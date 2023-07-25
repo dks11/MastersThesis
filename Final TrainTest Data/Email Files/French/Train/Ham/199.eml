@@ -1,0 +1,60 @@
+
+Salut Dede,
+
+Je construisais des vecteurs qui représentent les contrastes linéaires de
+intérêts et tester en utilisant la fonction estimable () des gmodels
+forfait.
+
+Salutations,
+
+Andrew
+
+Le lun du lundi 09 avril 2007 à 07:18:54 -0400, Dede Greenstein a écrit:
+> Bonjour
+>
+> J'ai un modèle à effet mixte qui donne des termes de pente et d'interception pour 6
+> Groupes (diagnostic (3 niveaux) par groupe à risque (2 niveaux)).la partie fixe de
+> Le modèle est -
+>
+> Volume cérébral ~ Diagnostic + groupe à risque + (groupe à risque * âge: diagnostic) - 1
+>
+> Ainsi, permettant aux termes de l'âge / de la pente de groupe à risque de varier dans le diagnostic et
+> omettre un diagnostic non significatif par interception du groupe à risque (l'âge était
+> Interaction centrée).
+>
+> Je suis intéressé à savoir si les différences dans le développement des groupes de risques
+> Les trajectoires sont différentes pour différents diagnostics.
+>
+> Les trois dernières (10) estimations à effet fixe sont des estimations pour le
+> Différences d'âge / pente entre les groupes de risque pour les 3 groupes de diagnostic.
+>
+> Ma question est la suivante - comment tester si les 3 différences sont statistiquement
+> différent les uns des autres?
+>
+> Je peux le faire en SAS mais la réponse en R me échappe.
+>
+>
+> Merci d'avance,
+> Dede
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+
+-
+Andrew Robinson
+Département de mathématiques et de statistiques Tél: + 61-3-8344-9763
+Université de Melbourne, Vic 3010 Australie Fax: + 61-3-8344-4599
+http://www.ms.unimelb.edu.au/~andrewpr
+http://blogs.mbs.edu/fishing-in-the-bay/
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

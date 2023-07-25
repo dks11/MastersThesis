@@ -1,0 +1,14 @@
+
+# Nouveau billet créé par Joshua Isom
+# Veuillez inclure la chaîne: [Perl # 42412]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42412>
+
+
+La configuration doit agir comme si l'écriture --Foo = non est fausse au lieu de
+vrai.Ce soir, j'ai essayé d'utiliser --execcapable = non pour contourner une compilation
+Échec, mais s'est ensuite rendu compte qu'il traiterait probablement "non" comme un vrai
+évaluer.
+
+###
+

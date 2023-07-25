@@ -1,0 +1,31 @@
+
+# Nouveau billet créé par "Alek Storm"
+# Veuillez inclure la chaîne: [Perl # 42407]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42407>
+
+
+Ce patch refactors et optimise les méthodes impliquées dans VTable
+dominant, en éliminant plusieurs d'entre eux.C'est maintenant plus facile à déprécier
+puis supprimez l'ancienne méthode de remplacement à double fonderie, qui
+Je vais me soumettre dans un patch ultérieur.Également:
+- faire du délégué généré.c plus petit, refactor
+- Type de nettoyage
+- BugFix - la méthode VTable "init" de la classe enfant est appelée deux fois lorsque
+La classe des parents et des enfants l'emporter sur
+- Ajouter le test pour cela
+
+Fichiers affectés:
+src / objets.c
+src / pmc / delegate.pmc
+src / pmc / parrotobject.pmc
+lib / parrot / pmc2c / delegate.pm
+inclure / perrotr / objets.h
+compilateurs / imcc / pbc.c
+T / pMC / Object-Meths.T
+
+-
+Alek Storm
+
+###
+

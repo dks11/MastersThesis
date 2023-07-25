@@ -1,0 +1,34 @@
+
+J'ai toujours couru Jigdo-Lite contre mon propre miroir.Il fournit deux choses:
+
+1) prouve que je peux construire de manière fiable les ISO à partir de ce que j'ai reflété localement.
+2) Ne gaspille pas la bande passante supplémentaire.
+
+Tant que les sommes de contrôle correspondent à ce qui est fourni de l'ISO officiel
+site d'image, je ne vois pas quelle serait la différence.
+
+Quelqu'un d'autre fait ça?:)
+
+Sera
+
+Simon Paillard a écrit:
+> Le lun, 09 avril 2007 à 08:43:07 -0400, Jean-Francois Chevrette a écrit:
+>> Salut,
+>>
+>> est-ce que quelqu'un a un guide simple sur la façon d'utiliser Jigdo pour construire
+>> et miroir ISOS?J'ai lu la documentation de Jigdo et de Debian
+>> page Web sur le sous-jet et cela ne fonctionnera tout simplement pas.
+>
+> Peut-être avec celui-ci: http://www.debian.org/cd/mirroring/#jigdomirror
+> et les liens connexes?
+>
+> Meilleures salutations,
+>
+
+
+-
+Pour vous désinscrire, envoyer un courriel à Debian-Mirrors-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

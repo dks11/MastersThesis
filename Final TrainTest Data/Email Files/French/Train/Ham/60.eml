@@ -1,0 +1,36 @@
+
+Sur le soleil, 08 avril 2007 à 06:35:18 -0700, James Peach a écrit:
+>
+> Ils ne sont pas * exactement * les mêmes, mais ils sont surtout les mêmes.Les
+> La différence est assez subtile.Ce patch devrait résoudre les différences:
+
+Je ne pense pas que ce soit la même chose.Le code de lecture
+est-ce que ReadaHead chaque fois qu'une préravcité / SendFile est demandée
+à un décalage de (décalage% limite) == 0.
+
+> D'après ce que je peux voir, ce patch ne fait pas cela.
+
+Engagez-le si vous le souhaitez, mais mon opinion est que
+Les modules sont suffisamment différents pour que j'entende
+Pour garder le VFS_READAHEAD un séparé.
+
+Aussi, pour utiliser celui actuel avec des valeurs par défaut
+qui sont exactement réglés sur Vista que vous utilisez simplement:
+
+objets VFS = Readahead
+
+Et vous obtenez l'accélération (sur Linux au moins,
+Et c'est notre principale plateforme).J'aime ça
+simplicité et je ne veux pas le perdre.
+
+Je sais que tu as écrit (et comme :-) le cacheprime
+module, mais c'était pour un SGI très spécifique
+Configuration si je me souviens bien et je ne pense pas qu'ils soient
+assez similaire pour fusionner.Ils * ont l'air * similaires
+Mais ils font des choses différentes et c'est
+Soyez plus simple pour les laisser de cette façon (IMHO).
+
+Jeremy.
+
+###
+

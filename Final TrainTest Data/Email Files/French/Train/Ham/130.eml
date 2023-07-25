@@ -1,0 +1,24 @@
+
+>
+>
+>
+> Essayé aussi.Donnez toujours le même problème.Bien que je pensais
+> C'est le travail .htaccess pour localiser le chemin de la lib de Perl.
+
+
+Bonjour,
+
+Ajouter cette ligne:
+
+Utilisez lib '/ home / sadm / lib / site_perl';
+
+Au sommet de votre script, je pense que cela devrait bien fonctionner.
+
+
+
+-
+> mailto: pangj@earthlink.net
+> http://home.arcor.de/jeffpang/
+
+###
+

@@ -1,0 +1,29 @@
+
+Auteur: Allison
+Date: lun 9 avril 23:37:43 2007
+Nouvelle révision: 18097
+
+Modifié:
+   tronc / docs / pdds / draft / pdd05_opfunc.pod
+
+Enregistrer:
+[PDD]: Ajoutez des normes noter à réviser lors de la préparation de l'Opcodes Design Doc pour
+lancement.
+
+
+Modifié: trunk / docs / pdds / draft / pdd05_opfunc.pod
+==============================================.===========================.
+--- Trunk / Docs / PDDS / Draft / PDD05_OPFUNC.POD (ORIGINAL)
++++ Trunk / Docs / PDDS / Draft / PDD05_OPFUNC.POD MON 9 avril 23:37:43 2007
+@@ -13,6 +13,8 @@
+ {{Remarque: ce PDD n'est connecté que vaguement à l'état actuel de
+ Perroquet.}}
+ 
++ {{Remarque: standardiser sur les traits de soulignement ou aucun soulignement?}}
++
+ = HEAD1 Description
+ 
+ Les fonctions OPCode sont le cheval de bataille du moteur du perroquet.Ils contrôlent
+
+###
+

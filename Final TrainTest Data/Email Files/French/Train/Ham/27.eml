@@ -1,0 +1,56 @@
+
+Le 10 avril 2007, à 2 h 05, Allison Randal a écrit:
+
+> Klaas-Jan Stol a écrit:
+>> Salut,
+>> Quelques suggestions pour PDD15:
+>> 1.
+>> Lire PDD15, j'ai remarqué que certaines méthodes / opérations sont nommées à l'aide d'un
+>> souligner les mots séparés, d'autres ne le font pas, par exemple:
+>> * get_class (mais aussi "getClass" est utilisé dans les exemples)
+>> * newclass
+>> OMI, ce serait bien d'être cohérent et de s'en tenir à 1 style.(Mon
+>> La préférence personnelle est de laisser de côté le soulignement)
+>
+> La norme GET_ est entrée avec des espaces de noms et était lui-même un
+> Modification de la norme find_ des opcodes précédents pour
+> Traiter avec les globaux et les lexicaux.Pour les méthodes, je dirais le
+> Les soulignements sont standard.Pour Opcoess, il est discutable que
+> Les soulignements ou aucun soulignement sont standard à ce stade.J'ai fait une note
+> Pour le revoir lorsque j'arrive au PDD OPCODES.
+>
+
+Je suis un peu mélangé là-dessus.Quelque chose comme get_args ne devrait probablement pas
+être getargs ou même getargs, mais si vous regardez à travers des ops.num, cela peut être
+Déroutant de savoir quoi.Mais pas pour les débutants, la numérisation
+via Ops.num peut aider à comprendre pourquoi votre code ne se compile pas comme
+attendu.
+
+>> 2.
+>> une autre chose;Des opérations telles que Find_method renvoient un PMC nul
+>> échec.Il pourrait être bien de le faire configurable pour l'utilisateur donc
+>> s / il peut choisir si une exception sera lancée, ou un PMC nul
+>> retourné.(Iirc, cela peut déjà être fait pour certains opérations, ce serait bien
+>> pour le définir pour tous les OP qui peuvent renvoyer un PMC nul).
+>> (Comme détail: dans PIR, cela pourrait être représenté par une pragma, comme:
+>> ".pragma exceptions 1")
+>
+> C'est la même question que nous avons pour les E / S, et vraiment pour de grandes pièces
+> de perroquet.J'ai temporairement retenu cette décision jusqu'à la nouvelle
+> Les exceptions PDD sont implémentées (les exceptions généralisées ne sont vraiment pas
+> Pratique avec l'implémentation actuelle des exceptions).
+>
+
+Peut-être qu'un code spécifique à l'espace de noms peut être utilisé, et peut-être applicable pour
+espaces de noms imbriqués tels que les HLL peuvent facilement en profiter, donc un HLL
+Peut dire dans son espace de noms racine "Je veux des exceptions" et tous les espaces de noms
+dans ce HLL par défaut d'utiliser des exceptions.Une option spécifique au fichier
+Soyez sujet à des bogues avec quelque chose comme PBC_MERGE ou autre chose, et le faire
+spécifique à l'espace de noms semble simple et propre, même si un peu trop dwim
+pour le perroquet.
+
+> Allison
+>
+
+###
+

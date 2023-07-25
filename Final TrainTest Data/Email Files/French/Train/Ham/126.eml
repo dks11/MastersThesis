@@ -1,0 +1,67 @@
+
+Klaas-Jan Stol a écrit:
+> Salut,
+>
+> Quelques suggestions pour PDD15:
+>
+> 1.
+> Lire PDD15, j'ai remarqué que certaines méthodes / opérations sont nommées à l'aide d'un
+> Soulignez les mots séparés, d'autres ne le font pas, par exemple:
+> * get_class (mais aussi "getClass" est utilisé dans les exemples)
+> * newclass
+>
+> IMO, ce serait bien d'être cohérent et de s'en tenir à 1 style.(Mon personnel
+> La préférence est de laisser de côté le soulignement)
+
+La norme GET_ est entrée avec des espaces de noms et était lui-même une modification
+de la norme Find_ des opcodes précédents pour traiter avec les globaux
+et lexicals.Pour les méthodes, je dirais que les soulignements sont standard.Pour
+Opcoess, il est discutable que les soulignements ou aucun soulignement soient
+Standard à ce stade.J'ai pris une note pour le revoir lorsque j'arrive au
+OPCODES PDD.
+
+> 2.
+> Une autre chose;Des opérations telles que Find_method renvoient un PMC nul
+> Échec.Il pourrait être bien de le faire configurable pour l'utilisateur pour qu'il soit
+> peut choisir si une exception sera lancée, ou qu'un PMC nul
+> retourné.(IIRC, cela peut déjà être fait pour certains opérations, ce serait bien de
+> Définissez-le pour tous les OP qui peuvent renvoyer un PMC nul).
+>
+> (Comme détail: dans PIR, cela pourrait être représenté par une pragma, comme:
+> ".pragma exceptions 1")
+
+C'est la même question que nous avons pour les E / S, et vraiment pour de grandes parties de
+Perroquet.J'ai temporairement retenu cette décision jusqu'à la nouvelle
+Les exceptions PDD sont implémentées (les exceptions généralisées ne sont vraiment pas
+pratique avec l'implémentation des exceptions actuelles).
+
+> 3.
+> Le sucre syntaxique pour l'OP:
+>
+> CallMethodsupercc "foo"
+>
+> pourrait bien être: super. "foo" ()
+>
+> Mais vous, je suppose, vous y avez déjà pensé :-)
+
+Ouais, ça pourrait fonctionner.Un pseudo-variable comme «soi» dans chaque méthode.Ou alors,
+
+   self.super. "foo" ()
+
+> 4.
+> De même, le sucre syntaxique pour:
+> CallMethodnextcc "foo"
+>
+> (en supposant l'objet "obj")
+> Pourrait être: obj. "Foo" .next () (ou peut-être: obj. "Foo" (). Ensuite, donc il y a un
+> un peu plus l'accent car il a l'air étranger)
+
+Également un bon candidat.Ou, pour modifier uniquement la syntaxe PIR en un seul endroit,
+
+   self.next. "foo" ()
+
+De grandes pensées, merci!
+Allison
+
+###
+

@@ -1,0 +1,17 @@
+
+>
+> Comment faire un initrd faire cela?Le seul initrd que j'ai fait jusqu'à présent était comme
+> Le résultat de la compilation d'un nouveau noyau, et je ne vois pas comment cela vous aidera.
+>
+L'installation d'un noyau Debian par défaut crée l'image nécessaire pour chaque noyau.
+Vous pouvez suivre la façon de Debian de compiler les noyaux si votre configuration nécessite un
+noyau personnalisé.
+> Peter A. Bonucci
+
+
+-
+Pour vous désabonner, envoyez un courriel à Debian-Laptop-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

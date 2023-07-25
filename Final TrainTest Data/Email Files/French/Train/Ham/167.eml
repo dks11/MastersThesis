@@ -1,0 +1,15 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42382]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42382>
+
+
+Dans les compilateurs de fichiers / IMCC / IMCC.L, il y a l'élément TODO:
+
+"Supprimer les citations, -> émettre, PBC"
+
+Cela doit être mis en uvre
+
+###
+

@@ -1,0 +1,30 @@
+
+Salut, je viens de mettre à jour les Gulus et je vérifie les autres miroirs.
+Il semble qu'il y ait une petite faute de frappe dans / Debian / Readme
+
+Exemple:
+http://gulus.usherbrooke.ca/debian/readme
+ftp://ftp.fr.debian.org/debian/readme
+
+"Test, ou Lenny. Accédez à cette version via DISTS / TEST.
+L'instantané de développement testé actuel est nommé Etch.Packages qui
+ont été testés dans un propogate de tests automatisés instables et passés à
+cette version. "
+
+La gravure doit être remplacée par Lenny comme dans le Readme.html
+
+
+
+-
+Yan Morin
+Consultant en logiciel libre
+yan.morin@savoirfaireLinux.com
+514-994-1556
+
+
+-
+Pour vous désinscrire, envoyer un courriel à Debian-Mirrors-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

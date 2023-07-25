@@ -1,0 +1,16 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42376]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42376>
+
+
+Dans le fichier src / ops / expérimental.ops Il y a l'élément TODO:
+
+"Les
+Géré seulement $ $ = io_thr_msg_add_select_rd aka 2 pour l'instant "
+
+Pour résoudre ce problème, je crois que tous les États prêts (4 $) doivent être gérés.
+
+###
+

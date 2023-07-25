@@ -1,0 +1,42 @@
+
+Le 4/6/07, Wilfred Zegwaard <wilfred.zegwaard@gmail.com> a écrit:
+
+> Je ne suis pas programmeur, mais j'ai l'expérience que R est bon pour
+> Traitement de grands ensembles de données, en particulier en combinaison avec
+> Statistiques.
+
+Je trouve ceci un peu surprenant, mais c'est peut-être juste un signe que je suis
+pas encore assez expérimenté avec R.
+
+Je ne peux pas utiliser R pour les grands ensembles de données.Du tout.Les grands ensembles de données prennent une éternité
+charger avec lire.able, r manque fréquemment de mémoire, et nlm ou
+GNLM ne semble jamais converger en réponses.En comparaison, je peux
+Point SAS et NLIN à ces données sans problème.(Bien sûr, SAS est
+Courir sur une machine dédiée assez puissante avec un grand disque de bélier, donc
+Cela peut faire partie du problème.)
+
+La sémantique pass-par valeur de R rend également les choses plus difficiles qu'elle ne devrait l'être
+gérer où il est crucial de ne pas faire de copie des données
+cadre, de peur de manquer de mémoire.Pass-by-Reference
+rendre la mise en uvre de transformations de données tellement plus facile que je ne fais pas
+Comprenez vraiment comment la valeur pass-par-valeur est devenue la norme.(S'il y a
+Une astuce pour faire des transformations sur place, je ne l'ai pas trouvé.)
+
+En ce moment, j'envisage de commencer un projet impliquant un grand
+Intégrations Monte Carlo sur le paramètre postérieur compliqué
+Distributions d'un modèle de régression non linéaire, et j'ai le fort
+Sentant que R sera simplement étouffé.
+
+R est idéal pour les petits projets, mais dès que vous avez même quelques centaines
+MEGS de données, il semble se décomposer.
+
+Si je fais mal les choses, dites-moi.:-) SAS est une bête avec laquelle travailler.
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

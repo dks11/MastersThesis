@@ -1,0 +1,106 @@
+
+Le 4/9/07, Simon Urbanek <simon.urbanek@r-project.org> a écrit:
+>
+> Le 7 avril 2007, à 10 h 56, Ramon Diaz-Uriarte a écrit:
+>
+>> Cher tout,
+>>
+>> Le fichier "clients.txt" du dernier package Rserve, par Simon
+>> Urbanek, dit, concernant son client R,
+>>
+>> "(...) Un client R simple, c'est-à-dire qu'il vous permet de vous connecter à RServe
+>> de r lui-même.C'est très simple et limité, car Rserve était
+>> Pas principalement destiné à la communication R à R (il existe de meilleures façons
+>> pour le faire), mais il est utile pour une connexion interactive rapide à
+>> Une ferme Rserve. "
+>>
+>> Quelles sont ces meilleures façons de le faire?Je pense utiliser
+>> rserve pour avoir un processus R envoyer des emplois à un tas de rserves dans
+>> différentes machines.C'est comme ce que nous pourrions faire avec RMPI (ou PVM),
+>> Mais sans la couche MPI.Par conséquent, il serait vraisemblablement plus facile de
+>> traiter les problèmes de réseau, les échecs de la machine, en utilisant des points de contrôle,
+>> etc. (c'est-à-dire pour essayer d'obtenir une meilleure tolérance aux défauts).
+>>
+>> il semble que Rserve fournirait l'infrastructure de base pour
+>> faire cela et m'éviter de réinventer la roue de l'utilisation
+>> des prises, etc., directement de R.
+>>
+>> Cependant, le commentaire de Simon sur de meilleures façons de communication R-à-R
+>> m'a fait me demander si cette idée a vraiment du sens.Qu'est-ce que la capture?
+>> D'autres personnes ont-elles essayé des approches similaires?
+>>
+>
+> Je commentais la communication directe R-à-R à l'aide de sockets +
+> «Sérialiser» dans R ou le package «neige» pour le traitement parallèle.Les
+> ce dernier pourrait être utile pour ce que vous avez en tête, car il inclut
+> Une implémentation basée sur une prise qui vous permet de paître plusieurs
+> Enfants (sur plusieurs machines) et collectez leurs résultats.Il
+> utilise des RSH ou SSH réguliers pour démarrer les travaux, donc si vous pouvez l'utiliser, il
+> devrait fonctionner pour vous.«Snow» a également des implémentations PVM et MPI, la
+> PVM One est vraiment facile à configurer (sur Unix) et c'était ce que j'étais
+> Utiliser pour l'informatique parallèle dans R sur un cluster.
+>
+
+Je pense que je comprends maintenant vos commentaires.J'ai utilisé la neige et le rmpi assez
+un peu.Mais le problème avec RMPI (ou plutôt MPI) est le manque de
+Tolérance aux défauts: si un nud baisse, tout l'univers MPI se casse,
+et donc l'ensemble complet d'esclaves.Mettre en place une sorte de
+Le schéma tolérant aux pannes avec Rserve semblait possible / plus simple (comme il le fait
+ne dépend pas de la couche MPI).
+
+(Oui, je devrais peut-être vérifier Snowft, mais il utilise PVM, et je me souviens d'un
+À l'époque, il y avait une raison pour laquelle nous avons décidé d'aller avec MPI au lieu de
+PVM).
+
+
+> Rserve est en quelque sorte comparable, mais en plus il fournit le
+> Infrastructure de frai en raison de son concept client / serveur.Ce que ça
+> N'a pas les fonctions de commodité que la neige offre comme
+> clusterApply etc. En y pensant, il serait réellement possible de
+> Ajoutez-les, même si j'avoue que l'objectif original de Rserve n'était pas
+> Informatique parallèle :).L'idée était d'avoir un serveur Rserve et
+> Plusieurs clients
+
+Aha.J'aurais dû voir ça.Je pense que je comprends mieux les différences maintenant.
+
+> alors que dans «neige», vous avez un seul client et
+> Plusieurs serveurs.Vous pouvez engendrer plusieurs rserves sur plusieurs
+> Machines, mais Rserve lui-même ne fournit aucun équilibre de charge
+> La boîte, vous devez donc le faire vous-même.
+>
+
+Oui bien sûr.Je pense que cela devrait être faisable, cependant, si je décide d'essayer
+pour emprunter cette voie.
+
+
+> Je ne sais pas si cela aide ... :)
+>
+
+Cela aide!Merci beaucoup.
+
+Meilleur,
+
+R.
+> Bravo,
+> Simon
+>
+>
+>
+>
+
+
+-
+Ramon Diaz-Uriarte
+Équipe informatique statistique
+Programme de biologie structurelle et de biocomputing
+Centre national du cancer espagnol (CNIO)
+http://ligarto.org/rdiaz
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

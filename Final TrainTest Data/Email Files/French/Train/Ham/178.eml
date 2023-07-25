@@ -1,0 +1,114 @@
+
+Le 4/9/07, Gregory Warnes <gregory.warnes@mac.com> a écrit:
+>
+> Vous pouvez trouver plus facile d'utiliser des espaces de réseaux pour R (voir http: // nws-
+> r.sourceforge.net/), qui fournit un mécanisme simple pour l'envoi
+> Tâches pour "travailler" R les processus et récupérer les résultats lorsqu'ils sont terminés.
+>
+> -G
+
+Merci, Greg.Oui, je joue aussi avec NWS.
+
+Meilleur,
+
+R.
+
+
+
+
+>
+> Le 9 avril 2007, à 12 h 08, Matthew Keller a écrit:
+>
+>> Salut Ramon,
+>>
+>> Je suis intéressé par les réponses à votre question.J'ai ce que je
+>> pense que c'est un problème similaire - j'ai un très grand script de simulation et
+>> aimerait pouvoir le modulariser en ayant un script principal qui
+>> appelle beaucoup d'informations - mais je ne l'ai pas encore fait parce que le
+>> La seule façon dont je pouvais penser à le faire était d'appeler un indice, de le faire fonctionner,
+>> Enregistrez les objets de l'indice, puis rappelez ces objets
+>> dans le script principal, qui semble être un moyen très lent et onéreux de
+>> Faites-le.
+>>
+>> Rserve ferait-il ce que je recherche?
+>>
+>> le 4/7/07, Ramon Diaz-uriarte <rdiaz02@gmail.com> a écrit:
+> >> cher tout,
+> >>
+> >> le fichier "clients.txt" du dernier package Rserve, par Simon
+> >> urbanek,
+> >> dit, concernant son client R,
+> >>
+> >> "(...) Un client R simple, c'est-à-dire qu'il vous permet de vous connecter à RServe
+> >> de
+> >> r lui-même.C'est très simple et limité, car Rserve n'était pas
+> >> principalement destiné à la communication R à R (il existe de meilleures façons de faire
+> >> ça), mais il est utile pour une connexion interactive rapide à un RServe
+> >> ferme. "
+> >>
+> >> Quelles sont ces meilleures façons de le faire?Je pense utiliser
+> >> rserve
+> >> Pour avoir un processus R, envoyez des travaux à un tas de rserves dans différents
+> >> Machines.C'est comme ce que nous pourrions faire avec RMPI (ou PVM), mais sans
+> >> La couche MPI.Par conséquent, il serait vraisemblablement plus facile de gérer
+> >> Problèmes de réseau, échecs de la machine, utilisant des points de contrôle, etc. (c'est-à-dire,
+> >> pour essayer d'obtenir une meilleure tolérance aux défauts).
+> >>
+> >> Il semble que Rserve fournirait l'infrastructure de base pour faire
+> >> cela et m'économiser de la réinventure de la roue de l'utilisation de sockets, etc.,
+> >> directement de R.
+> >>
+> >> Cependant, le commentaire de Simon sur de meilleures façons de communication R à R
+> >> m'a fait me demander si cette idée a vraiment du sens.Qu'est-ce que la capture?
+> >> D'autres personnes ont-elles essayé des approches similaires?
+> >>
+> >> merci,
+> >>
+> >> R.
+> >>
+> >> -
+> >> Ramon Diaz-Uriarte
+> >> Équipe informatique statistique
+> >> Programme de biologie structurelle et de biocomputing
+> >> Centre national du cancer espagnol (CNIO)
+> >> http://ligarto.org/rdiaz
+> >>
+> >> ______________________________________________
+> >> r-help@stat.math.ethz.ch Liste de diffusion
+> >> https://stat.ethz.ch/mailman/listinfo/r-help
+> >> Veuillez lire le guide de publication http://www.r-project.org/posting-
+> >> guide.html
+> >> et fournissez un code mentionné, minimal, autonome et autonome.
+> >>
+>>
+>>
+>> - -
+>> Matthew C Keller
+>> Fellow postdoctoral
+>> Virginia Institute for Psychiatric and Behavioral Genetics
+>>
+>> ______________________________________________
+>> r-help@stat.math.ethz.ch Liste de diffusion
+>> https://stat.ethz.ch/mailman/listinfo/r-help
+>> Veuillez lire le guide de publication http://www.r-project.org/posting-
+>> guide.html
+>> Et fournissez un code de reproductible commenté, minimal, autonome et autonome.
+>
+>
+
+
+-
+Ramon Diaz-Uriarte
+Équipe informatique statistique
+Programme de biologie structurelle et de biocomputing
+Centre national du cancer espagnol (CNIO)
+http://ligarto.org/rdiaz
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

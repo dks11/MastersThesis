@@ -1,0 +1,26 @@
+
+réaffecter les miroirs 418427
+gravité 418427 IMPORTANT
+Merci
+
+Le lundi 09 avril 2007 18:43, Hanishkvc a écrit:
+> Le site de miroir indien pour Debian semble toujours avoir seulement Debian
+> Packages 3.x et le principal problème étant que le netinst de Debian 4.0 va
+> à l'avance et importe les informations du package Debian 3.x sans donner
+> Avertissement.Il ne donne pas non plus la possibilité de sélectionner les packages pour
+> être installé dans le cadre de l'installation.Lors du démarrage dans le nouveau système
+> APT / APPUTURE répertorie les packages Debian 3.x pour l'installation.
+
+Il n'y a rien que l'équipe des installateurs puisse faire à ce sujet, désolé.Peut-être le
+Les gens du miroir peuvent aider.
+
+Salutations,
+FJP
+
+
+-
+Pour vous désinscrire, envoyer un courriel à Debian-Mirrors-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

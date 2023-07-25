@@ -1,0 +1,65 @@
+
+Bonjour Linda,
+
+Vendredi 6 avril 2007, 2:47:43, vous avez écrit:
+
+LS> le 4/5/07, Vladimir Ereeev <wl2776@gmail.com> a écrit:
+Ve >> Si vos frontières de pays ou d'État sont des polygones ou des polylines, vous pouvez convertir
+Ve >> à la projection souhaitée en utilisant
+Ve >> Le projet de fonction du package rgdal.
+
+Ve >> La grille de latitude-longitude pourrait également être ajoutée en générant des polylines souhaitées
+Ve >> en lat-lon et les convertir à la projection souhaitée à l'aide du projet.
+
+
+LS> Linda Smith a écrit:
+
+LS >>> J'ai un fichier gridded NetCDF avec la projection LCC.Je peux facilement utiliser
+Ls >>> image.Plot pour le visualiser.Cependant, comme les axises sont en x, y, pas lat et
+Ls >>> lon, je ne pouvais pas y ajouter des cartes d'état ou de pays (ou lat lon
+Ls >>> information).
+Ls >>> J'ai un fichier grid2d qui décrit le lat et le lon pour chacun (x, y)
+Ls >>> grille,
+Ls >>> mais les lat et lon ne sont pas régulièrement espacés, donc je ne pouvais pas utiliser
+Ls >>> image.plot.
+Ls >>>
+Ls >>> quelqu'un sait-il comment tracer ce type de données grindtées pour ce pays ou
+LS >>> Les frontières de l'État peuvent être facilement ajoutées?Merci beaucoup!
+Ls >>>
+
+Ve >> qu'entendez-vous par "fichier grid2d qui décrit le lat et le lon pour chaque
+Ve >> (x, y) grid "?
+Ve >> si ce sont deux rasters de la même taille ayant une latitude correspondante et
+Ve >> Valeurs de longitude dans chaque cellule raster, alors vous pouvez utiliser des lignes de contour pour obtenir
+Ve >> Grille Lat-Lon.Cependant, vous voudrez probablement le lisser.
+
+LS> Oui, ils le sont.Je pourrais ajouter des informations Lat et Lon de cette façon, mais
+Ls> je ne pouvais toujours pas utiliser la fonction map () pour superposer les bordures d'état sur
+Ls> mon tracé d'image parce que cette image n'est pas en lat et lon
+Ls> coordonnées.
+
+
+Je suppose que vous utilisez la fonction de fonction () dans le package de cartes.
+? Map dit qu'il renvoie une liste avec x, y, gamme et noms
+Composants.
+Vous pouvez faire quelque chose comme suivre, par exemple (non testé).
+
+  state.borders.ll <-map ("état", tracé = false)
+  state.borders <-project (cbind (state.borders.ll $ x, state.borders.ll $ y), proj = "+ proj = lcc + lat_1 = 48 + lat_2 = 33 + lon_0 = -100")
+  lignes (state.borders)
+
+-
+Cordialement,
+ Vladimir Mailto: wl2776@gmail.com
+
+
+- Sevinmail--
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

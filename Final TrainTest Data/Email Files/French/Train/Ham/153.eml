@@ -1,0 +1,29 @@
+
+Le 4/9/07, Tom Phoenix <tom@stonehenge.com> a écrit:
+>
+> Le 4/9/07, JM <JM5379@gmail.com> a écrit:
+>
+>> Le premier groupe renvoie uniquement la première sélection,
+>> Peu importe combien sont choisis.
+>
+> Utilisez la fonction param () dans le contexte de la liste, et non scalaire;Voir le CGI
+> Documentation du module.L'exemple dans le synopsis de la page manuelle CGI
+> Affiche comment gérer plusieurs cases à cocher.
+>
+> Bravo!
+>
+> --tom phoenix
+> Formation de Stonehenge Perl
+>
+
+c'est ça.u da mec!
+
+Merci pour beaucoup de temps gagné.
+Joe
+
+-
+Puisqu'il s'agit d'un compte Gmail, veuillez vérifier que la liste de diffusion est incluse dans
+La réponse aux adresses
+
+###
+

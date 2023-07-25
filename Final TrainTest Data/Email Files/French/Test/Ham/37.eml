@@ -1,0 +1,32 @@
+
+Bonjour,
+
+J'ai un programme de craquement des données qui me cause un problème.
+
+Certaines des données sont identifiées avec un & signe suivi d'un entier.
+Aucun problème n'est rencontré lors de l'analyse des données ci-dessous et 500, mais la valeur
+ci-dessus sont ignorés.
+
+Y a-t-il une limitation en R sur ce sujet?
+
+Merci beaucoup pour votre aide.
+
+Cordialement.
+
+
+
+Depièreux constant
+Directeur général
+Technologies de qualité appliquées Europe SPRL
+Mobile: +32 (0) 475 555 818
+Courriel: constant.depiereux@aqte-consulting.eu
+Site: http://www.aqte-consulting.eu
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

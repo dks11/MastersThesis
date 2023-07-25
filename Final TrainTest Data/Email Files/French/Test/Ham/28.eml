@@ -1,0 +1,15 @@
+
+J'ai un MacBook et voici ce que je personnalise:
+J'ai une image parallèle de Fedora Core 6 et installé le sucre-jhbuild là-bas.
+Nous avons écrit notre logiciel (TAMTAM) d'une manière où nous pouvons l'exécuter sous FC6
+Sans avoir besoin d'être à l'intérieur du sucre, donc généralement je fais couler l'application comme normale
+App.Quand j'ai besoin de le tester sous sucre, je le fais dans la construction de sucre ou sur le
+vrai xo.
+
+_______________________________________________
+Liste de diffusion de sucre
+Sucre@laptop.org
+http://mailman.laptop.org/mailman/listinfo/sugar
+
+###
+

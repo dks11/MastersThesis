@@ -1,0 +1,36 @@
+
+Le 4/8/07, Johann Hibschman <johannh@gmail.com> a écrit:
+> La sémantique pass-by-valeur de R rend également les choses plus difficiles qu'elle ne devrait l'être
+> Traitez où il est crucial que vous ne fassiez pas de copie des données
+> Cadre, par peur de manquer de mémoire.Pass-by-Reference
+> rendre la mise en uvre de transformations de données tellement plus facile que je ne fais pas
+> Comprenez vraiment comment la valeur pass-par rapport est devenue la norme.(S'il y a
+> Une astuce pour faire des transformations sur place, je ne l'ai pas trouvé.)
+
+Parce que R traite les objets en mémoire, je ne le noterais pas non plus comme
+Aussi fort que certains autres packages sur de très grands ensembles de données, mais vous pouvez
+Utilisez des bases de données qui peuvent le rendre moins importante dans certains cas et vous
+peut obtenir une certaine quantité de kilométrage des environnements R et comme
+Les ordinateurs 64 bits deviennent monnaie courante et la taille de la mémoire se développe
+Des ensembles de données de plus en plus grands deviendront faciles à gérer.
+
+Concernant les environnements, également disponibles sont des objets proto de la
+Praque de proto qui sont des environnements avec une sémantique légèrement différente.
+Même si vous n'avez pas l'intention d'utiliser le package Proto, c'est un peu
+de documentation et d'informations à l'appui qui pourraient être
+utile:
+
+- Page d'accueil:
+  http://code.google.com/p/r-proto/
+- Aperçu (cliquez sur l'onglet Wiki à la page d'accueil) qui comprend des liens d'article
+  qui discutent de l'OO et des environnements
+- Tutoriel, carte de référence, manuel de référence, vignette (voir la boîte des liens)
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

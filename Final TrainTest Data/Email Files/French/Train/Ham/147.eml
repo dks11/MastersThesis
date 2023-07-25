@@ -1,0 +1,44 @@
+
+HM ... Cela ressemble à un problème de devoir ...
+
+Peut-être commencer par comprendre comment le faire sans r -
+Quelle est l'approche et comment la calculeriez-vous?
+Puis recherchez R aide les mots clés possibles que vous
+est venu avec.
+
+Sarah
+
+Le 4/8/07, jochen.f <jjfahr@ucalgary.ca> a écrit:
+>
+> Salut ...
+>
+> Je dois utiliser R pour découvrir l'intervalle de confiance à 90% pour la sensibilité
+> et spécificité du test de diagnostic suivant:
+>
+> Un test de diagnostic particulier pour la sclérose en plaques a été effectué sur 20 ms
+> les patients et 20 sujets sains, 6 patients atteints de SEP ont été classés comme sains
+> et 8 sujets sains ont été classés comme souffrant de la SEP.
+>
+> De plus, j'ai besoin de trouver le nombre de patients atteints de SEP requis pour un
+> Sensibilité de 1% ...
+>
+> Y a-t-il un simple R-Command qui peut faire cela pour moi?
+>
+> Je suis complètement nouveau à r ...
+>
+> Aidez-vous s'il vous plaît!
+>
+> Jochen
+> -
+-
+Sarah Goslee
+http://www.functionaldiversity.org
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

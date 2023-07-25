@@ -1,0 +1,42 @@
+
+jelmer@samba.org écrit:
+
+> Auteur: Jelmer
+> Date: 2007-04-09 00:53:05 +0000 (lun, 09 avril 2007)
+> Nouvelle révision: 22134
+>
+> Websvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22134
+>
+> Journal:
+> Créez un fichier SMB.conf différent pour le côté client.Cela devrait être utilisé avec Samba 3 ou Windows plus facile ainsi que des environnements.
+
+Salut Jelmer,
+
+Je ne sais pas trop ce que vous avez en tête, et je ne sais pas si c'est
+pertinent, mais juste au cas où ...
+
+Dans libsmbclient, nous nous soucions de la configuration côté client qui peut différer de
+la configuration du serveur.Ici, dans le code pseudo, c'est ce qu'il fait:
+
+    // Essayez de charger un fichier SMB.conf personnel
+    if (lp_load ($ home / .smb / sb.conf)! = succès)
+    {
+      // Si cela a échoué, essayez de charger le fichier système smb.conf système
+      if (lp_load (dyn_configfile) == succès)
+      {
+        // Si cela a réussi, autorisez les modifications locales en ajoutant les paramètres
+        // Dans leur fichier personnel smb.conf.append.
+        lp_load ($ home / .smb / smb.conf.append)
+      }
+    }
+
+Cela gère le cas où l'on veut avoir tout son propre fichier smb.conf,
+mais aussi où le fichier smb.conf à l'échelle du système doit être utilisé mais quelques modifications
+à ses paramètres conçus pour l'utilisation du client dans smb.conf.append.
+
+Salutations,
+
+Derrell
+
+###
+

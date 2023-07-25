@@ -1,0 +1,40 @@
+
+Salut, ça a bien fonctionné, j'ai remarqué que l'installation RPM
+Créé automatiquement une image initrd pour moi.Je suis en avance et
+J'ai recréé pour mon synthisiseur comme il l'a dit dans le Howto.Quel script sur
+Mon système contrôle la façon dont l'initial initrd qui est créé avec le RPM
+Installation du noyau pour que je puisse le modifier pour mon synthisiseur?Pour
+une raison étrange pour la raison de chercher une disquette dans ma disquette et j'ai obtenu
+Beaucoup d'erreurs d'E / S mais à part ces /etc/grub.conf ont été mises à jour
+correctement.Je remarque également que mon espace arrière ne me bip
+invite de bash et également lors de l'utilisation de FTP avec le mode Bell.Tout ce que je
+devrait vérifier la configuration expliquant pourquoi le backpace ne bip ne bip à
+Hte début de la ligne? Au soleil, 8 avril 2007, Janina Sajka a écrit:
+
+> Exécuter la grub-stall
+>
+> Nick Gawronski écrit:
+>> Salut, j'ai dû supprimer complètement Debian et installer Fedora Core 6 comme quand je
+>> J'essayais de réparer Grub quelque chose qui s'est passé et j'ai perdu mes partitions.je
+>> Réinstaller Fedora Core 6 et j'essaie de passer à Kernel 2.6.19 que je
+>> Téléchargé à partir de speakupmodified.org mais j'obtiens l'erreur suivante de RPM
+>> Erreur mortelle sale: incapable de trouver un modèle approprié ce que cela signifie
+>> Et comment puis-je le réparer?Aussi quelle est la différence entre le noyau et
+>> Les versions Kernel-Xen comme 2.6.18-xen ont été installées par défaut sur mon
+>> Système Fedora Core 6?
+>>
+>> ___________________________________________________
+>> Liste de diffusion de scénario
+>> speakup@braille.uwo.ca
+>> http://speech.braille.uwo.ca/mailman/listinfo/speakup
+>
+>
+
+
+_______________________________________________
+Liste de diffusion de saignement
+Speakup@braille.uwo.ca
+http://speech.braille.uwo.ca/mailman/listinfo/speakup
+
+###
+

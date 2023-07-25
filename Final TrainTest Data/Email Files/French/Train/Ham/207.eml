@@ -1,0 +1,54 @@
+
+Will Coleda a écrit:
+> Le 6 avril 2007, à 12 h 31, Jonathan Worthington a écrit:
+>
+>> Salut,
+>>
+>> J'ajoute les nouvelles entrées VTable requises pour PDD15.Quelques questions.
+>>
+>> 1) devenir_parent, nous avons convenu que nous devrions y aller.Il semble être complètement
+>> inutilisé n'importe où dans le référentiel (langues incluses).Devrions-nous prendre
+>> que comme preuve suffisante pour le tuer, ou opter pour une norme
+>> Cycle de dépréciation?
+>
+> Cycle standard, ce qui signifie qu'il aura disparu dans 11 jours environ.
+
+Oui, cycle standard.Mettez le billet de dépréciation dans déprécié.pod avant
+la prochaine version.
+
+>> 2) Je pense que nous avons convenu que la méthode VTable de sous-classe devrait également aller,
+>> mais le parrotclasse actuel et le parrotobject l'utilisent, donc nous ne pouvons pas
+>> déprécions cela jusqu'à ce que nous les déprécions.Notez que c'est seulement
+>> Impinmentation dans Default.pmc.
+
+Oui, il est correctement géré par add_parent, pas besoin des deux.
+
+>> 3) Je viens de découvrir que nous avons aussi:
+>>
+>> pMC * new_singleton ()
+>> pMC * get_anonymous_subclass ()
+>>
+>> Je les ai marqués non spécifiés.Aucun d'eux n'est mis en uvre par des PMC
+>> dans le référentiel - pas même par défaut.Devraient-ils y aller?
+
+Oui.Je dirais qu'ils sont un cas d'être trop préparé pour un avenir possible
+Besoins.Les deux peuvent être gérés de manière adéquate en transmettant des options à «nouveau», ou
+  (pour les singletons) modifiant le code d'instanciation dans la classe (si tout
+Les instanciations sont des singletons).
+
+>> 4) Nous avons:
+>> pMC * get_attr (intval idx)
+>> void set_attr (intval idx, valeur pmc *): écrire
+>> Je suppose que, comme la sous-classe, ce sont des choses que nous prévoyons de déprécier
+>> avec ParrotClass et ParrotObject une fois que les gens utilisent tous le PDD 15
+>> l'implémentation, car la recherche d'attribut est maintenant par son nom?Ou partons-nous
+>> pour d'autres langues qui pourraient vouloir un attribut indexé entier
+>> Recherche, mais ne les implémentez pas dans notre propre système de classe?
+
+Allons-nous de l'avant et déprécions-les (lorsque nous faisons le plein pas en PDD
+15).Nous pouvons les ramener à un moment donné si vous êtes absolument nécessaire.
+
+Allison
+
+###
+

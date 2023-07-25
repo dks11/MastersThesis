@@ -1,0 +1,14 @@
+
+Salut tout le monde.J'ai réussi à résoudre le problème ACPI en compilant le mien
+2.6.20.6 Kernel.J'ai aussi dû modifier beaucoup avant de pouvoir obtenir
+Les iptables fonctionnent correctement, mais maintenant il est corrigé.
+
+Merci à ceux qui m'ont pointé dans la bonne direction.
+
+
+-
+Pour vous désabonner, envoyez un courriel à Debian-Laptop-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

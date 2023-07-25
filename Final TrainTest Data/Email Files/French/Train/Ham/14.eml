@@ -1,0 +1,103 @@
+
+Auteur: Jerry
+Date: 2007-04-09 16:04:07 +0000 (lun, 09 avril 2007)
+Nouvelle révision: 22138
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22138
+
+Enregistrer:
+* Synchronisez avec le Samba_3_0_25 à partir de SVN R22132.
+* Définissez la version sur 3.0.25rc1
+* Mettre à jour les notes de version.
+
+
+
+Supprimé:
+   Branches / Samba_3_0_release / Packaging / Redhat-9 /
+   Branches / Samba_3_0_release / source / passdb / pdb_plugin.c
+Modifié:
+   Branches / Samba_3_0_release / WhatsNew.txt
+   Branches / Samba_3_0_release / Exemples / VFS / MakeFile.in
+   Branches / Samba_3_0_release / Exemples / libsmbclient / makefile
+   Branches / Samba_3_0_release / Source / MakeFile.in
+   Branches / Samba_3_0_release / Source / Version
+   Branches / Samba_3_0_release / Source / Client / Client.c
+   branches / samba_3_0_release / source / configure.in
+   Branches / Samba_3_0_release / source / include / incluse.h
+   Branches / samba_3_0_release / source / include / rpc_ds.h
+   branches / samba_3_0_release / source / include / rpc_spoolss.h
+   Branches / Samba_3_0_release / source / include / smb.h
+   Branches / Samba_3_0_release / Source / Lib / Fault.c
+   Branches / Samba_3_0_release / source / lib / messages.c
+   Branches / Samba_3_0_release / source / lib / pidfile.c
+   Branches / Samba_3_0_release / Source / Lib / Replace / System / Config.M4
+   Branches / Samba_3_0_release / source / lib / remplacer / System / Filesys.h
+   Branches / Samba_3_0_release / source / lib / sysacls.c
+   Branches / Samba_3_0_release / source / lib / util.c
+   Branches / Samba_3_0_release / source / lib / util_sec.c
+   Branches / Samba_3_0_release / source / lib / util_str.c
+   Branches / Samba_3_0_release / source / lib / util_tdb.c
+   Branches / Samba_3_0_release / source / libads / ldap.c
+   Branches / Samba_3_0_release / source / libads / sasl.c
+   Branches / Samba_3_0_release / source / librpc / ndr / ndr_sec_helper.c
+   Branches / Samba_3_0_release / source / librpc / ndr / sid.c
+   Branches / Samba_3_0_release / source / libsmb / cliconnect.c
+   Branches / Samba_3_0_release / Source / Libsmb / Clidgram.c
+   Branches / Samba_3_0_release / source / libsmb / clikrb5.c
+   Branches / Samba_3_0_release / source / libsmb / cliprint.c
+   Branches / Samba_3_0_release / Source / Libsmb / Clirap.c
+   Branches / Samba_3_0_release / Source / Libsmb / Clirap2.c
+   Branches / Samba_3_0_release / Source / LibSmb / Credentials.c
+   Branches / Samba_3_0_release / source / libsmb / libsmbclient.c
+   Branches / Samba_3_0_release / source / libsmb / samlogon_cache.c
+   Branches / Samba_3_0_release / source / libsmb / smb_share_modes.c
+   Branches / Samba_3_0_release / Source / Modules / VFS_DEFAULT.C
+   Branches / Samba_3_0_release / Source / Modules / VFS_Recycle.c
+   Branches / Samba_3_0_release / source / nmbd / nmbd_brownesync.c
+   Branches / Samba_3_0_release / source / nmbd / nmbd_elections.c
+   Branches / Samba_3_0_release / source / nmbd / nmbd_incomingdgrams.c
+   Branches / Samba_3_0_release / source / nmbd / nmbd_packets.c
+   Branches / Samba_3_0_release / source / nmbd / nmbd_processlogon.c
+   Branches / Samba_3_0_release / source / nmbd / nmbd_sendannounce.c
+   Branches / Samba_3_0_release / Source / NSSwitch / idmap.c
+   Branches / Samba_3_0_release / source / nsswitch / idmap_ad.c
+   Branches / Samba_3_0_release / Source / NSSwitch / idmap_cache.c
+   Branches / Samba_3_0_release / Source / NSSwitch / PAM_WINBIND.C
+   Branches / Samba_3_0_release / Source / NSSwitch / Wbinfo.c
+   Branches / Samba_3_0_release / Source / NSSwitch / Winbind_NSS_aix.c
+   Branches / Samba_3_0_release / Source / NSSwitch / Winbind_NSS_IRIX.C
+   Branches / Samba_3_0_release / Source / NSSwitch / Winbindd_ads.c
+   Branches / Samba_3_0_release / Source / NSSwitch / Winbindd_Cred_Cache.c
+   Branches / Samba_3_0_release / source / passdb / lookup_sid.c
+   Branches / Samba_3_0_release / source / passdb / passdb.c
+   Branches / Samba_3_0_release / source / passdb / pdb_interface.c
+   Branches / Samba_3_0_release / Source / Printing / print_cups.c
+   Branches / Samba_3_0_release / source / rpc_parse / parse_ds.c
+   Branches / Samba_3_0_release / source / rpc_parse / parse_spoolss.c
+   Branches / Samba_3_0_release / source / rpc_server / srv_dfs_nt.c
+   Branches / Samba_3_0_release / source / rpc_server / srv_lsa_ds.c
+   branches / samba_3_0_release / source / rpc_server / srv_lsa_ds_nt.c
+   Branches / samba_3_0_release / source / rpc_server / srv_spoolss_nt.c
+   Branches / Samba_3_0_release / source / rpcclient / cmd_spoolss.c
+   branches / samba_3_0_release / source / script / tests / test_posix_s3.sh
+   Branches / Samba_3_0_release / Source / SMBD / IPC.C
+   Branches / Samba_3_0_release / Source / Smbd / Lanman.c
+   Branches / Samba_3_0_release / Source / SMBD / MSDFS.C
+   Branches / Samba_3_0_release / Source / SMBD / NTTRANS.C
+   Branches / Samba_3_0_release / source / smbd / quotas.c
+   Branches / Samba_3_0_release / source / smbd / réponse.c
+   Branches / Samba_3_0_release / source / smbd / service.c
+   Branches / Samba_3_0_release / Source / SMBD / SESSSETUP.C
+   Branches / Samba_3_0_release / source / smbd / trans2.c
+   Branches / Samba_3_0_release / Source / SMBD / VFS.C
+   Branches / Samba_3_0_release / source / torture / pdbtest.c
+   Branches / Samba_3_0_release / source / torture / torture.c
+   Branches / Samba_3_0_release / source / utils / net_lookup.c
+
+
+Set à l'échelle:
+Désolé, le patch est trop grand (7313 lignes) pour inclure;Veuillez utiliser WebVN pour le voir!
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22138
+
+###
+

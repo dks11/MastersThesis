@@ -1,0 +1,59 @@
+
+Chers R-user,
+
+Je voudrais utiliser la fonction "bruto" dans le package MDA pour flexible
+Analyse discriminante.
+Ensuite, j'ai essayé, par exemple, après l'approche.
+
+ > x
+             band1 band2 band3
+1 -1.206780 -1.448007 -1.084431
+2 -0.294938 -0.113222 -0.888895
+3 -0.267303 -0.241567 -1.040979
+4 -1.206780 -1.448007 -1.040979
+5 -1.151518 -0.806286 -0.671630
+6 -1.179146 -1.396670 -1.453775
+7 -0.294938 -0.241567 -1.453775
+8 -0,350200 -0.267239 -1.084431
+9 -1.151518 -0.857623 -0.649901
+10 1.362954 -1.396670 -2.235926
+11 -0,239675 1.118883 1.457551
+12 -0.294938 -1.268325 -0.497817
+13 -0.294938 -0.729278 -0.106745
+14 -1.123883 -0.703612 -0.150196
+15 0,616905 1.144548 -0.150196
+16 -0,267303 1.657930 1.044750
+17 1.611637 1.041874 0,610225
+18 -1.123883 -0.677941 0.262605
+19 -0.239675 -0.626604 -0.128473
+20 2.274797 1.118883 1.805171
+
+ > y
+[1] 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0
+
+ > fit <- bruto (x, y)
+
+Mais, obtenu ajusté $ ajusté. Les valeurs sont extrêmement élevées (ou bas).
+L'exécution de bruto (x [, 2: 3], y) est bien effectuée (les valeurs sont près de 1 ou 0).
+Les valeurs de la colonne 1 sont erronées ou une option appropriée est nécessaire?
+J'ai contacté le mainteneur de package, mais le problème n'a pas pu être résolu.
+
+Merci
+
+Shuji Kawaguchi
+
+ > R.Version
+Plateforme I386-Apple-Darwin8.8.1
+Arch i386
+OS Darwin8.8.1
+Système i386, darwin8.8.1
+Version.String R version 2.4.0 (2006-10-03)
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

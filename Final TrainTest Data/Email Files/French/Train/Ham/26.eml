@@ -1,0 +1,16 @@
+
+Salut John, merci.Je pense (2) de votre explication frappe le bon point.La raison en est que lorsque j'ai fabriqué mes propres variables manquées et que ma variable nominale d'origine a 10 valeurs possibles, elle fait chacun de chaque vecteur de variable exogène observé a 9 zéros et 1 une valeur.Et j'ai environ 400000 observations.Cela rendra donc la matrice presque zéro. Une question de plus.Si j'ai une réponse nominale, je suppose que le TSLS ne fonctionnerait plus.Comment puis-je faire le tour avec ça?Dit, j'ai 3 équations dans mon modèle de structure dont les réponses sont continues tandis qu'une autre a une réponse multinominale.Merci beaucoup.adschai@optonline.netcc: r-help@stat.math.ethz.ch> cher adschai, >> il n'est pas possible de savoir de votre description exactement ce que vous faites,> mais peut-être que ce qui suit vous aidera: >> ((1) Je suppose que votre non!
+ La variable minale est exogène, car> sinon il ne serait pas judicieux d'utiliser 2SLS.>> (2) Vous n'avez pas à faire vos propres régresseurs factice pour une variable nominale;> Il suffit de le représenter dans le modèle comme un facteur que vous le feriez, par exemple,> dans LM ().>> (3) Avez-vous au moins autant de variables instrumentales> (y compris le mannequin> régresseurs) que les coefficients structurels à estimer?Si> non, l'équation structurelle est sous-identifiée, ce qui produira l'erreur que> vous avez rencontrée. >> J'espère que cela aide,> John>> --------------------------------> John Fox> Département de sociologie> Université McMaster> Hamilton, Ontario> Canada L8S 4M4> 905-525-9140X23604> http: //socserv.mcmaster.CA / JFOX> ------------------------------------ >> - ----- Message original ----- >> De: r-helpbounts@stat.math.ethz.ch >> [Mailto: r-helpbouces@stat.math.ethz.ch] au nom de >> adschai@optonline.net >> envoyé: Dimanche 08 avril 2007 23:07 PM >> À: r-help@stat.math.ethz.ch>> Sujet :!
+  [R] traitant d'un grand prédicteur nominal dans le package SEM >>>> Salut, >>
+ >> J'utilise la fonction TSLS du package SEM pour estimer un modèle >> qui comprend un grand nombre de données.Parmi ses prédicteurs, il>> a des données nominales qui ont environ 10 valeurs possibles.I>> Développez ce paramètre en prédicteurs à valeur 9-binaire avec le coefficient >> de la valeur de base équivaut à 0. J'ai également un autre prédicteur continu.>>>> Le problème est que, chaque fois que j'exécute le TSLS, j'obtiendrai >> 'Système est une erreur singulière de calcul "tout le temps.Je suis >> Je me demande s'il y a de toute façon que je peux surmonter ce problème >>?S'il vous plaît suggérer.Merci beaucoup à l'avance.> >>> - ADSCHAI >>>> [[Version HTML alternative supprimée]] >>>>> ______________________________________________ >> r-help@stat.math.ethz.CH Liste de diffusion >> Https: //stat.ethz.ch/mailman/listinfo/r-help >> Veuillez lire le guide de publication>> http://www.r-project.org/posting-guide.html >> et fournir un auto à auto-Code contenu, reproductible.> >>>>>
+
+[[version HTML alternative supprimée]]
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

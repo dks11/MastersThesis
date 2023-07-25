@@ -1,0 +1,55 @@
+
+Le Sun, le 8 avril 2007, Hadley Wickham a écrit:
+
+> Le 4/8/07, Roger Bivand <roger.bivand@nhh.no> a écrit:
+>> Sur Sun, 8 avril 2007, Peter Williams a écrit:
+>>
+>>> Salut à tous,
+>>>
+>>> Je suis nouveau dans R à partir d'un fond C et Octave / Matlab.J'essaie de
+>>> Construisez des classes dans R à laquelle je veux attacher des données.
+>>> Tout d'abord, est att (obj, 'nom du membre') <- Données la façon de faire acceptée
+>>> ceci?
+>>
+>> Non, ce n'est pas le cas.Vous semblez essayer de déduire les cours de style nouveau à partir d'un
+>> Représentation utilisée avant R 2.4,
+
+(en fait, toujours utilisé)
+
+>> Mais en tout cas, ce ne serait pas
+>> Sensible.Veuillez consulter John M. Chambers.Programmation avec des données.
+>> Springer, New York, 1998, et / ou William N. Venables et Brian D. Ripley.
+>> S Programmation.Springer, New York, 2000, ou pour une ressource en ligne plus courte:
+>>
+>> http://www.stat.auckland.ac.nz/s-workshop/gentleman/methods.pdf
+>
+> Malheureusement, toutes ces références sont au moins 4 ans
+> Date quand il s'agit de méthodes S4.Y a-t-il un complet
+> Référence de la mise en uvre actuelle du système S4 OO
+> le code source?
+
+Non pas que je sache, et c'est une cible en mouvement.(Par exemple, j'ai demandé récemment
+sur certaines anomalies dans le bit S4 introduit pour 2.4.0 et ce que le
+La sémantique prévue est.) J'ai déjà dit que je crois que nous ne pouvons que
+aider à résoudre certains des problèmes d'efficacité avec S4 si nous avons une technique
+manuel.
+
+Il est injuste de choisir S4 ici, mais le manuel «R internes» est un
+tenter de documenter les détails d'implémentation importants (principalement en étudiant
+le code), et cela n'a que la plupart du chemin via SRC / Main / *. C.
+
+-
+Brian D. Ripley, Ripley@stats.ox.ac.uk
+Professeur de statistiques appliquées, http://www.stats.ox.ac.uk/~ripley/
+Université d'Oxford, Tél: +44 1865 272861 (Self)
+1 South Parks Road, +44 1865 272866 (PA)
+Oxford OX1 3TG, Fax britannique: +44 1865 272595
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

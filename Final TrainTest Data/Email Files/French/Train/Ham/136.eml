@@ -1,0 +1,96 @@
+
+Auteur: Allison
+Date: mar 10 avril 00:28:51 2007
+Nouvelle révision: 18101
+
+Modifié:
+   tronc / docs / pdds / pdd15_objects.pod
+
+Enregistrer:
+[PDD]: Modifications par rapport au dernier cycle de commentaires: Méthode d'espace de noms, Supprime_Method,
+get_class vs getClass.
+
+
+Modifié: trunk / docs / pdds / pdd15_objects.pod
+==============================================.===========================.
+--- trunk / docs / pdds / pdd15_objects.pod (original)
++++ trunk / docs / pdds / pdd15_objects.pod mar 10 avril 00:28:51 2007
+@@ -373,6 +373,10 @@
+ 
+ Supprimez un attribut de la classe.
+ 
++ = item retire_method (String *)
++
++ Supprimer une méthode de la classe.
++
+ = item retire_parent (chaîne *)
+ 
+ Retirez un parent de la classe.
+@@ -403,6 +407,12 @@
+ la classe, et définit également l'association avec un espace de noms.Sans
+ Argument Il renvoie uniquement la valeur actuelle de l'attribut de nom.
+ 
++ = espace de noms d'élément
++
++ $ P1 = $ p2.Namespace ()
++
++ Récupérer l'objet d'espace de noms associé à la classe.
++
+ = article nouveau
+ 
+     $ P1 = $ p2.New ('myattrib' => "foo")
+@@ -718,13 +728,18 @@
+ 
+ Supprimez un attribut du rôle.
+ 
++ = item retire_method (String *)
++
++ Retirez une méthode du rôle.
++
++
+ = item retire_role (String *)
+ 
+ Retirez un rôle du rôle.
+ 
+ = dos
+ 
+- = méthodes Head3
++ = Méthodes de rôle Head3
+ 
+ Ces méthodes ne sont que du sucre syntaxique pour les méthodes VTable.Elles sont
+ Non inclus dans le rôle PMC par défaut, mais a ajouté au rôle comme rôle.
+@@ -733,14 +748,17 @@
+ 
+ = Nom de l'article
+ 
++ $ P1 = $ p2.Name ($ s3)
++
+ L'accesseur de l'attribut de nom.Sans argument, il revient simplement
+ la valeur actuelle du nom.Lorsqu'il a passé un argument, il définit le nom de
+ le rôle et définit également l'association avec un espace de noms.
+ 
+-Lorsque vous associez une classe à un espace de noms, il tire tous les
+-Méthodes et méthodes VTable détenues dans cet espace de noms.Et quand
+-Réplication d'une classe avec une autre dans l'association, elle supprime tout
+-Méthodes et méthodes VTable de la classe précédente.
++ = espace de noms d'élément
++
++ $ P1 = $ p2.Namespace ()
++
++ Récupérer l'objet d'espace de noms associé au rôle.
+ 
+ = Attributs d'élément
+ 
+@@ -1038,8 +1056,8 @@
+ 
+ Pour créer une classe C <foo> avec les parents C <a> et C <b>, le code serait:
+ 
+- GetClass $ P0, "A"
+- GetClass $ P1, "B"
++ get_class $ p0, "a"
++ get_class $ p1, "b"
+    Sous-classe $ P2, $ P0, "FOO"
+    Addparent $ P2, $ P1
+
+###
+

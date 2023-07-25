@@ -1,0 +1,20 @@
+
+Paul Cochrane (via RT) a écrit:
+> Dans le fichier src / ops / object.ops, dans OP CallMethodcc (), il y a l'élément TODO:
+>
+> "Devrions-nous vérifier si object.can (méthode)"
+>
+> Faites le chèque ou supprimez l'élément TODO avec une bonne raison (et
+> Peut-être laisser un commentaire dans la source de savoir pourquoi).
+>
+Je pense que nous ne devrions pas avoir besoin de le faire;find_method va simplement remettre un
+null PMC s'il ne trouve pas de méthode, puis nous pouvons tester cela et
+Jetez une exception si elle est nul.
+
+Des objections?Sinon, je vais supprimer ce commentaire dans les deux prochains de
+journées.
+
+Jonathan
+
+###
+

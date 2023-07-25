@@ -1,0 +1,49 @@
+
+Hoffmann Schreef:
+> Quelqu'un pourrait-il expliquer comment, dans l'exemple ci-dessous, $ name et $ goodguy
+> sont égaux numériques?
+>
+> $ name = 'markkkk';
+>
+> $ goodguy = 'Tony';
+>
+> if ($ name == $ goodguy) {
+> imprimer "Bonjour, monsieur. \\ n";
+>} else {
+> Imprimer "Begone, Evil Peon! \\ n";
+>}
+
+Essayez aussi avec quelque chose comme
+
+#! / usr / bin / perl
+  utiliser strict;
+  utiliser des avertissements;
+
+  mon $ name = '1markkkk';
+  mon $ goodguy = '2Tony';
+
+
+  if ($ name eq $ goodguy) {
+      Imprimer "Bonjour, ami. \\ n";
+  }
+  elsif ($ name == $ goodguy) {
+      imprimer "Bonjour, n'importe qui. \\ n";
+  }
+  autre {
+      Imprimer "Begone, Evil Peon! \\ n";
+  }
+
+__FINIR__
+
+-
+Affijn, ruud
+
+"Gewoon est Een Tijger."
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

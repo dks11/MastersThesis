@@ -1,0 +1,45 @@
+
+Le Tue, le 10 avril 2007, Ronggui a écrit:
+
+> Il semble que la masse suggère de juger sur la base de
+> sum (résidus (mode, type = "Pearson")) / df.residual (mode).Ma question est
+> Il y a une règle de base de la valeur cutpoiont?
+>
+> Le document "sur l'utilisation des corrections pour surdispersion" suggère
+> Une surdispersion existe si la déviance est au moins le double du nombre de
+> Degrés de liberté.
+
+Il existe également des tests formels pour sur-dispersion.J'en ai mis en uvre un pour
+Un package qui n'est pas encore sur Cran (code / documents joints), un autre est
+implémenté dans odTest () dans le package "pscl".Ce dernier contient également
+compter davantage les modèles de régression des données qui peuvent traiter les deux
+sur-dispersion et en excès de zéros dans les données de comptage.Une vignette expliquant le
+Les outils sont sur le point d'être publiés.
+
+hth,
+Z
+
+> Y a-t-il d'autres indices?Merci.
+>
+> -
+> Ronggui Huang
+> Département de sociologie
+> Fudan University, Shanghai, Chine
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+>
+
+--- Mail_boundary ---
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

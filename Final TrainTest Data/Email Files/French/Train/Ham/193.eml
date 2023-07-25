@@ -1,0 +1,70 @@
+
+Ce qui suit est une fonction interne dans Arima ()
+
+     archeck <- fonction (ar) {
+         p <- max (qui (c (1, -ar)! = 0)) - 1
+         si p)
+             retour (true)
+         tout (mod (polyroot (c (1, -ar [1: p])))> 1)
+     }
+
+
+Sur Tue, le 10 avril 2007, Leeds, Mark (IED) a écrit:
+
+> J'ai regardé autour de moi mais je ne trouve pas la méthode en R pour tester si
+> les coefficients estimés résultants
+> d'un modèle AR implique que le modèle est inversible.
+>
+> Pour citer le livre bleu d'Eric Zivot:
+
+Ce qui ne nous aide vraiment pas.(Je soupçonne que vous voulez dire zivot et wang.)
+Il s'agit du matériel de série Standard Times.
+
+>
+> "L'AR (P) est inversible à condition que les Rots de la caractéristique
+> équation
+>
+> Phi (z) = 1 - phi_1 * z - phi_2 * z ^ 2 = phi_3 * z ^ 3 - ..... phi_p * z ^ p = 0 mensonge
+> à l'extérieur
+> le cercle complexe ".
+>
+> Je ne trouve pas de fonction et je ne sais pas comment faire ce qui précède.je
+> pense qu'il existe une méthode équivalente dans laquelle
+> Je peux vérifier si les valeurs propres d'une double équation (j'oublie
+> ce que c'est) sont moins d'un mais je ne le fais pas
+> Rappelez-vous exactement ce qu'est cette équation et, même si je l'ai fait, je suis toujours
+> Je ne saurais pas comment le faire.
+>
+> Peut-être vérifier si l'Absolu de la somme des coefficients est
+> Moins d'un va bien?
+> Je me souviens avoir fait ça dans une autre vie mais je ne sais pas si c'est un
+> Approximation ou un test réel.
+>
+>
+> Merci pour toute aide.
+> --------------------------------------------------------
+>
+> Ce n'est pas une offre (ou une sollicitation d'une offre) pour acheter / se ... {{Dropped}}
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+
+-
+Brian D. Ripley, Ripley@stats.ox.ac.uk
+Professeur de statistiques appliquées, http://www.stats.ox.ac.uk/~ripley/
+Université d'Oxford, Tél: +44 1865 272861 (Self)
+1 South Parks Road, +44 1865 272866 (PA)
+Oxford OX1 3TG, Fax britannique: +44 1865 272595
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

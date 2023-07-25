@@ -1,0 +1,137 @@
+
+Au fichier: ///home/jelmer/bzr.samba/samba_4_0/
+
+------------------------------------------------------------
+Revno: 11811
+révision-id: jelmer@samba.org-20070409131517-82iejvs1yb3ja3er
+Parent: SVN-V2: 22136 @ 0C0555D6-39D7-0310-84FC-F1CC0BD64818-BRANCHES% 2FSAMBA_4_0
+Commitation: Jelmer Vernooij <jelmer@samba.org>
+Branch Nick: Samba_4_0
+Timestamp: lun 2007-04-09 15:15:17 +0200
+message:
+  Utilisez réellement Client.Conf, différez plus de code autant que possible.
+modifié:
+  source / script / tests / mktestdc.sh svn-v2: 21909@0c0555d6-39d7-0310-84fc-f1cc0bd64818-BRANCHES%2FSAMBA_4_0-SOURCE%2FScript%2ftests%2FMKtestdc.sh
+  source / script / tests / selftest.pl svn-v2: 20693@0c0555d6-39d7-0310-84fc-f1cc0bd64818-branches%2fsamba_4_0-Source%2FScript%2ftests%2Felftest.pl
+=== Fichier modifié 'source / script / tests / mktestdc.sh'
+--- a / source / script / tests / mktestdc.sh 2007-04-09 00:53:05 +0000
++++ b / source / script / tests / mktestdc.sh 2007-04-09 13:15:17 +0000
+@@ -83,7 +83,6 @@
+ Server Protocole max = SMB2
+ notify: inotify = false
+ LDB: Nosync = vrai
+-
+ Système: Anonymous = Vrai
+ # Nous ne voulons pas passer nos auto-tests si le code PAC est faux
+ gensec: require_pac = true
+@@ -273,8 +272,6 @@
+ 
+ echo "krb5_config = $ krb5_config"
+ echo "prefix_abs = $ prefix_abs"
+-echo "Configuration = $ Configuration"
+-echo "conffile = $ conffile"
+ echo "slapd_conf = $ slapd_conf"
+ Echo "piddir = $ piddir"
+ echo "auth = $ auth"
+@@ -290,7 +287,9 @@
+ echo "srcdir = $ srcdir"
+ Echo "Prefix = $ Prefix"
+ echo "ldapdir = $ ldapdir"
++ Echo "conffile = $ conffile"
+ echo "provision_options = $ provision_options"
+ echo "provision_aci = $ provision_aci"
+ echo "winbindd_socket_dir = $ winbindd_socket_dir"
+ echo "ncalrpcdir = $ ncalrpcdir"
++ Echo "Configuration = $ Configuration"
+
+=== Fichier modifié 'source / script / tests / selftest.pl'
+--- a / source / script / tests / selftest.pl 2007-04-09 00:53:05 +0000
++++ b / source / script / tests / selftest.pl 2007-04-09 13:15:17 +0000
+@@ -427,15 +427,6 @@
+ Fermer (sauter);
+ }
+ 
+-my $ testenv_vars = $ cible-> setup_env ("dc", "$ prefix / dc", $ socket_wrapper_dir);
+-
+-Socketwrapper :: set_default_iface (6);
+-
+-ForEach ("mot de passe", "domaine", "serveur", "configuration",
+- "nom d'utilisateur", "netbiosname") {
+- $ env {$ _} = $ testenv_vars -> {$ _};
+-}
+-
+ Mes $ interfaces = join (',', ("127.0.0.6/8",
+ "127.0.0.7/8",
+ "127.0.0.8/8",
+@@ -443,33 +434,36 @@
+ "127.0.0.10/8",
+ "127.0.0.11/8"));
+ 
+-
++ My $ testenv_vars = $ cible-> setup_env ("dc", "$ prefix / dc", $ socket_wrapper_dir);
+ 
+ mon $ conffile = "$ prefix / client.conf";
++ mon $ ABS_SRCDIR = CWD ();
+ ouvert (cf, "> $ conffile");
+ imprimer cf "[global] \\ n";
+ if (défini ($ env {valgrind})) {
+- imprimer cf "iconv: native = true \\ n";
++ imprimer cf "\\ Ticonv: native = true \\ n";
+ } autre {
+- imprimer cf "iconv: native = false \\ n";
++ imprimer cf "\\ Ticonv: natif = false \\ n";
+ }
+-print cf "
++ imprimer CF
++ "Netbios Name = localtest
++ netbios alias = localhost
+ workgroup = $ testenv_vars -> {domain}
+ Realm = $ testenv_vars -> {royaume}
++ PID Directory = $ testenv_vars -> {piddir}
+ ncalrpc dir = $ testenv_vars -> {ncalrpcdir}
+- JS inclut = $ srcdir / script / libjs
++ js incluent = $ ABS_SRCDIR / SCRIPTING / LIBJS
+ Winbindd Socket Directory = $ testenv_vars -> {winbindd_socket_dir}
+ Nom Resolve Order = Bcast
+ Interfaces = 127.0.0.1/8
+- Action panique = $ srcdir / script / gdb_backtrace \\% pid \\% \\% prog \\%
++ Panic Action = $ ABS_SRCDIR / SCRIPT / GDB_BACKTRACE \\% PID \\% \\% Prog \\%
+ max xmit = 32k
+ notify: inotify = false
+ LDB: Nosync = vrai
+ Système: Anonymous = Vrai
+ # Nous ne voulons pas passer nos auto-tests si le code PAC est faux
+- Torture: Basedir = ST
++ Torture: Basedir = ./st
+ gensec: require_pac = true
+- PID Directory = $ Testenv_vars -> {piddir}
+ "
+ Close (cf);
+ 
+@@ -486,9 +480,14 @@
+ $ Env {torture_options} = join ('', @torture_options);
+ imprimer "Options $ env {torture_options} \\ n";
+ 
++ foreach ("mot de passe", "domaine", "serveur", "nom d'utilisateur", "netbiosname") {
++ $ Env {$ _} = $ testenv_vars -> {$ _};
++}
++
+ mon @todo = ();
+ 
+ mon $ testsdir = "$ srcdir / script / tests";
++ $ Env {configuration} = "--configfile = $ conffile";
+ 
+ if ($ opt_quick) {
+ ouvert (in, "$ testsdir / tests_quick.sh |");
+@@ -520,6 +519,8 @@
+ 
+ $ Env {krb5_config} = $ testenv_vars -> {krb5_config};
+ 
++ Socketwrapper :: set_default_iface (6);
++
+ if ($ opt_testenv) {
+ $ Env {piddir} = $ testenv_vars -> {piddir};
+ My $ term = ($ env {term} ou "xterm");
+
+###
+

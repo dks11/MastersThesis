@@ -1,0 +1,50 @@
+
+J'ai écrit une nouvelle activité de chat basée sur la télépathie.Je l'ai rendu aussi simple que
+possible: lorsque vous le lancez, il rejoint le chat multi-utilisateur Jabber
+chat@conference.olpc.collabora.co.uk.
+
+À l'heure actuelle, il est codé pour utiliser du gabble (le XMPP soutenu pour la télépathie), mais
+Il devrait être assez facile de le faire utiliser SALUT (pour le jabber de réseau local).Si
+Vous voulez exécuter ceci, vous devrez avoir le binaire de télépathie et son
+. Fichier de service installé.
+
+Le référentiel Git est ici:
+
+http://projects.collabora.co.uk/~daf/chat-activity.git/
+
+(C'est ma première fois avec Git, donc je ne sais pas si j'ai bien compris.)
+
+Il y a un bug vraiment ennuyeux que je ne pouvais pas m'entraîner: la conversation est
+À l'intérieur d'une zone de défilement GTK, à l'aide d'un piratage, j'ai retiré le code de journal.L'interface utilisateur
+La structure ressemble à ceci:
+
+ - Hippo.Canvas
+   - Hippo.CanvasWidget
+     - gtk.scrolledwindow
+       - gtk.viewport
+         - Hippo.canvas (*)
+           - Hippo.canvasbox
+             - (éléments de conversation)
+   - sucre.graphics.entry.entry
+
+Il semble que l'hippo intérieur.
+qui gâche le réglage vertical du ScrolledWindow.Il s'avère
+que l'allocation est toujours 804 pixels plus grande que la demande, ce que je suis
+Devinez est 844 (hauteur d'écran) - 40 pixels pour l'entrée.C'est énervant
+Parce que je veux faire défiler la conversation quand quelqu'un dit quelque chose,
+Mais cela finit par montrer une masse d'espace vide si je fais défiler ce qui devrait être le
+bas.D'où ce piratage brut qui le fait fonctionner un peu:
+
+        adj.set_value (adj.upper - adj.page_size - 804)
+
+Si quelqu'un peut faire la lumière à ce sujet, je serais très heureux.
+
+-
+Dafydd
+_______________________________________________
+Liste de diffusion de sucre
+Sucre@laptop.org
+http://mailman.laptop.org/mailman/listinfo/sugar
+
+###
+

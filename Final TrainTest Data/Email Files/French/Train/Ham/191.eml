@@ -1,0 +1,35 @@
+
+Il y a plusieurs options - avez-vous regardé Grid?Si tu veux
+Restez avec les graphiques de base, au lieu d'utiliser des glyphes ponctuels, vous pourriez
+Dessinez des polygones à précisément les emplacements que vous spécifiez.
+
+Un glyphe est un rendu d'un point, un objet 0 dimensionnel, donc c'est
+Tout à fait raisonnable de faire valoir que les glyphes ne doivent pas être redimensionnés lorsque
+rediffusion d'un complot.
+
+Hadley
+
+Le 4/9/07, Cressoni, Massimo (Nih / nhlbi) [f] <cressonim@nhlbi.nih.gov> a écrit:
+> Je cherche un moyen de trouver la dimension du symbole de tracé dans un graphique dans les coordonnées relatives.
+> Importer le graphique dans GIMP et la mesurer peut fonctionner, mais je recherche une manière plus élégante.
+> De plus, j'ai remarqué que la taille du symbole est maintenue constante lorsque le graphique est à l'échelle (c'est-à-dire redimensionner la fenêtre ou
+> Modification de la résolution du fichier de sortie).D'autres logiciels, comme l'échelle Sigmaplot également les points où un tracé est
+> à l'échelle.
+>
+> Massimo Cressoni
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

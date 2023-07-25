@@ -1,0 +1,60 @@
+
+Salut,
+
+Ce soir, j'ai commencé à travailler sur l'association entre les cours et
+Espaces de noms spécifiés dans PDD15.Avoir quelques questions.
+
+1) J'ai ajouté un "emplacement" à l'espace de noms PMC pour tenir une classe ou un rôle PMC A
+il y a longtemps.Cependant, aucune interface n'est spécifiée pour stocker / obtenir
+à cette fente.Pour l'instant, j'ai ajouté des méthodes "set_class" et "get_class"
+L'espace de noms PMC.Comment devraient-ils être appelés (si quelque chose
+autre)?Tout ce qui est décidé doit être ajouté à un PDD quelque part - je
+Devinez le pdd namespce.
+
+2) Je vois que nous avons maintenant juste une méthode .Name et aucune méthode .Namespace.
+Pour la classe, la description de la méthode du nom dit:
+
+"L'accesseur de l'attribut de nom. Sans argument, il est simplement
+Renvoie la valeur actuelle du nom.Lorsqu'il a passé un argument, il définit le
+Nom de la classe et définit également l'association avec un espace de noms.Avec
+Aucun argument, il ne renvoie que la valeur actuelle de l'attribut de nom. "
+
+C'est un peu clair pour moi.À quoi devrait être défini la créneau de nom -
+Le nom du morceau le plus imbriqué de l'espace de noms (par exemple pour ["animal";
+"Singe"], le nom est "singe")?
+
+Aussi, que devrait-il revenir?Juste l'attribut de nom?Et si tu
+Vous voulez accéder à l'espace de noms?
+
+Enfin, notez que le rôle dit quelque chose de différent - je suppose que ceux-ci devraient
+être cohérent?
+
+3) Pour le rôle (mais pas la classe - une erreur?), Il dit:
+
+"Lorsque vous associez une classe à un espace de noms, il tire tous les
+Méthodes et méthodes VTable maintenues dans cet espace de noms. "
+
+Pour le moment, nous ne portons pas l'adverbe ": méthode"
+le PBC.Ainsi, alors que je suppose que vous pouvez itérer un espace de noms (pas essayé
+pourtant, en supposant simplement que vous pouvez car il est dérivé de hachage) et tester pour
+PMCS pour s'assurer qu'ils sont sous-marins.Cependant, au-delà de cela, vous n'avez aucun moyen de
+Sachant si c'est une méthode ou non (pour autant que je puisse voir, j'adorerais être
+corrigé à ce sujet si quelqu'un sait le contraire).Devrait: la méthode est transportée
+jusqu'à un niveau PBC?
+
+4) Après cela, il dit:
+
+"Et lorsque vous remplacez une classe par une autre dans l'association, elle
+Supprime toutes les méthodes et méthodes VTable de la classe précédente. "
+
+Supprimer des méthodes de quoi?La classe ou l'espace de noms?Si la classe, fait
+il supprime toutes les méthodes de la classe puis tirez celles du nouveau
+Espace de noms?Ou regardons-nous l'ancien espace de noms et voyons quelles méthodes il
+a ensuite supprimé ceux qui apparaissent là-bas?
+
+Merci,
+
+Jonathan
+
+###
+

@@ -1,0 +1,72 @@
+
+Cher adschai,
+
+Il n'est pas possible de savoir de votre description exactement ce que vous faites,
+Mais peut-être que ce qui suit vous aidera:
+
+(1) Je suppose que votre variable nominale est exogène, car sinon elle
+ne serait pas raisonnable d'utiliser 2SLS.
+
+(2) Vous n'avez pas à faire vos propres régresseurs factice pour une variable nominale;
+Il suffit de le représenter dans le modèle comme un facteur que vous le feriez, par exemple, dans LM ().
+
+(3) Avez-vous au moins autant de variables instrumentales (y compris le mannequin
+Régresseurs) car il existe des coefficients structurels à estimer?Sinon, le
+L'équation structurelle est sous-identifiée, ce qui produira l'erreur
+vous avez rencontré.
+
+J'espère que ça aide,
+ John
+
+--------------------------------
+John Fox
+Département de sociologie
+Université McMaster
+Hamilton, Ontario
+Canada L8S 4M4
+905-525-9140X23604
+http://socserv.mcmaster.ca/jfox
+--------------------------------
+
+> ----- Message original -----
+> De: r-helpbounts@stat.math.ethz.ch
+> [Mailto: r-helpbounts@stat.math.ethz.ch] au nom de
+> adschai@optonline.net
+> Envoyé: Dimanche 08 avril 2007 23:07
+> À: r-help@stat.math.ethz.ch
+> Sujet: [R] traitant d'un grand prédicteur nominal dans le package SEM
+>
+> Salut,
+>
+> J'utilise la fonction TSLS du package SEM pour estimer un modèle
+> qui comprend un grand nombre de données.Parmi ses prédicteurs, il
+> a des données nominales qui ont environ 10 valeurs possibles.Donc je
+> Développez ce paramètre en prédicteurs à valeur à 9 binaires avec le
+> Le coefficient de valeur de base est égal à 0. J'en ai également un autre
+> prédicteur continu.
+>
+> Le problème est que, chaque fois que je exécute les TSL, je vais obtenir
+> «Le système est une erreur de calcul en calcul» tout le temps.je suis
+> Je me demande s'il y a de toute façon que je peux surmonter ce
+> Problème?S'il vous plaît suggérer.Merci d'avance.
+>
+> - Adschai
+>
+> [[version html alternative supprimée]]]
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication
+> http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

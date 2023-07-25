@@ -1,0 +1,58 @@
+
+Bonjour,
+
+2007/4/9, Rodrigo Tavares <digolinopage@yahoo.com.br>:
+
+> Bonjour,
+>
+> J'ai mis mon code:
+>
+>
+>
+> si je mets en code: mon @argv = ('a');
+> Venez le message:
+
+
+Vous ne devriez pas utiliser «mon» pour déclarer le @Argv car @Argv est un package spécial
+variable dans perl.instead Vous pouvez accéder directement à ce tableau, n'avez pas besoin du
+déclarant.
+Si vous avez vraiment besoin de changer de @Argv avec désinvolture, en utilisant «local» dans un bloc:
+{
+    @Argv local = (1,2,3);
+}
+
+
+> sh: -c: ligne 0: EOF inattendu tout en recherchant
+> correspondant `''
+> Sh: -C: Ligne 1: Erreur de syntaxe: fin inattendue du fil
+
+
+Avez-vous ajouté le '# / usr / bin / perl' à la première ligne du script?
+
+
+
+>
+>
+> if ($ argv [0] eq 'stop')
+> {
+> Imprimer "Arrêt PostgreSQL: \\ n";
+> sauf si (fourche)
+> {
+> pour (mon $ i = 0; $ i <@banks; $ i ++)
+> {
+> Imprimez "Hello World!"
+>}
+>} # Fork Fork
+>}
+
+
+Les codes ci-dessus ne semblent pas un problème.
+Mais vous devez déclarer @banks au début sinon vous obtiendrez des erreurs de compilation
+Lorsque «Utiliser Strict» a été activé.
+
+-
+mailto: pangj@earthlink.net
+http://home.arcor.de/jeffpang/
+
+###
+

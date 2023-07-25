@@ -1,0 +1,22 @@
+
+Le 4/9/07, JM <JM5379@gmail.com> a écrit:
+
+> Le premier groupe ne renvoie que la première sélection,
+> Peu importe combien sont choisis.
+
+Utilisez la fonction param () dans le contexte de la liste, et non scalaire;Voir le CGI
+Documentation du module.L'exemple dans le synopsis de la page manuelle CGI
+Affiche comment gérer plusieurs cases à cocher.
+
+Salutations!
+
+- Tom Phoenix
+Formation de Stonehenge Perl
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

@@ -1,0 +1,41 @@
+
+Christos Hatzis a écrit:
+> Jetez un il au manuel "R Installation and Administration" -
+> Section 6.1 Installation de packages.
+>
+> Il dépend de la plate-forme et vous n'avez pas dit quelle plate-forme vous êtes.
+>
+> -Christos
+>
+>
+De plus, au moins un «livre à l'aide du package ISWR» a des informations sur le
+compte dans l'annexe A. Pour des raisons évidentes, les informations sont aussi anciennes que
+Le livre, mais il a toujours l'air utilisable.
+
+     -pd
+>> ----- Message original -----
+>> De: r-helpbounts@stat.math.ethz.ch
+>> [mailto: r-helpbouces@stat.math.ethz.ch] au nom de Slomascolo
+>> Envoyé: lundi 09 avril 2007 15h04
+>> à: r-help@stat.math.ethz.ch
+>> Sujet: [r] bibliothèque ISWR
+>>
+>>
+>> J'apprends à utiliser R en utilisant un livre qui utilise des exemples de
+>> La bibliothèque ISWR, j'ai donc besoin d'avoir cette bibliothèque.Quand je tape
+>> bibliothèque (ISWR), R dit: Erreur dans la bibliothèque (ISWR): il n'y a pas
+>> Package appelé 'ISWR'
+>>
+>> Dois-je installer ISWR séparément?Comment puis-je faire cela?
+>>
+>> merci!
+>>
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

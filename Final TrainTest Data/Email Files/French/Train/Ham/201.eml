@@ -1,0 +1,25 @@
+
+Comme nous l'avions promis, ftp.br.debian.org reflète maintenant les CD ainsi que
+les packages.Nous avons tous les arcs et tous les formats pour la gravure.
+
+Ils sont disponibles via HTTP et FTP à ftp.br.debian.org/debian-cd,
+et via RSYNC à ftp.br.debian.org::debian-cd.
+
+Veuillez mettre à jour les listes de miroirs.J'allais utiliser le formulaire de soumission
+Mais nous ne savons pas encore qui (si?) Nous obtiendrons une poussée, et j'ai peur
+de l'utilisation de l'option de modification, remplissez uniquement les champs de CD et avez
+Les autres ont effacé :-)
+
+Toutes les images ISO ont été générées avec Jigdo.Il produit l'ensemble ~ 400 Go
+Avec seulement environ 2 Go de téléchargements.Bon travail...
+
+Sur un autre problème, que le DNS change pour MX et CL ne s'est pas encore produit.Les
+La nouvelle version serait un bon moment pour cela.
+
+
+-
+Pour vous désinscrire, envoyer un courriel à Debian-Mirrors-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

@@ -1,0 +1,94 @@
+
+Le 9 avril 2007 13:00:41 -0000, résumé des bogues de Parrot
+<Perlbug-nummary@perl.org> a écrit:
+> Résumé des bogues du perroquet
+>
+> http://rt.perl.org/rt3/noauth/parrot/overview.html
+> Généré au lun 9 avril 13:00:01 2007 GMT
+> -------------------------------------------------------------------------------
+>
+> * Nombres
+> * Aperçu des problèmes ouverts
+>
+> -------------------------------------------------------------------------------
+>
+> Nombres
+>
+> Nombre de billets: 127 Nouveau + 432 Open = 559
+> Créé cette semaine: 43
+> Fermé cette semaine: 7
+>
+> -------------------------------------------------------------------------------
+>
+> Aperçu des problèmes ouverts
+>
+> Tag de gravité de la plate-forme Lang
+> AIX 0 abandonné 0 5005threads 0 Amber 0
+> Les 3 Bounces 4 mortels 0 Basic 1
+> bsdos 0 high 0 bug 54 bc 0
+> Cygwin 6 Low 1 Compiller 0 Befunge 0
+> cygwin_nt 0 moyen 0 Configurer 0 bf 0
+> Darwin 0 Aucun 0 Core 0 COLA 0
+> dec_osf 0 normal 1 Dailybuild 0 avant 0
+> dgux 0 inconnu 0 docs 0 jako 0
+> DOS 0 WishList 3 Duplicate 0 Lisp 0
+> dynixptx 0 installer 1 m4 0
+> FreeBSD 1 bibliothèque 0 OOK 0
+> générique 0 notabug 0 perl6 0
+> GNU 0 Notok 0 Plot 0
+> Hpux 0 ok 0 punie 0
+> irix 0 patch 40 pynie 0
+> irix64 0 Regex 0 Python 0
+> Linux 0 Sendtocpan 0 Ruby 0
+> Lynxos 0 TODO 294 Schéma 0
+> Mac 0 inconnu 0 TCL 85
+> Machten 0 utilitaires 0 urm 0
+> macOs 0 wontfix 0 zcode 0
+> MacOs x 0
+> mswin32 0
+> netbsd 1
+> Suivant 0
+> OpenBSD 1
+> OS2 0
+> OS390 0
+> Autre 0
+> PowerUX 0
+> Qnx 0
+> Riscos 0
+> SCO 0
+> Solaris 1
+> sunos 0
+> svr4 0
+> svr5 0
+> sysv 0
+> Unicos 0
+> Unicosmk 0
+> Unix 0
+> inconnu 0
+> uts 0
+> VMS 0
+> Vos 0
+> Win32 3
+> -------------------------------------------------------------------------------
+>
+La file d'attente Parrot RT augmente d'ici la semaine.ça veut dire que nous avons plus d'yeux
+sur le code source et plus de gens exécutant le perroquet.ça signifie aussi ça
+devient plus difficile à gérer.
+
+Comme vous pouvez le voir dans les extraits ci-dessus du résumé RT hebdomadaire
+Message, nous avons plus de 500 billets.beaucoup d'entre eux ne sont pas classés avec
+considérant la plate-forme, la gravité, la langue, etc.
+Billets et création de requêtes partagées que nous pouvons utiliser pour gérer la file d'attente
+facilitera les engageurs et les contributeurs à effectuer
+Analyse sur les billets actuels.Cela permettra aux gens de plus facilement
+Déterminez si un billet a déjà été saisi, par exemple.
+
+Oh, et juste pour le sortir du chemin ... Je ne suis * pas * entrant dans un billet
+Pour cet article: P
+
+Si quelqu'un souhaite aider à cet effort, mais n'a pas le
+Droits appropriés, faites-le nous savoir.Nous essaierons de vous installer pour vous aider.
+~ Jerry
+
+###
+

@@ -1,0 +1,29 @@
+
+# Nouveau billet créé par Joshua Isom
+# Veuillez inclure la chaîne: [Perl # 42411]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42411>
+
+
+J'ai récemment obtenu une nouvelle machine AMD64 et j'ai travaillé sur l'obtention du perroquet
+Courir, ce qui était assez simple.Ensuite, je voulais obtenir un bit 32
+Version conçue pour les tests également et la comparaison croisée.Cependant, un
+Peu de problèmes ont été rencontrés.Le premier était que sur FreeBSD, Archname
+est AMD64-FreeBSD et ne contient pas x86_64.Un patch rapide a conduit à
+Échec horrible sur la configuration.Le joint est un patch qui permettra
+Parrot pour configurer avec succès le perroquet sur 32 bits sur un 64 bits
+Plate-forme.
+
+Maintenant, Parrot ne compilera pas.Le premier problème est dans src / exec_save.c,
+En ce que R_386_32 et R_386_PC32 ne sont pas définis.En ce moment, il faut
+'perl configure.pl --m = 32 --execcapable = 0' pour configurer le perroquet et obtenir
+passé exec_save.c, il échoue chez les compilateurs / imcc / imcparser.c avec
+"Compiler / imcc / imcparser.c: 885: Erreur: types conflictuels pour 'malloc'"
+
+Wrt le patch, il le modifie pour modifier les drapeaux au lieu du compilateur,
+Depuis au moins pour FreeBSD, CXX est codé en dur à G ++ pour une raison quelconque,
+ignorer toute modification précédente.Je n'ai aucune idée de comment (ou si) il va
+affecter Linux sur AMD64 (ou x86_64 comme ils l'aiment).
+
+###
+

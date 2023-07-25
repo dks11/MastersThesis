@@ -1,0 +1,65 @@
+
+faire 'lsmod | grep pcspkr'
+
+Il faut y être par défaut.Sinon, modélisez-le pour le backspace
+bips.
+
+Ne plaisante pas avec le script Mkinitrd.Si vous voulez un script, écrivez votre
+posséder qui passe des arguments.
+
+Nick Gawronski écrit:
+> Salut, cela a très bien fonctionné. J'ai remarqué que l'installation RPM
+> Création automatique d'une image initrd pour moi.Je suis en avance et
+> Je l'ai recréé pour mon synthisiseur comme il l'a dit dans le Howto.Quel script sur
+> Mon système contrôle la façon dont l'initial initrd qui est créé avec le RPM
+> Installation du noyau pour que je puisse le modifier pour mon synthisiseur?Pour
+> une raison étrange pour la raison de chercher une disquette dans ma disquette et j'ai obtenu
+> Beaucoup d'erreurs d'E / S mais à part ces /etc/grub.conf ont été mis à jour
+> correctement.Je remarque également que mon espace arrière ne me bip
+> invite bash et également lors de l'utilisation de FTP avec le mode Bell.Tout ce que je
+> devrait vérifier la configuration expliquant pourquoi le backpace ne bip ne bip à
+> Hte début de la ligne? Sur Sun, 8 avril 2007, Janina Sajka a écrit:
+>
+>> Exécuter la grub-stall
+>>
+>> Nick Gawronski écrit:
+>>> Salut, j'ai dû supprimer complètement Debian et installer Fedora Core 6 comme quand je
+>>> J'essayais de réparer Grub quelque chose qui s'est passé et j'ai perdu mes partitions.je
+>>> réinstallé Fedora Core 6 et j'essaie de mettre à niveau vers le noyau 2.6.19 que je
+>>> Téléchargé à partir de speakupmodified.org mais j'obtiens l'erreur suivante de RPM
+>>> Erreur mortelle sale: incapable de trouver un modèle approprié ce que cela signifie
+>>> Et comment puis-je le réparer?Aussi quelle est la différence entre le noyau et
+>>> les versions de noyau-xen comme 2.6.18-xen ont été installées par défaut sur mon
+>>> Système Fedora Core 6?
+>>>
+>>> ___________________________________________________
+>>> Liste de diffusion de scolak
+>>> speakup@braille.uwo.ca
+>>> http://speech.braille.uwo.ca/mailman/listinfo/speakup
+>>
+>>
+>
+>
+> _______________________________________________
+> Liste de diffusion de scénario
+> Speakup@braille.uwo.ca
+> http://speech.braille.uwo.ca/mailman/listinfo/speakup
+
+-
+
+Janina Sajka, téléphone: +1.202.595.7777;SIP: janina@a11y.org
+Partenaire, Capital Accessibility LLC http://capitalaccessibilité.com
+
+Marketing the owasys 22c Talking sans écran sans écran aux États-Unis et au Canada
+En savoir plus sur http://screenlessphone.com
+
+Président, accessibilité ouverte janina@a11y.org
+Linux Foundation http://a11y.org
+
+_______________________________________________
+Liste de diffusion de saignement
+Speakup@braille.uwo.ca
+http://speech.braille.uwo.ca/mailman/listinfo/speakup
+
+###
+

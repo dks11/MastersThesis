@@ -1,0 +1,23 @@
+
+Jerry Gay a écrit:
+> Le 4/9/07, Klaas-jan stol <parrotcode@gmail.com> a écrit:
+>> Salut,
+>>
+>> a joint un correctif qui modifie le fichier json.in.Actuellement, lorsque vous faites
+>> Test de NAKAKE, cela ne fonctionnera pas (Windows), car le passage au test
+>> Le répertoire et l'appel prouvaient sont séparés par un ';'.Ce patch le change
+>> dans &&.
+>>
+>> J'envoie ceci comme un patch, car je ne sais pas si cela fonctionne pour d'autres
+>> Systèmes (mais je pense que c'est le cas).
+>> (juste pour éviter de casser les choses)
+>>
+> C'est la syntaxe que nous utilisons partout ailleurs.
+> Le patch a l'air bien, engagez-vous.
+> ~ Jerry
+OK merci.Appliqué dans R18063
+
+kjs
+
+###
+

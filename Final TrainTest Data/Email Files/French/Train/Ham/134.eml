@@ -1,0 +1,70 @@
+
+Joshua Isom a écrit:
+> Le 10 avril 2007, à 2 h 05, Allison Randal a écrit:
+>
+>> klaas-jan stol a écrit:
+>>> Salut,
+>>> Quelques suggestions pour PDD15:
+>>> 1.
+>>> Lire PDD15, j'ai remarqué que certaines méthodes / opérations sont nommées à l'aide d'un
+>>> souligner aux mots séparés, d'autres ne le font pas, par exemple:
+>>> * get_class (mais aussi "getClass" est utilisé dans les exemples)
+>>> * newclass
+>>> OMI, ce serait bien d'être cohérent et de s'en tenir à 1 style.(Mon
+>>> La préférence personnelle est de laisser de côté le soulignement)
+>>
+>> La norme GET_ est entrée avec des espaces de noms et était lui-même un
+>> Modification de la norme Find_ de l'Opcodes précédent pour
+>> traiter avec les globaux et les lexicaux.Pour les méthodes, je dirais le
+>> Les soulignements sont standard.Pour Opcoess, il est discutable que
+>> Les soulignements ou aucun soulignement sont standard à ce stade.J'ai fait un
+>> Remarque pour le revoir lorsque j'arrive au PDD OPCODES.
+>>
+>
+> Je suis un peu mélangé à ce sujet.Quelque chose comme get_args probablement
+> ne devrait pas être getargs ou même getargs, mais si vous regardez à travers des ops.num,
+> Cela peut être déroutant de savoir ce qui est quoi.Bien que pas pour les débutants,
+> La numérisation via Ops.num peut aider à comprendre pourquoi votre code ne fait pas
+> compiler comme prévu.
+>
+>>> 2.
+>>> une autre chose;Des opérations telles que Find_method renvoient un PMC nul
+>>> échec.Il pourrait être bien de le faire configurable pour l'utilisateur donc
+>>> s / il peut choisir si une exception sera lancée, ou un PMC nul
+>>> est retourné.(Iirc, cela peut déjà être fait pour certains opérations, ce serait
+>>> Ravi de le définir pour tous les OP qui peuvent retourner un PMC nul).
+>>> (comme détail: dans PIR, cela pourrait être représenté par une pragma, comme:
+>>> ".pragma exceptions 1")
+>>
+>> c'est la même question que nous avons pour les E / S, et vraiment pour de grandes pièces
+>> de Parrot.J'ai temporairement retenu cette décision jusqu'à la nouvelle
+>> exceptions PDD est implémentée (les exceptions généralisées ne sont vraiment pas
+>> pratique avec l'implémentation des exceptions actuelles).
+>>
+>
+> Peut-être qu'un code spécifique à l'espace de noms peut être utilisé, et peut-être applicable
+> pour les espaces de noms imbriqués tels que les HLL peuvent facilement en profiter, donc un
+> hll peut dire dans son espace de noms racine "je veux des exceptions" et tout
+> Espaces de noms dans ce HLL par défaut en utilisant des exceptions.Un fichier spécifique
+> L'option serait sujette à des bogues avec quelque chose comme PBC_MERGE ou autre chose,
+> et le rendre spécifique à l'espace de noms semble simple et propre, même si un
+> peu trop dwim pour le perroquet.
+Oui, je peux voir le problème que vous voulez dire.Pour ajouter une note au potentiel
+exception pragma, cela pourrait être traduit en une seule instruction qui
+Modifie le comportement du perroquet (soit les codes d'erreur de retour / null
+objets ou lancer des exceptions).Si vous y réfléchissez, c'est juste
+Un autre OPCode en cours d'exécution, modifiant «l'état du monde».Si pour
+Instance dans le fichier PBC 1, vous supprimez une variable globale qui est utilisée dans
+Fichier PBC 2, et vous fusionneriez ces fichiers PBC, c'est également une erreur.
+HLLS, OTOH, peut «protéger» l'utilisateur plus, tout comme les HLL font le contrôle d'accès:
+Certains (sinon la plupart) oo hlls ne permettent pas à l'utilisateur d'accéder privé
+membres d'autres classes.Dans PIR, ce n'est pas un problème, donc le chèque est
+fait dans le compilateur HLL.De même, la syntaxe du HLL peut empêcher
+l'utilisateur de faire des choses comme ça (s'il y avait un moyen de définir ceci
+Comportement des exceptions d'un HLL).
+
+mon 2c,
+kjs
+
+###
+

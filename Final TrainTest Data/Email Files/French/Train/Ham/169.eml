@@ -1,0 +1,156 @@
+
+Joey,
+
+Tout d'abord, c'est une mauvaise habitude d'appeler vos données c.Cela peut être fait, mais il peut
+vous confondez plus tard.Appelons-le Consdata.
+Ma seule expérience est avec Optim.
+Dans ce cas, je changerais un peu FN.Je laisse la portée prendre soin de Consdata.
+Alternativement, passez-le comme dernier paramètre:
+
+fn <-Function (psi, alpha) {
+S1 <-SUM (pour (i en 1: n) {(consdata [i] - (psi ^ (- 1 / alpha) * (lag (consdata [i], - 1)))) ^ 2 *
+(LAG (consdata [i], - 1) ^ ((- 2) * (alpha + 1)))})
+S2 <- sum (pour (m en 1: n) {log (lag (consdata [m], - 1) ^ (((2) * alpha) +2))})
+constant- (74 * s1) - (1/2) * s2
+}
+
+optim (c (1,0), fn, méthode = "bfgs")
+
+Alternativement, au cas où vous souhaitez passer les données explicitement, utilisez le ...
+passer les données
+ fn <function (psi, alpha, consdata) {}
+optim (c (1,0), fn, méthode = "bfgs", consdata = consdata)
+
+Kees
+
+
+Le lundi 09 avril 2007 04:59, Joey Repice a écrit:
+> Chers utilisateurs,
+>
+> Je suis nouveau sur R. Je voudrais trouver * des estimateurs du maximum de vraisemblance pour PSI
+> et alpha * basé sur la fonction de vraisemblance du journal suivant *, c est
+> Les données de consommation comprenant 148 entrées:
+>
+> fn <-Function (c, psi, alpha)
+>
+> {
+>
+> s1 <-sum (pour (i en 1: n) {(c [i] - (psi ^ (- 1 / alpha) * (lag (c [i], - 1)))) ^ 2 *
+>
+> (lag (c [i], - 1) ^ ((- 2) * (alpha + 1))
+>
+>)});
+>
+> s2 <- sum (pour (m en 1: n) {log (lag (c [m], - 1) ^ (((2) * alpha) +2))});
+>
+> constant- (74 * s1) - (1/2) * s2}
+>
+>
+>
+> En particulier, je souhaite utiliser les algorithmes BHHH et BFGS.j'ai trouvé
+> Les packages suivants qui peuvent être utilisés pour la tâche: * mle {stats4},
+> Optim {statts}, maxbhhh {miceCon}, maxbfgs {miceCon} *.J'en ai documenté
+> de mes tentatives ci-dessous ((a) Nom du package (b) Utilisation (c) Ma tentative et
+> Erreur correspondante).En toute humilité, je m'excuse pour tout mauvais codage, et
+> Demandez si quelqu'un peut * me diriger pour trouver ces estimateurs *.
+>
+>
+>
+> Le vôtre sincèrement.
+>
+>
+>
+>
+>
+> * (1a) mle {stats4}
+>
+> (b) Utilisation:
+>
+> mle (moinslogl, start = formals (moinslogl), méthode = "bfgs",
+>
+> fixe = list (), ...)
+>
+> (Pour cela, j'utilise le négatif de la fonction log-likelihood, bn) *
+>
+> * (c)> mle (start = list (psi = 1, alpha = 0), fn, méthode = "bfgs", fixe = list (c = c)) *
+>
+> Erreur dans Optim (start, f, méthode = méthode, Hessian = true, ...):
+>
+> valeur de différence finie non finie [1]
+>
+>
+>
+> * (2a) Optim {stats}
+>
+>
+>
+> (b) Optim (par, fn, gr = null,
+>
+> méthode = c ("nelder-mead", "bfgs", "cg", "l-bfgs-b", "sann"), *
+>
+> *
+>
+> inférieur = -inf, supérieur = inf,
+>
+> contrôle = list (), Hessian = false, ...)
+>
+>
+>
+> (c)> optim (c (c, 1,0), fn, méthode = "bfgs", contrôle = list (c = c)) *
+>
+> Erreur: l'argument "psi" est manquant, sans défaut
+>
+>
+>
+> * (3a) maxbhhh {micecon}
+>
+> (b) Utilisation: maxbhhh (fn, grad = null, hess = null, thêta, print.level
+> = 0, iterlim = 100, ...) *
+>
+> * *
+>
+> * (c)> maxbhhh (fn (c, psi, alpha), theta = list (psi = 1, alpha = 0)) *
+>
+> Erreur dans psi ^ (- 1 / alpha) * (lag (c [i], -1)):
+>
+> Déliaté de longueur temporelle / Longueur vectorielle
+>
+>
+>
+> (4a) maxbfgs {micecon}
+>
+>
+>
+> (b) Utilisation: maxbfgs (fn, grad = null, thêta, print.level = 0, iterlim = 200,
+>
+> tol = 1e-06, ...)
+>
+> * (ci)> maxbfgs (fn (c, psi, alpha), theta = list (psi = 1, alpha = 0)) *
+>
+> Erreur dans psi ^ (- 1 / alpha) * (lag (c [i], -1)):
+>
+> Déliaté de longueur temporelle / Longueur vectorielle
+>
+>
+>
+> * (cii)> maxbfgs (fn, theta = list (psi = 1, alpha = 0)) *
+>
+> Erreur: l'argument "psi" est manquant, sans défaut
+>
+> [[version html alternative supprimée]]]
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication
+> http://www.r-project.org/posting-guide.html et fournissez-le, minimal,
+> Code autonome et reproductible.
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

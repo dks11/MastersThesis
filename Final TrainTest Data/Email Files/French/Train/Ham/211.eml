@@ -1,0 +1,19 @@
+
+Salut,
+
+J'utilise la fonction TSLS du package SEM pour estimer un modèle qui comprend un grand nombre de données.Parmi ses prédicteurs, il a des données nominales qui ont environ 10 valeurs possibles.J'étends donc ce paramètre en prédicteurs à valeur 9-binaire avec le coefficient de valeur de base égaux 0. J'ai également un autre prédicteur continu.
+
+Le problème est que, chaque fois que j'exécute le TSLS, j'obtiendrai l'erreur «Système est en calcul» tout le temps.Je me demande s'il y a de toute façon que je peux surmonter ce problème?S'il vous plaît suggérer.Merci d'avance.
+
+- Adschai
+
+[[version HTML alternative supprimée]]
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

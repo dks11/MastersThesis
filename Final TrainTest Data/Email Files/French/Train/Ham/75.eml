@@ -1,0 +1,43 @@
+
+Le samedi 07 avril 2007 à 11:20:19 -0700, Jim McKim a écrit:
+> La grammaire problématique:
+>
+> Grammaire x_grammar;
+>
+> #token h_digits {<: i [0-9a-f]> +}
+> #token h_digits {<[0-9a-f]>}
+>
+> token tok_constant {
+> # <h_digits> (: <h_digits>) ** {1..15}
+> <h_digits>: <h_digits>
+>}
+
+
+L'erreur (que PGE a du mal à attraper)
+que l'opérateur de coupe (':') n'est appliqué à aucun
+Terme particulier dans:
+
+    # <h_digits> (: <h_digits>) ** {1..15}
+
+Ainsi, lorsque PGE voit l'opérateur de coupe, il tente de
+Appliquez-le au modèle précédent et il n'y a rien
+là pour l'appliquer, à quel point PGE s'étouffe.Pge devrait
+Signalez une exception plus utile ici.
+
+Notez que le premier # ne commençait pas toute la ligne
+Dans ce cas - puisque # est suivi d'une ouverture '<' support
+caractère, le commentaire se termine avec le support de clôture '>' [1]
+et pas à la fin de la ligne.
+
+Alors, je vais prendre ce billet comme étant que PGE a besoin de
+mieux reconnaître quand un jeton «coupé» est appliqué à
+un terme nul et signaler l'erreur en conséquence.
+
+Merci!
+
+PM
+
+[1] http://dev.perl.org/perl6/doc/design/syn/s05.html#new_metacharacters
+
+###
+

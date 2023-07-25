@@ -1,0 +1,35 @@
+
+Bonjour à tous,
+
+J'essaye d'utiliser Cor.Test sur une gamme de valeurs via la commande Apply,
+
+C <- Appliquer (x, 1, cor.test, y)
+
+où x est un tableau, me donnant plusieurs sorties de cor.test.je peux
+accéder aux éléments individuels de cela par par ex.c [[1]] ou c [[1]] $ estimation ou
+c [[n]] ou autre, mais y a-t-il un moyen de sortir le vecteur de tous
+estimations, ou toutes les valeurs p?
+
+c'est-à-dire si je veux sortir un vecteur P qui est en vigueur,
+
+p <- c (c [[1]] $ p.value, c [[2]] $ p.value, .....)
+
+Puis-je faire cela sans faire de boucle pour?
+
+Je note que je ne peux pas faire quelque chose comme c [[1: n]] $ p.value, par exemple.
+
+Je dois dire que je ne comprends pas la notation C [[n]] pour obtenir le N'HET
+estimer que si quelqu'un pouvait l'expliquer, je serais très heureux.
+
+Merci beaucoup,
+
+    - Joe
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

@@ -1,0 +1,66 @@
+
+Salut,
+
+J'ai eu le même problème avec Build 385. Semble que l'image est faible
+'espace disque'.Connectez-vous à la console (racine, pas de PW) et supprimez quelque chose
+From / Home / OLPC / Library (j'ai fait environ 8 Mo);Après cela, il devrait bien démarrer.
+
+Reinier
+
+
+Dan Williams a écrit:
+> Le samedi 2007-04-07 à 18:08 -0500, Michael Tobis a écrit:
+>
+>> J'essaie d'installer l'émulateur (build 385) sous Parallels (Build
+>> 1940) sur OS 10.4.9 sur un Intel iMac.Je me rapproche de façon aléatoire
+>> suivre les instructions à
+>>
+>> http://wiki.laptop.org/go/os_images_for_emulation
+>>
+>> (à quoi j'ajouterais seulement le réglage de la machine virtuelle sur Autostart et
+>> Le mode plein écran semble aller tout un peu plus loin.)
+>>
+>> Je vois la page initiale des éclaboussures, les bottes Linux très bien, mais je ne suis jamais envoyé
+>> Retour à une interface graphique.Je peux me connecter en tant que racine, et cela fonctionne comme une console
+>> (L'affichage devient noir toutes les quelques secondes).il semble également que le
+>> La variable d'environnement d'affichage n'est pas définie pour ce que cela vaut.
+>>
+>
+> Apparemment, X ne commence pas correctement.Pour diagnostiquer cela, nous avons besoin d'un
+> log.Alors connectez-vous comme racine.Ensuite, laissez X mourir et essayez de redémarrer.Quand cela
+> meurt à nouveau, tapez rapidement 'init 3' sur la coquille racine pour arrêter X.
+>
+> Puis prendre /var/log/xorg.0.log et l'attacher à un rapport de bogue dans TRAC sur
+> dev.laptop.org.
+>
+> Dan
+>
+>
+>
+>> J'obtiens également un message à plusieurs reprises qui
+>>
+>> id "3" réapparaît trop rapidement;handicapé pendant 5 minutes
+>>
+>> Tout conseil serait très apprécié.
+>>
+>> Michael Tobis
+>> ___________________________________________________
+>> Liste de diffusion de sucre
+>> sucre@laptop.org
+>> http://mailman.laptop.org/mailman/listinfo/sugar
+>>
+>
+> _______________________________________________
+> Liste de diffusion de sucre
+> Sucre@laptop.org
+> http://mailman.laptop.org/mailman/listinfo/sugar
+>
+>
+>
+_______________________________________________
+Liste de diffusion de sucre
+Sucre@laptop.org
+http://mailman.laptop.org/mailman/listinfo/sugar
+
+###
+

@@ -1,0 +1,24 @@
+
+Le 08/04/2007, à 12 h 41, jra@samba.org a écrit:
+
+> Auteur: JRA
+> Date: 2007-04-08 19:41:47 +0000 (Sun, 08 avril 2007)
+> Nouvelle révision: 22132
+>
+> Websvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?
+> View = Rev & root = Samba & Rev = 22132
+>
+> Journal:
+> Je déteste l'inefficacité.N'appelez pas conv_str_size ()
+> Sur chaque appel préalable / SendFile, initialisez-les
+> Variables dans une structure allouée à la connexion
+> Il est temps et référez-vous directement.
+
+Ce code est si proche de VFS_CACHEPRIME que je suis tenté de suggérer
+ils devraient être fusionnés.Y a-t-il eu une raison particulière pour laquelle vous n'avez pas fait cela?
+
+-
+James Peach |jpeach@samba.org
+
+###
+

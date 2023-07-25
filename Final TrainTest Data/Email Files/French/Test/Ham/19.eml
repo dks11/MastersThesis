@@ -1,0 +1,87 @@
+
+Je suis nouveau sur R.
+J'ai juste essayé de recréer en R (en utilisant le package SEM et les données d'entrée identiques) une solution pour un modèle de mesure simple que j'ai trouvé auparavant dans Lisrel.Lisrel n'a eu aucun problème et a convergé en seulement 3 itérations.
+Dans SEM, je n'ai aucune solution, juste le message d'avertissement:
+
+"Impossible de calculer la décomposition du QR de la Hesse.
+L'optimisation n'a probablement pas convergé.
+ Dans: sem.default (Ram = Ram, S = s, n = n, param.Names = pars, var.Names = vars, "
+
+Qu'est-ce que ça veut dire?Peut-être que je fais quelque chose de mal?
+
+J'ai 3 facteurs latents (anxiété, dépression et peur) - chacun d'eux a 3 indicateurs observés (A1, A2, A3; D1, D2, D3 et F1, F2, F3)
+Vous trouverez ci-dessous mon script en r:
+
+!Analyse de l'anxiété, de la dépression et de la peur - Lisrel P.31
+
+!Création de la matrice d'intercorrélation d'anxiété, de dépression et de peur (km):
+Km <-matrix (
+C (1, .8, .83, .2, .21, .19, .18, .18, .18,
+0,1, .81, .22, .24, .18, .19, .19, .21,
+0,0,1, .22, .19, .2, .2, .2, .22,
+0,0,0,1, .84, .82, .22, .22, .21,
+0,0,0,0,1, .84, .19, .18, .19,
+0,0,0,0,0,1, .18, .18, .18,
+0,0,0,0,0,0,1, .84, .82,
+0,0,0,0,0,0,0,1, .81,
+0,0,0,0,0,0,0,0,1), 9, 9)
+
+!Création du vecteur d'anxiété, de dépression et de crainte Vector (SD):
+SD <-C (1,5, 2,4, 3,2, 2,3, 2,3, 2,6, 4,5, 4,7, 5.6)
+
+!Calcul de la matrice Var-Covar en fonction des corrélations et des SD:
+bibliothèque (masse)
+Covar <-outer (SD, SD) * km
+
+!Création de noms de variables
+Rownames (Covar) <- Colnames (Covar) <- C ('A1', 'A2', 'A3', 'D1', 'D2', 'D3', 'F1', 'F2', 'F3')
+
+!Spécification du modèle de mesure à estimer:
+modèle <-specify.model ()
+Anxiété -> a1, na, 1
+Anxiété -> A2, LAM_ANX_2, NA
+Anxiété -> A3, LAM_ANX_3, NA
+Dépression -> d1, na, 1
+Depress -> D2, LAM_DEP_2, NA
+Depress -> D3, LAM_DEP_3, NA
+Peur -> f1, na, 1
+Peur -> f2, LAM_FEAR_2, NA
+Fear -> F3, Lam_Fear_3, Na
+a1 <-> a1, theta_a1, na
+a2 <-> a2, theta_a2, na
+a3 <-> a3, theta_a3, na
+d1 <-> d1, theta_d1, na
+d2 <-> d2, theta_d2, na
+d3 <-> d3, theta_d3, na
+f1 <-> f1, theta_f1, na
+f2 <-> f2, theta_f2, na
+f3 <-> f3, theta_f3, na
+Anxiété <-> Anxiété, Phi_aa, Na
+Depress <-> Depress, Phi_dd, na
+Peur <-> peur, phi_ff, na
+Anxiété <-> peur, phi_af, na
+Anxiété <-> déprimer, phi_ad, na
+Depress <-> peur, phi_df, na
+
+!Exécution de l'estimation en utilisant SEM:
+SEM.Anxiété <-sem (modèle, Covar, n = 150)
+
+Merci beaucoup pour votre conseil!
+Dimitri
+
+
+ 
+________________________________________________________________________________________
+
+
+
+[[version HTML alternative supprimée]]
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

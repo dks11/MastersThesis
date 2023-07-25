@@ -1,0 +1,24 @@
+
+Le dimanche 08 avril 2007 06:37, James Keenan via RT a écrit:
+
+> Le dimanche 08 avril 00:07:13 2007, chromating@wgz.org a écrit:
+
+>> Lorsque Parrot traite ses arguments en ligne de commande, il détecte valide et
+>> des drapeaux et des rapports non valides invalids, puis sort avec un code de sortie de
+>> 1.
+
+>> Je n'ai trouvé aucun test pour cette fonctionnalité.Ils seraient ravis d'avoir.
+>
+> Il y a une semaine, j'ai soumis un correctif qui a extrait le traitement de l'argument CL
+> fonctionnalité de configure.pl et la placée dans
+> lib / parrot / configure / options.pm.Le but du patch était spécifiquement
+> Pour améliorer la testabilité de la fonctionnalité dans configure.pl.Le patch
+> comprenait également un fichier de test, t / configure / 01-options.t, qui, entre autres
+> Les choses ont inclus un test pour une option non valide.
+
+Je veux dire les arguments en ligne de commande à l'exécutable Parrot, pas configure.pl.
+
+- C
+
+###
+

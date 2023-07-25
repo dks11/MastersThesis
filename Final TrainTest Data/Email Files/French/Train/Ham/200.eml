@@ -1,0 +1,21 @@
+
+Sur le soleil, 08 avril 2007 à 05:09:36 -0700, James Peach a écrit:
+>
+> Vous pouvez l'ajouter
+> détermine s'il fait unadahead (c.-à-d.
+> lire (2).
+
+J'attends votre patch :-).
+
+> Bien sûr, mais 2 modules qui font * presque * la même chose est tout simplement déroutant.
+
+Je ne pense pas qu'ils le fassent.Readahead est construit autour
+Celui-ci Syscall sur Linux.Ce n'est pas la même chose que
+cacheprime - le cacheprime se lit depuis le début de
+Le fichier, ReadaHead, déclenche sur chaque prérage / file
+Demandez qui correspond à Offset Mod ReadaHead_offset.
+
+Jeremy.
+
+###
+

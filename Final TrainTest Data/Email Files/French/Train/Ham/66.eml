@@ -1,0 +1,33 @@
+
+Sur Sun, 2007-04-08 à 12:15 +0200, Raphael a écrit:
+> Salut les utilisateurs,
+>
+> Je veux "source" un autre fichier (également un Perl-Script) dans mon One au
+> Début.Il y a des définitions qui doivent être chargées avant d'exécuter
+> le reste de l'autre script.Dans un shell-script, je peux le faire avec ".
+> Nom de fichier ", et à Perl?
+>
+> Merci pour toutes les idées et l'aide.
+
+Les modules sont ce que vous recherchez.
+
+Créez vos sous-programmes ou définitions que vous souhaitez utiliser dans un fichier
+appelé xyz.pm (xyz devrait être quelque chose de significatif)
+
+Utilisez lib '/ where / my / module / is /';
+Utilisez XYZ
+
+
+
+-
+Ken Foskey
+Développeur FOSS
+
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

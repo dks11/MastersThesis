@@ -1,0 +1,88 @@
+
+Auteur: JRA
+Date: 2007-04-09 21:01:46 +0000 (lun, 09 avril 2007)
+Nouvelle révision: 22145
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22145
+
+Enregistrer:
+Correction du bug n ° 4494 - rapporté par Kevin Jamieson <Bugzilla@kevinjamieson.com>.
+Si vous renvoyez une erreur UNIX mappée de SendFile, n'appelez pas chaîne_reply.
+Jeremy.
+
+Modifié:
+   Branches / Samba_3_0 / source / smbd / process.c
+   Branches / Samba_3_0 / Source / Smbd / Répondre.c
+   Branches / Samba_3_0_25 / Source / Smbd / Process.c
+   Branches / Samba_3_0_25 / Source / Smbd / Répondre.c
+
+
+Set à l'échelle:
+Modifié: branches / samba_3_0 / source / smbd / process.c
+==============================================.==================
+--- Branches / Samba_3_0 / Source / Smbd / Process.C 2007-04-09 18:56:26 UTC (Rev 22144)
++++ branches / samba_3_0 / source / sbd / process.c 2007-04-09 21:01:46 UTC (Rev 22145)
+@@ -1161,8 +1161,8 @@
+ char oubuf_saved [smb_wct];
+ int outmensize = SMB_LEN (undbuf) + 4;
+ 
+- / * Peut-être que ce n'est pas enchaîné * /
+- if (smb_com2 == 0xff) {
++ / * Peut-être que ce n'est pas enchaîné, ou c'est un paquet d'erreur.* /
++ if (smb_com2 == 0xff || sval (undbuf, smb_rcls)! = 0) {
+ Scval (undbuf, smb_vwv0,0xff);
+ Retour OutSize;
+ }
+
+Modifié: branches / samba_3_0 / source / smbd / réponse.c
+==============================================.==================
+--- Branches / Samba_3_0 / Source / Smbd / Répondre.C 2007-04-09 18:56:26 UTC (Rev 22144)
++++ branches / samba_3_0 / source / sbd / réponse.c 2007-04-09 21:01:46 UTC (Rev 22145)
+@@ -2706,8 +2706,10 @@
+ }
+ 
+ NREAD = Send_file_readx (Conn, Inbuf, Outbuf, Length, BufSize, FSP, StartPos, SMB_MAXCNT);
+- if (nread! = -1)
++ / * Appelez uniquement chaîne_reply sinon une erreur.* /
++ if (nRead! = -1 && sval (oubuf, smb_rcls) == 0) {
+ nread = chain_reply (inbuf, outbuf, longueur, bufsize);
++}
+ 
+ End_profile (SMBREADX);
+ retourner nread;
+
+Modifié: branches / samba_3_0_25 / source / smbd / process.c
+==============================================.==================
+--- Branches / Samba_3_0_25 / Source / SMBD / Process.C 2007-04-09 18:56:26 UTC (REV 22144)
++++ branches / samba_3_0_25 / source / smbd / process.c 2007-04-09 21:01:46 UTC (Rev 22145)
+@@ -1153,8 +1153,8 @@
+ char oubuf_saved [smb_wct];
+ int outmensize = SMB_LEN (undbuf) + 4;
+ 
+- / * Peut-être que ce n'est pas enchaîné * /
+- if (smb_com2 == 0xff) {
++ / * Peut-être que ce n'est pas enchaîné, ou c'est un paquet d'erreur.* /
++ if (smb_com2 == 0xff || sval (undbuf, smb_rcls)! = 0) {
+ Scval (undbuf, smb_vwv0,0xff);
+ Retour OutSize;
+ }
+
+Modifié: branches / samba_3_0_25 / source / smbd / réponse.c
+==============================================.==================
+--- Branches / Samba_3_0_25 / Source / SMBD / Répondre.C 2007-04-09 18:56:26 UTC (REV 22144)
++++ branches / samba_3_0_25 / source / smbd / réponse.c 2007-04-09 21:01:46 UTC (Rev 22145)
+@@ -2705,8 +2705,10 @@
+ }
+ 
+ NREAD = Send_file_readx (Conn, Inbuf, Outbuf, Length, BufSize, FSP, StartPos, SMB_MAXCNT);
+- if (nread! = -1)
++ / * Appelez uniquement chaîne_reply sinon une erreur.* /
++ if (nRead! = -1 && sval (oubuf, smb_rcls) == 0) {
+ nread = chain_reply (inbuf, outbuf, longueur, bufsize);
++}
+ 
+ End_profile (SMBREADX);
+ retourner nread;
+
+###
+

@@ -1,0 +1,32 @@
+
+Salut...
+
+Je dois utiliser R pour découvrir l'intervalle de confiance à 90% pour la sensibilité
+et spécificité du test de diagnostic suivant:
+
+Un test de diagnostic particulier pour la sclérose en plaques a été effectué sur 20 ms
+patients et 20 sujets sains, 6 patients atteints de SEP ont été classés comme sains
+et 8 sujets sains ont été classés comme souffrant de la SEP.
+
+De plus, j'ai besoin de trouver le nombre de patients atteints de SEP requis pour un
+Sensibilité de 1% ...
+
+Y a-t-il un simple R-Command qui peut faire cela pour moi?
+
+Je suis complètement nouveau à r ...
+
+Aidez-moi, s'il vous plaît!
+
+Jochen
+-
+Afficher ce message dans le contexte: http://www.nabble.com/confidence-intervals....-help...-tf3544217.html#a9894014
+Envoyé à partir de l'archive de la liste de diffusion de l'aide R sur nabble.com.
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

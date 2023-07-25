@@ -1,0 +1,17 @@
+
+salut,
+
+a joint un correctif qui modifie le fichier json.in.Actuellement, lorsque vous faites
+Test Nmake, il ne fonctionnera pas (Windows), car le passage au test
+Le répertoire et l'appel prouvaient sont séparés par un ';'.Ce patch le change
+dans &&.
+
+J'envoie ceci comme un patch, car je ne sais pas si cela fonctionne pour d'autres
+systèmes (mais je pense que c'est le cas).
+(Juste pour éviter de casser les choses)
+
+Cordialement
+kjs
+
+###
+

@@ -1,0 +1,29 @@
+
+Auteur: Jerry
+Date: 2007-04-09 17:41:48 +0000 (lun, 09 avril 2007)
+Nouvelle révision: 22143
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22143
+
+Enregistrer:
+Jeremy dit de ne pas régler la longueur
+Modifié:
+   Branches / Samba_3_0_release / WhatsNew.txt
+
+
+Set à l'échelle:
+Modifié: branches / samba_3_0_release / whatsnew.txt
+==============================================.==================
+--- Branches / Samba_3_0_release / WhatsNew.txt 2007-04-09 17:37:20 UTC (Rev 22142)
++++ branches / samba_3_0_release / whatsnew.txt 2007-04-09 17:41:48 UTC (révérend 22143)
+@@ -85,7 +85,6 @@
+ 
+ [file_share]
+ objets VFS = Readahead
+- Readahead: Longueur = 1M
+ 
+ Notez que ce plugin entraînera des exigences de RAM supplémentaires
+ En raison de l'augmentation de la quantité de caches de tampon du noyau utilisés par SMBD.
+
+###
+

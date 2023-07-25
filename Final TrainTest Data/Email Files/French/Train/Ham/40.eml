@@ -1,0 +1,63 @@
+
+Auteur: Jerry
+Date: 2007-04-09 19:53:29 +0000 (lun, 09 avril 2007)
+Nouvelle révision: 1099
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba-web&rev=1099
+
+Enregistrer:
+annoncer 3.0.25rc1
+Modifié:
+   tronc / index.html
+
+
+Set à l'échelle:
+Modifié: trunk / index.html
+==============================================.==================
+--- Trunk / index.html 2007-04-04 15:36:45 UTC (Rev 1098)
++++ trunk / index.html 2007-04-09 19:53:29 UTC (Rev 1099)
+@@ -19,26 +19,28 @@
+ 
+     <h2> Release actuelle </h2>
+ 
+- <h4> <a name="latest"> 21 mars 2007 </a> </h4>
+- <p class = "Headline"> Samba 3.0.25pre2 disponible en téléchargement </p>
++ <h4> <a name="latest"> 9 avril 2007 </a> </h4>
++ <p class = "Headline"> Samba 3.0.25rc1 Disponible en téléchargement </p>
+ 
+- <p> samba 3.0.25pre2 est disponible en téléchargement.C'est le deuxième
+- Aperçu de la prochaine version de production de production de mise à niveau de Samba.
+- Il est destiné à des fins de test uniquement.Veuillez tester et
+- <a href="https://bugzilla.samba.org/"> signalez tous les bugs que vous
+- trouver </a>.Notre plan est de commencer par l'étape du candidat de libération
+- Fin mars.Veuillez lire les changements dans le
+- <a href="/samba/ftp/pre/whatsnew-3-0-25pre2.txt"> notes de libération </a>
++ <p> samba 3.0.25rc1 est maintenant disponible en téléchargement.C'est le premier
++ Release candidat de la prochaine version de version de production de mise à niveau
++ de samba.Une version RC signifie que la version est proche du
++ version finale de production, mais il peut y avoir quelques bugs persistants.
++ Pour cette raison, il est destiné à tester uniquement.S'il vous plaît
++ Test et <a href="https://bugzilla.samba.org/"> signalez tous les bugs que vous
++ trouver </a>.Veuillez lire les changements dans le
++ <a href="/samba/ftp/rc/whatsnew-3-0-25rc1.txt"> notes de libération </a>
+     Pour plus de détails sur les nouvelles fonctionnalités et la différence de comportement de
+     les versions précédentes. </p>
+ 
+- <p> le <a href="/samba/ftp/pre/samba-3.0.25pre2.tar.gz"> samba 3.0.25pre2
++ <p> le <a href="/samba/ftp/rc/samba-3.0.25rc1.tar.gz"> samba 3.0.25rc1
+     Le code source </a> peut être téléchargé maintenant.Le <a
+- href = "/ samba / ftp / pre / samba-3.0.25pre2.tar.asc"> gnupg
++ href = "/ samba / ftp / rc / samba-3.0.25rc1.tar.asc"> gnupg
+     La signature est pour le pour le <em> un </em> compressé Tarball </a>.
+     Si vous préférez, le <a
+- href = "/ samba / ftp / pre / patch-3.0.25pre1-3.0.25pre2.diffs.gz"> patch
+- Fichier contre Samba 3.0.25pre1 </a> (<a href="/samba/ftp/pre/patch-3.0.25pre1-3.0.25pre2.diffs.asc"> gnupg
++ href = "/ samba / ftp / rc / patch-3.0.25pre2-3.0.25rc1.diffs.gz"> patch
++ dossier contre Samba
++ 3.0.25pre2 </a> (<a href="/samba/ftp/rc/patch-3.0.25pre2-3.0.25rc1.diffs.asc"> gnupg
+     Signature </a>) est également disponible en téléchargement.
+     Veuillez lire ces <a href="/samba/download/"> instructions sur
+     Comment vérifier la signature GPG </a>.Les packages précompilés
+
+###
+

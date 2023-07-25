@@ -1,0 +1,39 @@
+
+Auteur: Jerry
+Date: 2007-04-09 16:44:56 +0000 (lun, 09 avril 2007)
+Nouvelle révision: 22140
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22140
+
+Enregistrer:
+Définissez cerion dans cette branche à 3.0.25rc2-svn
+Modifié:
+   branches / samba_3_0_25 / source / version
+
+
+Set à l'échelle:
+Modifié: branches / samba_3_0_25 / source / version
+==============================================.==================
+--- Branches / Samba_3_0_25 / source / version 2007-04-09 16:12:06 UTC (Rev 22139)
++++ branches / samba_3_0_25 / source / version 2007-04-09 16:44:56 UTC (Rev 22140)
+@@ -46,7 +46,7 @@
+ # par exemple.Samba_version_pre_release = 1 #
+ # -> "2.2.9pre1" #
+ #########################################################
+-Samba_version_pre_release = 3
++ Samba_version_pre_release =
+ 
+ #########################################################
+ # Pour «RC», la version sera #
+@@ -56,7 +56,7 @@
+ # par exemple.Samba_version_rc_release = 1 #
+ # -> "3.0.0rc1" #
+ #########################################################
+-Samba_version_rc_release =
++ Samba_version_rc_release = 2
+ 
+ #########################################################
+ # Pour marquer les instantanés SVN, cela devrait être défini sur «Oui» #
+
+###
+

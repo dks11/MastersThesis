@@ -1,0 +1,47 @@
+
+Le 09-APR-07 16:29:20, Cleber Borges a écrit:
+> Bonjour à tous
+>
+>
+> Existe-t-il un package pour la lecture des données dans le port série
+> ("Com1" dans Windows)?
+>
+> Y a-t-il un moyen simple pour faire ceci?
+>
+> Merci pour tous les conseils!
+>
+>
+> Cleber Borges
+
+Il y avait un thread "[r] lecture des données d'un port série"
+À partir du 13 septembre 2005 à ce sujet.Vous pouvez trouver le
+les informations là-bas suffisamment pour vos besoins.
+
+Vous devrez lire l'ensemble du fil (5 messages) - le plein
+Les informations n'ont pas émergé en même temps!
+
+Pour le trouver, allez à
+
+https://stat.ethz.ch/pipermail/r-help/2005-september/thread.html
+
+Et faites défiler vers le bas jusqu'à ce que vous le trouviez.
+
+En espérant que cela aide - sinon suffisant, veuillez poser plus de questions.
+
+Meilleurs vux,
+Ted.
+
+--------------------------------------------------------------------
+Courriel: (Ted Harding) <Ted.harding@nessie.mcc.ac.uk>
+Fax à l'email: +44 (0) 870 094 0861
+Date: 09-APR-07 Heure: 18:36:53
+------------------------------ xfmail ------------------------------
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

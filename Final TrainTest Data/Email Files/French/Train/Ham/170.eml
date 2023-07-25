@@ -1,0 +1,56 @@
+
+Le 4/9/07, Jean-Rene David <jrdavid@magma.ca> a écrit:
+> * Chas Owens [2007.04.09 11:00]:
+>>> pour (mon $ i = 0; $ i <@banks; $ i ++)
+>>
+>> Si vous devez boucler de cette façon, faites-le au moins comme ceci:
+>>
+>> pour mon $ i (0 .. $ # banques) {}
+>>
+>> Mais très probablement, vous n'avez pas besoin de boucle de cette façon et il vaut mieux
+>> Loop de cette façon:
+>>
+>> pour ma banque $ (@banks) {}
+>
+> Je me demandais: le tableau est-il garanti d'être
+> Traversé dans le même ordre dans les trois cas?
+
+Les trois boucles traitent le tableau dans le même ordre (de l'index 0 à
+Index $ # Array).L'avantage de la version sans index est que vous
+Impossible de faire une erreuse hors un.Examinez les boucles suivantes:
+
+pour (mon $ i = 1; $ i <@banks; $ i ++)
+pour (mon $ i = 0; $ i <= @banks; $ i ++)
+pour (mon $ i = 1; $ i <= @banks; $ i ++)
+pour mon $ i (0 .. @banks)
+pour mon $ i (1 .. @banks)
+pour mon $ i (1 .. $ # banks)
+
+À quel point pensez-vous qu'il sera facile de trouver l'erreur?Et si le code
+semble faire la bonne chose?C'est beaucoup plus sûr à dire
+
+pour ma banque $ (@banks)
+
+Vous savez avec certitude que chaque élément de @Array sera visité.
+
+Il est également important de noter qu'il n'y a pas de différence entre $ Bank
+et $ banques [$ i].Si vous modifiez $ Bank, alors l'élément correspondant
+@Banks est également modifié.
+
+>
+> Et sont les deux derniers "pour" et non
+> "foreach"?
+couper
+
+Foreach n'est maintenant qu'un alias pour, si cela a du sens.Ils
+avait l'habitude d'avoir des fonctionnalités distinctes, mais quelque part vers 5,6
+ont été fusionnés.Le terme foreach n'est conservé que pour le code hérité;
+Le nouveau code doit être utilisé pour.
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

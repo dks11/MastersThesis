@@ -1,0 +1,18 @@
+
+# Nouveau billet créé par "Alek Storm"
+# Veuillez inclure la chaîne: [Perl # 42406]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42406>
+
+
+Ce correctif corrige le bogue dans lequel le remplacement de la méthode VTable "init" est
+appelé au lieu de "init_pmc" lorsque init = null est passé à
+Parrot_instantiate_object_init, au lieu de init = pmcnull.Le choix
+dont la méthode à appeler reposait sur une déclaration c <if (init)>, qui peut
+Renvoie à tort vrai si init == pmcnull.
+
+-
+Alek Storm
+
+###
+

@@ -1,0 +1,53 @@
+
+Salut
+
+r-helpbouces@stat.math.ethz.ch napsal dne 09.04.2007 22:10:22:
+
+> Je veux produire des boîtes à boîte et tracer les valeurs enregistrées mais j'ai le
+> Échelle de l'axe à l'échelle originale et non guetée.Il semble que j'ai le
+
+> Les premières étapes, mais j'ai des problèmes avec le dernier.Voici ce que je suis
+> faire (que j'ai obtenu pour la documentation pour le boxplot et l'axe).Comment puis-je
+
+> Obtenez les tiques à étiqueter 2,5 et 9 de l'échelle d'origine?
+> A <c (1,2,3,4,5,6,7,8,9,10)
+> bcat <c (1,1,1,2,2,2,2,3,3,3)
+> boxplot (log (a) ~ bcat, yxt = "n")
+> axe (2, tick = a)
+
+Est
+axe (2, at = log (a), étiquettes = a)
+
+ce que tu veux?
+
+Salutations
+Pétrole
+
+
+>
+> -
+> Dean Sonneborn, MS
+> Analyste du programmeur
+> Département des sciences de la santé publique
+> Université de Californie, Davis
+> (530) 754-9516 (voix)
+> (530) 752-3118 (fax)
+>
+>
+> [[version html alternative supprimée]]]
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication
+http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

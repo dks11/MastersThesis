@@ -1,0 +1,36 @@
+
+Depièreux constant a écrit:
+> Bonjour,
+>
+> J'ai un programme de crise de données qui me cause un problème.
+>
+> Certaines données sont identifiées avec un & signe suivi d'un entier.
+> Aucun problème n'est rencontré lors de l'analyse des données ci-dessous et 500, mais la valeur
+> ci-dessus sont ignorés.
+>
+> Y a-t-il une limitation en R sur ce sujet?
+>
+Salut constant,
+Comme Ted a répondu, la question est quelque peu mystérieuse.Sont ces données de
+quelque chose comme le code MS VBA, où les types de variables peuvent être spécifiés avec un
+Nombre de symboles préfixés?
+
+Si ce n'est qu'une bizarrerie du format de données et que vous savez que l'ampère et
+est toujours suivi par un entier (ou un flotteur ou un double ...) vous pouvez
+Jetez simplement l'ampère et lors de la lecture du fichier de données.
+
+gsub ("&", "", incoming_data)
+
+Substitutions plus sophistiquées qui ne jetteront pas d'ampères et qui sont nécessaires
+sont laissés à quelqu'un avec une tête pour des expressions régulières
+
+Jim
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

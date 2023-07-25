@@ -1,0 +1,94 @@
+
+Le 4/9/07, Rodrigo Tavares <digolinopage@yahoo.com.br> a écrit:
+> Bonjour,
+>
+> J'ai mis mon code:
+>
+> utiliser strict;
+> utiliser des avertissements;
+>
+> J'ai donc déclaré de nombreuses variables.Par exemple les compteurs et
+> Arrays.En utilisant mon.
+>
+> Mon script commence le postgres.
+> ./PostgreSQL.Pl Démarrer | Stop | Recharger | Status
+>
+> J'utilise cette structure ci-dessous.Quand j'exécute le script
+> COMO le message:
+>
+> Utilisation de la valeur non initialisée dans Eq String à
+> ./PostgreSql.pl Line 67
+
+L'une de vos variables aussi undef que sa valeur.Cela peut être une erreur ou
+Peut être quelque chose que vous faites exprès.Il est préférable de mettre un garde
+code qui définit une valeur par défaut autour des variables qui peuvent être ou non
+Positionner:
+
+$ var = "" sauf si défini $ var;
+
+>
+> si je mets en code: mon @argv = ('a');
+> Venez le message:
+>
+> sh: -c: ligne 0: EOF inattendu tout en recherchant
+> correspondant `''
+> Sh: -C: Ligne 1: Erreur de syntaxe: fin inattendue du fil
+
+Il est étrange que vous receviez des erreurs de coquille noires tout en exécutant un
+Script perl.As tu un #!ligne au début de votre fichier qui
+pointe vers l'interpréteur Perl?On dirait que tu as un déséquilibre
+citez quelque part.
+
+>
+>
+> J'ai essayé de créer ce tableau, mais toutes les tentatives échouent.
+>
+> Comment puis-je résoudre ce problème?
+>
+> if ($ argv [0] eq 'stop')
+> {
+> Imprimer "Arrêt PostgreSQL: \\ n";
+> sauf si (fourche)
+> {
+> pour (mon $ i = 0; $ i <@banks; $ i ++)
+
+Si vous devez boucler de cette façon, faites-le au moins comme ça:
+
+pour mon $ i (0 .. $ # banks) {}
+
+Mais très probablement, vous n'avez pas besoin de boucle de cette façon et il vaut mieux
+boucle de cette façon:
+
+pour ma banque $ (@banks) {}
+
+
+> {
+> Imprimez "Hello World!"
+>}
+>} # Fork Fork
+>}
+>
+>
+> Meilleures salutations,
+>
+> Faria
+>
+> __________________________________________________
+> Fale com seus amigos de graça com o novo yahoo!Messager
+> http://br.messenger.yahoo.com/
+>
+> -
+> À désabonner, e-mail: débutants-unsubscribe@perl.org
+> Pour les commandes supplémentaires, e-mail: débutants-help@perl.org
+> http://learn.perl.org/
+>
+>
+>
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

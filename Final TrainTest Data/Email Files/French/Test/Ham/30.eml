@@ -1,0 +1,133 @@
+
+Cher adschai,
+
+> ----- Message original -----
+> De: adschai@optonline.net [mailto: adschai@optonline.net]
+> Envoyé: lundi 09 avril 2007 20h30
+> À: John Fox;r-help@stat.math.ethz.ch
+> Sujet: Re: Re: [R] traitant d'un grand prédicteur nominal dans
+> Package SEM
+>
+> Salut John,
+>
+> Deux questions supplémentaires sur ce package SEM:
+> (1) Le TSLS est basé sur le maximum de vraisemblance ou OLS?
+
+Ni;Il fait les moindres carrés en deux étapes (2SL).
+
+> (2) J'essaie de trouver la bonté d'ajustement pour le résultat de
+> TSLS.D'une manière ou d'une autre, je ne le vois pas dans la documentation.Voudriez-vous
+> Veuillez fournir quelques exemples?
+
+Je ne suis pas sûr de ce que vous entendez par bonté d'ajustement.Si vous avez à l'esprit un
+R ^ 2 Mesure de type;Vous pouvez toujours utiliser 1 -
+Variance d'erreur / variance de la variable-endogène, mais ce n'est pas garanti
+être positif.
+
+> (3) Si je voudrais diagnostiquer la sélection des modèles, dit
+> Utilisez les critères AIC, il est un peu clair pour moi comment je peux postuler
+> ce modèle d'équation structurelle tel qu'il est composé de
+> plusieurs équations plutôt qu'un.Et y a-t-il un
+> Fonctionnalité dans SEM qui fait cela?
+
+Puisqu'il n'y a aucune probabilité pour l'estimation 2SLS, je ne vois pas comment vous pourriez
+Obtenez un AIC.D'un autre côté, SEM () est adapté à l'information complète
+maximum-likelihhood (fiml).Il imprime le BIC;vous pourriez calculer l'AIC
+Si tu as aimé.
+
+John
+
+> Toute aide serait vraiment appréciée.Merci.
+>
+> - Adschai
+>
+> ----- Message original -----
+> De: John Fox
+> Date: lundi 9 avril 2007 8:04 AM
+> Sujet: Re: [R] traitant d'un grand prédicteur nominal dans le package SEM
+> À: adschai@optonline.net
+> CC: r-help@stat.math.ethz.ch
+>
+>> Cher adschai,
+>>
+>> Il n'est pas possible de savoir de votre description exactement ce que vous êtes
+>> Faire, mais peut-être que ce qui suit vous aidera:
+>>
+>> (1) Je suppose que votre variable nominale est exogène,
+> Puisque sinon
+>> Il ne serait pas judicieux d'utiliser 2SLS.
+>>
+>> (2) Vous n'avez pas à faire vos propres régresseurs factice pour un nominal
+>> variable;représente-le simplement dans le modèle comme un facteur que vous le feriez,
+>> par exemple, dans lm ().
+>>
+>> (3) Avez-vous au moins autant de variables instrumentales
+> (y compris le
+>> mannequin
+>> Régresseurs) car il existe des coefficients structurels pour
+> estimer?Sinon,
+>> L'équation structurelle est sous-identifiée, ce qui produira le
+>> Erreur que vous avez rencontrée.
+>>
+>> J'espère que cela aide,
+>> John
+>>
+>> --------------------------------
+>> John Fox
+>> Département de sociologie
+>> Université McMaster
+>> Hamilton, Ontario
+>> Canada L8S 4M4
+>> 905-525-9140x23604
+>> http://socserv.mcmaster.ca/jfox
+>> --------------------------------
+>>
+>>> ----- Message original -----
+>>> De: r-helpbounces@stat.math.ethz.ch
+>>> [mailto: r-helpbounts@stat.math.ethz.ch] au nom de
+>>> adschai@optonline.net
+>>> Envoyé: Dimanche 08 avril 2007 23:07
+>>> à: r-help@stat.math.ethz.ch
+>>> Sujet: [R] traitant d'un grand prédicteur nominal dans le package SEM
+>>>
+>>> Salut,
+>>>
+>>> J'utilise la fonction TSLS du package SEM pour estimer un
+> modèle qui
+>>> comprend un grand nombre de données.Parmi ses prédicteurs, il a un
+>>> Données nominales qui ont environ 10 valeurs possibles.Alors je développe ça
+>>> Paramètre dans des prédicteurs à valeur à 9 binaires avec le coefficient de
+>>> La valeur de base équivaut à 0. J'ai également un autre prédicteur continu.
+>>>
+>>> Le problème est que, chaque fois que j'exécute le TSLS, j'obtiendrai
+> 'Le système est
+>>> Erreur singulière du calcul tout le temps.je suis
+> Se demander s'il y a
+>>> est-ce que je peux surmonter ce problème?S'il vous plaît
+> suggérer.
+>>> Merci beaucoup d'avance.
+>>>
+>>> - Adschai
+>>>
+>>> [[version html alternative supprimée]]]
+>>>
+>>> ______________________________________________
+>>> r-help@stat.math.ethz.ch Liste de diffusion
+>>> https://stat.ethz.ch/mailman/listinfo/r-help
+>>> Veuillez lire le guide de publication
+>>> http://www.r-project.org/posting-guide.html
+>>> Et fournissez un code mentionné, minimal, autonome et autonome.
+>>>
+>>
+>>
+>>
+>
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

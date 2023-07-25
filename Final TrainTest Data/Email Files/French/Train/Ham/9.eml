@@ -1,0 +1,40 @@
+
+Le lundi 2007-04-09 à 17:33 -0500, Gerald (Jerry) Carter a écrit:
+> ----- Commencer le message signé PGP -----
+> Hash: Sha1
+>
+> Les gens,
+>
+> Sur la base de certaines recherches de Jeremy, il semble que Windows Vista
+> n'a pas été soigneusement testé contre les serveurs CIFS en mode partage
+> Sécurité.(Jeremy pouvez-vous rafraîchir ma mémoire ici sur les détails?)
+>
+> Donc je propose que nous commençons à l'utiliser comme une incitation à obtenir
+> People Of Security = partage.Nous pouvons contourner certains des
+> Bogues mais il semble probablement pas tous et IMO nous avons plus important
+> Travaillez à faire de toute façon.
+>
+> Si quelqu'un veut être le "Security = Share & Vista" officiel
+> Soutenir le développeur, je serai heureux de laisser tomber la proposition et le point
+> Tous les e-mails Samba@samba.org pertinents :-) Quelqu'un?Quelqu'un?
+
+
+OMI, nous devrions commencer à imprimer des messages douloureux dans le journal chaque fois que les gens
+Utilisez la sécurité = partage.
+
+Ce serait une perte de temps pour soutenir ce mode davantage.Nous savons tous que nous
+peut obtenir les mêmes résultats avec la sécurité = utilisateur et forcer l'utilisateur.
+
+Y a-t-il une utilisation de la sécurité = partage légitime et ne peut pas être
+fourni avec la sécurité = utilisateur?
+
+Simo.
+
+-
+Simo Sorce
+Samba Team GPL Officier de conformité
+Courriel: idra@samba.org
+http://samba.org
+
+###
+

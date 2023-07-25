@@ -1,0 +1,110 @@
+
+Je me trompe peut-être à ce sujet, mais je pensais que les licences pour au moins
+Certains des forfaits commerciaux vous permettent de faire une copie de celle
+Vous avez au travail pour un usage domestique.
+
+Le 4/9/07, Greg Snow <Greg.snow@intermountainmail.org> a écrit:
+> Voici quelques autres thougts à ajouter à ce que vous avez déjà reçu:
+>
+> Vous avez mentionné que le prix n'est pas en cause, mais il y a d'autres coûts que
+> L'argent que vous voudrez peut-être regarder.Sur ma machine de travail, j'ai r,
+> S-Plus, SAS, SPSS et quelques autres programmes de statistiques;Sur mon ordinateur portable
+> et les ordinateurs domestiques que j'ai installés.Donc, si une échéance est imminente et
+> Je travaille sur un projet principalement en R, il est facile de travailler dessus sur le
+> Bus ou à la maison (ou lors d'une réunion ennuyeuse), il en va de même
+> Projet SAS ou SPSS (Hmm, en y réfléchissant maintenant, peut-être que j'ai besoin de faire
+> moins dans r :-).
+>
+> R et S-Plus sont très flexibles / personnalisables, si vous avez un certain tracé
+> Que vous faites souvent, vous pouvez écrire votre propre fonction / script pour le faire
+> Automatiquement, la plupart des autres programmes vous donneront leur norme, puis
+> Vous devez le modifier pour répondre à vos spécifications.Avec un sweave (et le
+> Extensions ODF et HTML) Vous pouvez automatiser des rapports entiers, très utiles pour
+> Des choses que vous faites mois après mois.
+>
+> Et ce que je pense est le plus grand avantage de R et S-Plus, c'est qu'ils
+> vous encourage fortement à réfléchir à vos données.Autres programmes (à
+> le moins que je connais) a tendance à avoir une manière spécifique de traiter
+> Vos données et attendez-vous à ce que vous modifiiez vos données pour s'adapter à ces programmes
+> modèle.Ces modèles peuvent être excessives (vous forcer à restructurer
+> vos données pour s'adapter à leur modèle) ou sous-estimatif (permettez des choses qui
+> devrait vraiment être des objets de données séparés à combiner
+> "ensemble de données") et parfois les deux.S D'un autre côté, permet de nombreux
+> différentes façons de stocker et de travailler avec vos données, et lorsque vous analysez le
+> Données, différentes branches de nouvelles analyses s'ouvrent en fonction du début
+> Résultats plutôt que d'obtenir simplement une production d'origine pour une procédure.Je tombe
+> Vous voulez être une boîte noire où les données se déroulent à une extrémité et une réponse spécifique
+> Sorte l'autre, alors la plupart des programmes fonctionneront;Mais si tu veux
+> Comprenez vraiment ce que vos données doivent vous dire, puis R / S-Plus fait
+> ce facile et naturel.
+>
+> J'espère que cela aide,
+>
+>
+> -
+> Gregory (Greg) L. Snow Ph.D.
+> Centre de données statistiques
+> Intermountain Healthcare
+> greg.snow@intermountainmail.org
+> (801) 408-8111
+>
+>
+>
+>> ----- Message original -----
+>> De: r-help rebonces@stat.math.ethz.ch
+>> [mailto: r-helpbounts@stat.math.ethz.ch] au nom de Lorenzo Isella
+>> Envoyé: jeudi 05 avril 2007 9:02 AM
+>> À: r-help@stat.math.ethz.ch
+>> Sujet: [r] raisons d'utiliser r
+>>
+>> Cher tout,
+>> L'Institut pour lequel je travaille organise un atelier interne
+>> Pour l'informatique haute performance (HPC).
+>> Je prévois d'y assister et de parler un peu de liquide
+>> Dynamique, mais il y a aussi beaucoup d'intérêt consacré
+>> Aux données post-traitement et gestion d'énormes ensembles de données.
+>> Beaucoup de gens sont intéressés par le traitement / modèle d'image
+>> La reconnaissance et les statistiques appliquées à la géographie / écologie, mais je
+>> aimerait ne pas publier ceci sur trop de listes.
+>> L'objectif final de l'atelier est de comprendre le matériel
+>> Exigences et rédiger une liste de l'équipement que nous ferions
+>> aime acheter.Je pense que cela pourrait également être le lieu de parler de R.
+>> Par conséquent, même si ce n'est pas exactement une liste de diffusion typique
+>> Question, je voudrais avoir des suggestions sur où
+>> collecter des informations sur:
+>> (1) les institutions (pas seulement le monde universitaire) utilisant R (2) matériel
+>> Exigences, éventuellement repères (3) Clusters, R &
+>> Plusieurs machines CPU, R Performance sur différents matériels.
+>> (4) Enfin, une liste des avantages pour l'utilisation de R over
+>> Packages statistiques commerciaux.L'argent en soi
+>> n'est pas une raison assez bonne et certaines personnes ont peur par le
+>> Manque de support professionnel, bien que cette liste de diffusion soit
+>> Tout simplement merveilleux.
+>>
+>> Cordialement
+>>
+>> Lorenzo Isella
+>>
+>> ______________________________________________
+>> r-help@stat.math.ethz.ch Liste de diffusion
+>> https://stat.ethz.ch/mailman/listinfo/r-help
+>> Veuillez lire le guide de publication
+>> http://www.r-project.org/posting-guide.html
+>> Et fournissez un code de reproductible commenté, minimal, autonome et autonome.
+>>
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

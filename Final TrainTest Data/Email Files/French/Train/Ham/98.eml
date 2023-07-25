@@ -1,0 +1,158 @@
+
+Shuji,
+
+Ma réponse est "cela dépend".Utilisation de la régression sur des variables manquées zéro / un
+peut fonctionner, mais il existe des approches plus directes de la classification qui
+pourrait fonctionner mieux.
+
+Dans le cas où vous nous avez montré, les données étaient linéairement séparables par une
+prédicteur.Si les données que vous avez publiées sont représentatives de votre
+Ensembles de données typiques, vous voudrez peut-être utiliser une approche très simple:
+Identifiez l'important prédicteur et utilisez une courbe ROC pour trouver un bien
+coupure pour ça.Vous n'avez pas besoin des autres données.
+
+Cependant, si ces données représentent un cas "facile", vous voudrez peut-être essayer
+Autres approches de la classification.Je commence généralement par soit
+Randomforest ou un arbre en sac (voir le Randomforest et les packages iprés).
+Si je peux obtenir de bonnes performances avec ces modèles, je vais essayer des modèles plus simples
+qui sont plus interprétables, comme des arbres simples (le package RPART), la FDA
+avec Method = Mars (en utilisant le package MDA) et d'autres approches.
+
+Max
+
+----- Message original -----
+À partir de: ????[Mailto: kawaguchi@math.kyushu-u.ac.jp]
+Envoyé: lundi 09 avril 2007 13 h 49
+À: Kuhn, Max
+CC: r-help@stat.math.ethz.ch
+Sujet: Re: [R] ne peut pas s'adapter aux valeurs correctes dans l'analyse discriminante
+par bruto.
+
+Cher Max,
+
+Merci beaucoup !Votre exemple de code est très utile.
+
+Dans un problème séparable linéaire, je devrais utiliser la FDA par régression linéaire
+au lieu de Bruto à moins de prendre un processus de réduction dimensionnel,
+devrais-je?
+
+Salutations.
+
+Shuji
+
+
+Le 2007/04/09, à 22:25, Kuhn, Max a écrit:
+
+> Shuji,
+>
+> Je soupçonne que Bruto explose parce que vos données sont linéairement
+> séparable.
+> Pour voir cela (si vous ne le saviez pas déjà), essayez
+>
+> bibliothèque (réseau)
+> Splom (~ x, groupes = y)
+>
+> Et regardez la première rangée.Si vous essayez de faire la classification,
+> là
+> sont quelques méthodes qui s'étoufferaient sur cette (régression logistique) et un
+> Peu qui ne le feront pas (arbres, SVM, etc.).Je suppose que Bruto est dans le
+> dernier groupe.
+>
+> Cependant, si vous essayez de faire la classification, essayez d'utiliser Bruto via la FDA:
+>
+>> tmp <- cbind (x, facteur (y))
+>>
+>> fdafit <- fda (y2 ~., tmp)
+>> FDAFIT
+> Appel:
+> fda (formule = y2 ~., data = tmp)
+>
+> Dimension: 1
+>
+> Le pourcentage entre la variance des groupes expliquée:
+> v1
+> 100
+>
+> Degrés de liberté (par dimension): 5
+>
+> Erreur de classification de la formation: 0 (n = 20)
+>>
+>> Prédire (fdafit, type = "postérieur") [1: 3,]
+> 0 1
+> 2 0 1
+> 2 0 1
+> 2 0 1
+>
+> Max
+>
+> ----- Message original -----
+> De: r-helpbounts@stat.math.ethz.ch
+> [Mailto: r-helpbounces@stat.math.ethz.ch] au nom de ????
+> Envoyé: Dimanche 08 avril 2007 22:47
+> À: r-help@stat.math.ethz.ch
+> Sujet: [r] ne peut pas s'adapter aux valeurs correctes dans l'analyse discriminante par
+> bruto.
+>
+> Chers R-user,
+>
+> Je voudrais utiliser la fonction "bruto" dans le package MDA pour flexible
+> Analyse discriminante.
+> Ensuite, j'ai essayé, par exemple, après l'approche.
+>
+>> x
+> band1 band2 band3
+> 1 -1.206780 -1.448007 -1.084431
+> 2 -0.294938 -0.113222 -0.888895
+> 3 -0.267303 -0.241567 -1.040979
+> 4 -1.206780 -1.448007 -1.040979
+> 5 -1.151518 -0.806286 -0.671630
+> 6 -1.179146 -1.396670 -1.453775
+> 7 -0.294938 -0.241567 -1.453775
+> 8 -0,350200 -0.267239 -1.084431
+> 9 -1.151518 -0.857623 -0.649901
+> 10 1.362954 -1.396670 -2.235926
+> 11 -0.239675 1.118883 1.457551
+> 12 -0.294938 -1.268325 -0.497817
+> 13 -0.294938 -0.729278 -0.106745
+> 14 -1.123883 -0.703612 -0.150196
+> 15 0.616905 1.144548 -0.150196
+> 16 -0,267303 1.657930 1.044750
+> 17 1.611637 1.041874 0,610225
+> 18 -1.123883 -0.677941 0.262605
+> 19 -0.239675 -0.626604 -0.128473
+> 20 2.274797 1.118883 1.805171
+>
+>> y
+> [1] 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0
+>
+>> Fit <- bruto (x, y)
+>
+> Mais, obtenu ajusté $ ajusté. Les valeurs sont extrêmement élevées (ou bas).
+> L'exécution de bruto (x [, 2: 3], y) est bien fait (les valeurs sont près de 1 ou
+> 0).
+> Les valeurs de la colonne 1 sont erronées ou une option appropriée est nécessaire?
+> J'ai contacté le mainteneur de colis, mais le problème ne pouvait pas être
+> résolu.
+>
+> Merci
+>
+> Shuji Kawaguchi
+>
+>> r.version
+> Plateforme I386-Apple-Darwin8.8.1
+> Arch i386
+> OS Darwin8.8.1
+> Système i386, darwin8.8.1
+> Version.String R version 2.4.0 (2006-10-03)
+
+----------------------------------------------------------------------
+Avis légal \\ Sauf indication contraire expressément, ce messag ... {{Dropped}}
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

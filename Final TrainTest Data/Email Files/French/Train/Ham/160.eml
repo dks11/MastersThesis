@@ -1,0 +1,53 @@
+
+Lisez les données en tant que chaîne, puis supprimez le "&" avec 'gsub'.
+À quoi ressemble votre fichier de données et quelle est la taille?Ce serait
+utile pour fournir un échantillon de vos données afin que nous puissions répondre au
+Question plus facile.
+
+Le 4/10/07, constant depièreux <constante.depiereux@aqte.be> a écrit:
+> Bonjour,
+>
+> J'ai un programme de crise de données qui me cause un problème.
+>
+> Certaines données sont identifiées avec un & signe suivi d'un entier.
+> Aucun problème n'est rencontré lors de l'analyse des données ci-dessous et 500, mais la valeur
+> ci-dessus sont ignorés.
+>
+> Y a-t-il une limitation en R sur ce sujet?
+>
+> Merci beaucoup pour votre aide.
+>
+> Meilleures salutations.
+>
+>
+>
+> Depièreux constant
+> Directeur général
+> Technologies de qualité appliquées Europe SPRL
+> Mobile: +32 (0) 475 555 818
+> Courriel: constante.depiereux@aqte-consulting.eu
+> Site: http://www.aqte-consulting.eu
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+
+
+-
+Jim Holtman
+Cincinnati, oh
++1 513 646 9390
+
+Quel est le problème que vous essayez de résoudre?
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

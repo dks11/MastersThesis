@@ -1,0 +1,133 @@
+
+----- Commencer le message signé PGP -----
+Hash: SHA1
+
+==============================================.============
+                                      Le port 80 est le nouveau HTTP.
+                             - Jeremy Allison sur les services Web
+==============================================.============
+Annonces de publication
+====================.
+Ceci est le premier candidat à la publication du code Samba 3.0.25
+base et est prévu pour les tests uniquement.Une version RC signifie
+que nous sommes proches de la version finale mais le code peut encore
+Ayez quelques bugs mineurs restants.Cette version n'est * pas * destinée
+pour les serveurs de production.Il y a eu un montant substantiel
+de développement depuis la série 3.0.23 / 3.0.24 de versions stables.
+Nous aimerions demander de l'aide à la communauté de Samba dans les tests
+Ces changements alors que nous travaillons vers la prochaine production significative
+Mettre à niveau la version Samba 3.0.
+
+Les principales fonctionnalités incluses dans la base de code 3.0.25 comprennent:
+
+  o Améliorations significatives du support de connexion hors ligne Winbind.
+  o Prise en charge des mises à jour DDNS sécurisées dans le cadre de la «jointure des annonces nettes»
+    processus.
+  o Interface IDMap réécrite qui permet la mise en cache basée sur TTL et
+    Par backends de domaine.
+  o Nouvelle interface plug-in pour le paramètre "Winbind NSS Info".
+  o Nouveau changement de fichier notifier le sous-système qui est capable d'utiliser
+    inotifier sur Linux.
+  o Prise en charge du passage des descripteurs de sécurité Windows à un VFS
+    Plug-in permettant plusieurs outils UNIX ACL à côté exécuté
+    par côté sur le même serveur.
+  o Amélioration de la compatibilité avec les clients de Windows Vista, y compris
+    Amélioration des performances de lecture avec les serveurs Linux.
+  o Pages d'homme pour les plug-ins VFS.
+
+
+Logons hors ligne et support de site publicitaire
+===============================================.
+
+La capacité de Winbind à prendre en charge les connexions hors ligne a été considérablement
+Amélioré avec la version 3.0.25, y compris le support pour la localisation
+Contrôleurs de domaine Asynchrone à l'aide du site Active Directory
+informations.
+
+
+Nouvelle interface IDMap pour Winbindd
+==============================.
+
+La version 3.0.25 de Samba comprendra une interface IDMap réécrite
+Pour Winbindd qui remplace le paramètre "IDMAP Backend".Les
+Le document de conception initial peut être trouvé à
+
+http://www.samba.org/~idra/samba3_newidmap.pdf
+
+Veuillez vous référer à la description "Idmap Domains" dans le SMB.Conf (5)
+Page de l'homme pour plus de détails.
+
+
+Mises à jour DNS dynamiques
+===================
+
+La commande "Net Ads Join" est désormais en mesure d'enregistrer le DNS de l'hôte
+Un enregistrement avec les serveurs DNS Windows 2000 SP4 et 2003.Cette
+La fonctionnalité doit être activée au moment de la compilation à l'aide de - avec-dnsupdate
+Lors de l'exécution du script ./configure.Il y a aussi un "filet connexe
+ADS DNS "Commande pour rafraîchir les enregistrements d'un hôte qui pourraient être
+Lancé à partir d'un script client DHCP lorsqu'une nouvelle adresse IP est obtenue.
+
+
+Prise en charge des modules ACL supplémentaires
+================================.
+
+Le support POSIX ACL de Samba a été déplacé à l'intérieur de la couche VFS
+Ce qui signifie qu'il est désormais possible de prendre en charge plusieurs implémentations ACL
+sur le même serveur, notamment NFSV4 et GPFS ACLS.
+
+
+Plugin VFS Readahead
+====================
+
+Windows Vista introduit la prise en charge de lecture bordé de tuyaux pour améliorer
+Performances lors du transfert de fichiers.Le nouveau plugin VFS_READAHEAD
+permet aux serveurs de fichiers Linux d'utiliser des tampons de noyau supplémentaires
+pour la mise en cache de fichiers afin d'éviter le temps d'attente des E / S lors du service
+Clients Vista.Si vous ressentez de mauvaises performances en lecture entre
+Clients Linux Serveurs et Vista, veuillez tester le VFS_READAHEAD
+module en ajoutant les lignes suivantes à la définition de partage
+Dans smb.conf:
+
+[file_share]
+objets VFS = Readahead
+
+Notez que ce plugin entraînera des exigences de RAM supplémentaires
+En raison de l'augmentation de la quantité de caches de tampon du noyau utilisés par SMBD.
+Veuillez vous référer à VFS_READAHEAD (8) pour plus d'informations.
+
+
+==================
+Détails de téléchargement
+==================
+
+Les tarball et fichiers de correctifs non compressés ont été signés
+en utilisant GNUPG (ID 6568B7EA).Le code source peut être téléchargé
+à partir de:
+
+http://download.samba.org/samba/ftp/rc/
+
+Les notes de publication sont disponibles en ligne sur:
+
+http://www.samba.org/samba/ftp/rc/whatsnew-3-0-25rc1.txt
+
+Les forfaits binaires seront disponibles sur une base bénévole à partir de
+
+http://download.samba.org/samba/ftp/binary_packages/
+
+Notre code, nos bugs, notre responsabilité.
+(https://bugzilla.samba.org/)
+
+--Apprécier
+L'équipe Samba
+----- COMMENCER PGP Signature -----
+Version: GNUPG V1.4.3 (GNU / Linux)
+Commentaire: Utilisation de gnupg avec Mozilla - http://enigmail.mozdev.org
+
+id8dbqfggp2pir7qmdg1efyrauxkakdl06 / bycvlzhqylu9 / + 5no1awcygcfz1lc
+rmrh + ghplrftx7xpnrttkcw =
+= a8af
+----- Fin de la signature PGP -----
+
+###
+

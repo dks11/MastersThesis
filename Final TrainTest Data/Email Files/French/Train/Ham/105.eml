@@ -1,0 +1,82 @@
+
+------------------------------------------------------------
+Revno: 83
+révision-id: tridge@samba.org-20070410094029-2b9561032c749c8a
+Parent: tridge@samba.org-20070410093521-faf87738c5a369a7
+Commitation: Andrew Tridgell <tridge@samba.org>
+Branche Nick: tridget
+Timestamp: mar 2007-04-10 19:40:29 +1000
+message:
+  rendre certaines fonctions statiques et supprimer une structure inutilisée
+modifié:
+  Common / ctdb_daemon.c ctdb_daemon.c-20070409200331-3el1kqgdb9m4ib0g-1
+  TCP / TCP_CONNECT.C TCP_CONNECT.C-20061128004937-X70Q1CU5XZG5G2TM-1
+  TCP / TCP_INIT.C TCP_INIT.C-20061128004937-X70Q1CU5XZG5G2TM-2
+=== Fichier modifié 'Common / ctdb_daemon.c'
+--- a / commun / ctdb_daemon.c 2007-04-10 09:33:21 +0000
++++ b / commun / ctdb_daemon.c 2007-04-10 09:40:29 +0000
+@@ -417,16 +417,10 @@
+ }
+ 
+ 
+-Struct ctdbd_queue_packet {
+- struct ctdbd_queue_packet * suivant, * prev;
+- data uint8_t *;
+- uint32_t longueur;
+-};
+-
+ / *
+   faire la file d'attente un paquet pour l'envoi
+ * /
+-int ctdbd_queue_pkt (struct ctdb_context * ctdb, struct ctdb_req_header * hdr)
++ statique int ctdbd_queue_pkt (struct ctdb_context * ctdb, struct ctdb_req_header * hdr)
+ {
+ return ctdb_queue_send (ctdb-> daemon.queue, (uint8_t *) hdr, hdr-> longueur);
+ }
+
+=== Fichier modifié 'TCP / TCP_CONNECT.C'
+--- A / TCP / TCP_CONNECT.C 2007-04-10 09:33:21 +0000
++++ b / tcp / tcp_connect.c 2007-04-10 09:40:29 +0000
+@@ -37,7 +37,7 @@
+ / *
+   appelé lorsqu'un paquet complet est arrivé - ne devrait pas se produire sur cette prise
+  * /
+-Void CTDB_TCP_TNODE_CB (Uint8_t * Données, size_t cnt, void * privé)
++ statique void ctdb_tcp_tnode_cb (uint8_t * data, size_t cnt, void * privé)
+ {
+ struct ctdb_node * node = talloc_get_type (privé, struct ctdb_node);
+ struct ctdb_tcp_node * tnode = talloc_get_type (nud-> privé,
+
+=== Fichier modifié 'TCP / TCP_INIT.C'
+--- A / TCP / TCP_INIT.C 2007-04-10 02:39:25 +0000
++++ b / tcp / tcp_init.c 2007-04-10 09:40:29 +0000
+@@ -29,7 +29,7 @@
+ / *
+   Commencez le protocole
+ * /
+-int ctdb_tcp_start (struct ctdb_context * ctdb)
++ statique int ctdb_tcp_start (struct ctdb_context * ctdb)
+ {
+ int i;
+ 
+@@ -59,7 +59,7 @@
+ / *
+   Initialiser la partie TCP d'un nud CTDB
+ * /
+-int ctdb_tcp_add_node (nud struct ctdb_node *)
++ static int ctdb_tcp_add_node (nud struct ctdb_node *)
+ {
+ struct ctdb_tcp_node * tnode;
+ tnode = talloc_zero (nud, struct ctdb_tcp_node);
+@@ -74,7 +74,7 @@
+ / *
+   Allocateur de paquets de transport - permet au transport de contrôler la mémoire des paquets
+ * /
+-Void * ctdb_tcp_allocate_pkt (struct ctdb_context * ctdb, size_t size)
++ statique void * ctdb_tcp_allocate_pkt (struct ctdb_context * ctdb, size_t size)
+ {
+ / * le transport TCP doit être aligné à 8 octets pour garantir
+ que nous pouvons utiliser un en-tête de longueur et des éléments 64 bits
+
+###
+

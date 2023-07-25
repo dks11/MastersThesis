@@ -1,0 +1,17 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42374]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42374>
+
+
+Dans le fichier src / ops / io.ops il y a l'élément TODO:
+
+"Tous les résultats de string_to_cstring () doivent être libérés
+     Mais cela génère de vilains avertissements wrt jetant le const de const
+     qualificatif"
+
+Libérez les résultats mais aussi sans générer les avertissements si possible.
+
+###
+

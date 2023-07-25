@@ -1,0 +1,52 @@
+
+Boga Srinivas a écrit:
+> Salut Hoffman,
+>
+> Lorsque vous essayez de faire une comparsion numérique sur les chaînes.
+>
+> L'interprète essaiera de les convertir en numéros, puis de faire un
+> Comparsion.
+>
+> S'il ne peut pas se convertir en numéros, ils sont fabriqués 0, puis il le fera
+> Comparez.
+>
+> Pour plus d'informations, veuillez vous référer à cette URL:
+>
+> http://www.perlmeme.org/howtos/syntax/comparing_values.html
+>
+> bravo!
+>
+> -Srini
+>
+> Hoffmann a écrit:
+>> pourrait-il expliquer comment, dans l'exemple ci-dessous, $ name et $ goodguy
+>> sont égaux numériques?
+>>
+>> $ name = 'markkkk';
+>>
+>> $ goodguy = 'Tony';
+>>
+>> if ($ name == $ goodguy) {
+>> imprimer "Bonjour, monsieur. \\ n";
+>>} else {
+>> imprimer "Begone, Evil Peon! \\ n";
+>>}
+>>
+>> merci,
+>> Hoffmann
+>>
+>
+>
+Srini:
+
+Merci pour le lien!
+
+Hoffmann
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

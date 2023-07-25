@@ -1,0 +1,122 @@
+
+Auteur: Jelmer
+Date: 2007-04-09 00:53:05 +0000 (lun, 09 avril 2007)
+Nouvelle révision: 22134
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22134
+
+Enregistrer:
+Créez un fichier smb.conf différent pour le côté client.Cela devrait être utilisé avec Samba 3 ou Windows plus facile ainsi que des environnements.
+Modifié:
+   branches / samba_4_0 /
+   branches / samba_4_0 / source / script / tests / mktestdc.sh
+   branches / samba_4_0 / source / script / tests / selftest.pl
+
+
+Set à l'échelle:
+
+Modifications de la propriété sur: succursales / samba_4_0
+_______________________________________________________________________
+Nom: bzr: fusion
+... sauté ...
+
+Modifié: branches / samba_4_0 / source / script / tests / mktestdc.sh
+==============================================.==================
+--- Branches / Samba_4_0 / Source / Script / Tests / Mktestdc.sh 2007-04-08 23:55:01 UTC (REV 22133)
++++ branches / samba_4_0 / source / script / tests / mktestdc.sh 2007-04-09 00:53:05 UTC (Rev 22134)
+@@ -43,8 +43,6 @@
+ Prefix_abs = `pwd`
+ CD $ oldpwd
+ 
+-Test_data_prefix = $ prefix_abs
+-
+ Tmpdir = $ prefix_abs / tmp
+ Etcdir = $ prefix_abs / etc
+ Piddir = $ prefix_abs / pid
+@@ -61,15 +59,8 @@
+ rm -rf $ préfixe / *
+ Mkdir -p $ privatedir $ etcdir $ piddir $ ncalrpcdir $ lockdir $ tmpdir $ ldapdir / db $ ldapdir / db / bdb-logs $ ldapdir / db / tmpp
+ 
+-si [-z "$ valgrind"];ensuite
+- nativeIconv = "true"
+-autre
+- nativeIconv = "false"
+-Fi
+-
+ chat> $ conffile << eof
+ [global]
+- iconv: native = $ nativeIconv
+ name netbios = $ netbiosname
+ NetBiOS alias = $ serveur
+ Workgroup = $ Domain
+@@ -92,7 +83,6 @@
+ Server Protocole max = SMB2
+ notify: inotify = false
+ LDB: Nosync = vrai
+- Torture: Basedir = $ test_data_prefix
+ 
+ Système: Anonymous = Vrai
+ # Nous ne voulons pas passer nos auto-tests si le code PAC est faux
+@@ -283,7 +273,6 @@
+ 
+ echo "krb5_config = $ krb5_config"
+ echo "prefix_abs = $ prefix_abs"
+-echo "test_data_prefix = $ test_data_prefix"
+ Echo "Configuration = $ Configuration"
+ echo "conffile = $ conffile"
+ echo "slapd_conf = $ slapd_conf"
+@@ -303,3 +292,5 @@
+ echo "ldapdir = $ ldapdir"
+ echo "provision_options = $ provision_options"
+ echo "provision_aci = $ provision_aci"
++ echo "winbindd_socket_dir = $ winbindd_socket_dir"
++ echo "ncalrpcdir = $ ncalrpcdir"
+
+Modifié: branches / samba_4_0 / source / script / tests / selftest.pl
+==============================================.==================
+--- Branches / Samba_4_0 / source / script / tests / selftest.pl 2007-04-08 23:55:01 UTC (Rev 22133)
++++ branches / samba_4_0 / source / script / tests / selftest.pl 2007-04-09 00:53:05 UTC (révélateur 22134)
+@@ -443,9 +443,39 @@
+ "127.0.0.10/8",
+ "127.0.0.11/8"));
+ 
++
++
++ mon $ conffile = "$ prefix / client.conf";
++ Open (cf, "> $ conffile");
++ imprimer cf "[global] \\ n";
++ if (défini ($ env {valgrind})) {
++ imprimer cf "iconv: native = true \\ n";
++} else {
++ imprimer cf "iconv: native = false \\ n";
++}
++ imprimer cf "
++ workgroup = $ testenv_vars -> {domain}
++ royaume = $ testenv_vars -> {royaume}
++ ncalrpc dir = $ testenv_vars -> {ncalrpcdir}
++ js incluent = $ srcdir / script / libjs
++ Winbindd Socket Directory = $ testenv_vars -> {winbindd_socket_dir}
++ nom Resolve Order = Bcast
++ Interfaces = 127.0.0.1/8
++ Panic Action = $ srcdir / script / gdb_backtrace \\% pid \\% \\% prog \\%
++ max xmit = 32k
++ notify: inotify = false
++ LDB: Nosync = True
++ Système: Anonymous = True
++ # Nous ne voulons pas passer nos auto-tests si le code PAC est faux
++ Torture: basé sur Basedir = ST
++ gensec: require_pac = true
++ PID Directory = $ testenv_vars -> {piddir}
++ ";
++ Close (CF);
++
+ mon @torture_options = ();
+ push (@torture_options, "--option = interfaces = $ interfaces");
+-push (@torture_options, $ testenv_vars -> {configuration});
++ push (@torture_options, "--configfile = $ conffile");
+ # Assurez-vous que tout appel Smbtorture ne fonctionne pas trop longtemps
+ push (@torture_options, "--maximum-runtime = $ torture_maxtime");
+ push (@torture_options, "--Target = $ opt_target");
+
+###
+

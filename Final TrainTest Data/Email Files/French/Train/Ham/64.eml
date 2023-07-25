@@ -1,0 +1,17 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42349]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42349>
+
+
+Dans Languages / Dotnet / Ops / Dotnet.Ops, les OPS suivants doivent être corrigées
+pour des architectures 64 bits:
+
+ - net_conv_ovf_i_un
+ - net_conv_ovf_u_un
+ - net_conv_ovf_i
+ - net_conv_ovf_u
+
+###
+

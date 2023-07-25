@@ -1,0 +1,65 @@
+
+Le Tue, le 10 avril 2007, Achim Zeileis a écrit:
+
+> Sur mar, le 10 avril 2007, Ronggui a écrit:
+>
+>> il semble que la masse suggère de juger sur la base de
+>> sum (résidus (mode, type = "Pearson")) / df.residual (mode).
+
+Pas vraiment;c'est l'estimateur de moment conventionnel de la surdispersion
+et il ne souffre pas des biais graves l'estimation non référencée
+ci-dessous a (et sont illustrés en masse).
+
+>> ma question: est
+>> y a-t-il une règle de base de la valeur cutpoiont?
+>>
+>> Le document "sur l'utilisation des corrections pour surdispersion"
+
+Quel journal?Il est grossier de ne pas donner de crédit et inutile à votre
+lecteurs à ne pas donner une citation appropriée.
+
+>> suggère que une surdispersion existe si la déviance est au moins deux fois
+>> Nombre de degrés de liberté.
+
+Surdispersion _exists_: "Tous les modèles sont faux mais certains sont utiles"
+(Box G.E.P.).La question est si elle est importante dans votre problème, pas ça
+si est détectable.
+
+> Il existe également des tests formels pour sur-dispersion.J'en ai mis en uvre un pour
+> Un package qui n'est pas encore sur Cran (code / documents joints), un autre est
+> implémenté dans odTest () dans le package "pscl".Ce dernier contient également
+> compter davantage les modèles de régression des données qui peuvent traiter les deux
+> sur-dispersion et en excès de zéros dans les données de comptage.Une vignette expliquant le
+> Les outils sont sur le point d'être publiés.
+
+Il y a, mais comme des tests formels pour les valeurs aberrantes que je ne conseillerais pas d'utiliser
+eux, comme vous pouvez obtenir des inférences trompeuses avant qu'elles ne soient importantes,
+et ils peuvent rejeter lorsque les inférences du petit modèle sont parfaitement
+adéquat.
+
+En général, c'est une bien meilleure idée d'élargir vos modèles pour tenir compte
+des types de départs votre test anticipé plutôt que post-hoc pour
+Ces départs et alors si ces tests ne manquent pas
+peu d'effet sur vos inférences.
+
+L'estimateur du moment \\ phi de sur-dispersion vous donne une indication de
+Les effets probables sur vos inférences: par exempleLes erreurs standard estimées sont
+proportionnel à \\ sqrt (\\ phi).Avoir des erreurs standard qui doivent être gonflées
+de 40% semble indiquer que la règle que vous citez est trop optimiste (même
+Lorsque son estimateur est fiable).
+
+-
+Brian D. Ripley, Ripley@stats.ox.ac.uk
+Professeur de statistiques appliquées, http://www.stats.ox.ac.uk/~ripley/
+Université d'Oxford, Tél: +44 1865 272861 (Self)
+1 South Parks Road, +44 1865 272866 (PA)
+Oxford OX1 3TG, Fax britannique: +44 1865 272595
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

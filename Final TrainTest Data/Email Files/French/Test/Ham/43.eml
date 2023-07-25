@@ -1,0 +1,64 @@
+
+------------------------------------------------------------
+Revno: 84
+révision-id: tridge@samba.org-20070410104831-d956235aa1d7329f
+Parent: tridge@samba.org-20070410094029-2b9561032c749c8a
+Commitation: Andrew Tridgell <tridge@samba.org>
+Branche Nick: tridget
+Timestamp: mar 2007-04-10 20:48:31 +1000
+message:
+  Corrigez la file d'attente pour les prises TCP partiellement connectées
+modifié:
+  TCP / CTDB_TCP.H CTDB_TCP.H-20061127103747-L8XENIWIAPBYDEHQ-3
+  TCP / TCP_CONNECT.C TCP_CONNECT.C-20061128004937-X70Q1CU5XZG5G2TM-1
+  TCP / TCP_INIT.C TCP_INIT.C-20061128004937-X70Q1CU5XZG5G2TM-2
+=== Fichier modifié 'TCP / CTDB_TCP.h'
+--- A / TCP / CTDB_TCP.H 2007-04-10 09:33:21 +0000
++++ b / tcp / ctdb_tcp.h 2007-04-10 10:48:31 +0000
+@@ -48,5 +48,6 @@
+ void ctdb_tcp_node_connect (struct event_context * ev, struct timed_event * te,
+ struct timeval t, vide * privé);
+ void ctdb_tcp_read_cb (uint8_t * data, size_t cnt, void * args);
++ void ctdb_tcp_tnode_cb (uint8_t * data, size_t cnt, void * private);
+ 
+ #define ctdb_tcp_alignment 8
+
+=== Fichier modifié 'TCP / TCP_CONNECT.C'
+--- A / TCP / TCP_CONNECT.C 2007-04-10 09:40:29 +0000
++++ b / tcp / tcp_connect.c 2007-04-10 10:48:31 +0000
+@@ -37,7 +37,7 @@
+ / *
+   appelé lorsqu'un paquet complet est arrivé - ne devrait pas se produire sur cette prise
+  * /
+-Static void ctdb_tcp_tnode_cb (uint8_t * data, size_t cnt, void * privé)
++ void ctdb_tcp_tnode_cb (uint8_t * data, size_t cnt, void * private)
+ {
+ struct ctdb_node * node = talloc_get_type (privé, struct ctdb_node);
+ struct ctdb_tcp_node * tnode = talloc_get_type (nud-> privé,
+@@ -80,8 +80,7 @@
+ 
+         setsockopt (tnode-> fd, ipproto_tcp, tcp_nodelay, (char *) & un, sizeof (un));
+ 
+- tNode-> queue = ctdb_queue_setup (node-> ctdb, nud, tnode-> fd, ctdb_tcp_alignment,
+- ctdb_tcp_tnode_cb, nud);
++ ctdb_queue_set_fd (tnode-> file d'attente, tnode-> fd);
+ 
+ / * Dites à la couche CTDB que nous sommes connectés * /
+ Node-> ctdb-> upCalls-> node_conned (node);
+
+=== Fichier modifié 'TCP / TCP_INIT.C'
+--- A / TCP / TCP_INIT.C 2007-04-10 09:40:29 +0000
++++ b / tcp / tcp_init.c 2007-04-10 10:48:31 +0000
+@@ -67,6 +67,10 @@
+ 
+ tnode-> fd = -1;
+ Node-> private = tNode;
++
++ tnode-> queue = ctdb_queue_setup (node-> ctdb, nud, tnode-> fd, ctdb_tcp_alignment,
++ ctdb_tcp_tnode_cb, nud);
++
+ retour 0;
+ }
+
+###
+

@@ -1,0 +1,41 @@
+
+Le 10-avr-07 07:48:38, Constant Depièreux a écrit:
+> Bonjour,
+>
+> J'ai un programme de crise de données qui me cause un problème.
+>
+> Certaines données sont identifiées avec un & signe suivi d'un entier.
+> Aucun problème n'est rencontré lors de l'analyse des données ci-dessous et 500, mais la valeur
+> ci-dessus sont ignorés.
+>
+> Y a-t-il une limitation en R sur ce sujet?
+
+Je pense que nous avons besoin de clarifications - un peu Péciser le Contexte!
+
+Quelle est la syntaxe du chemin "& 500" (ou autre)
+identifier les données?
+
+Quel code utilisez-vous pour reconnaître "& 500" (ou autre) en tant qu'identifiant?
+
+Il est possible que quelque chose dans votre code ait "et"
+être reconnu comme l'opérateur R pour la conjonction logique qui
+(selon votre code) Renvoie False dans certains cas;mais il est
+Difficile de voir comment "xxxx & 500" peut être vrai, mais "xxxx & 501" faux!
+
+Meilleurs vux,
+Ted.
+
+--------------------------------------------------------------------
+Courriel: (Ted Harding) <Ted.harding@nessie.mcc.ac.uk>
+Fax à l'email: +44 (0) 870 094 0861
+Date: 10-APR-07 Heure: 10:28:10
+------------------------------ xfmail ------------------------------
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

@@ -1,0 +1,44 @@
+
+Le jeu le 05 avril 2007 à 11:37:51 -0600, John Jorgensen a écrit:
+> Le 4/5/07, Rafal Szczesniak <Mimir@samba.org> a écrit:
+>> Je suis désolé mais je ne vois pas vraiment l'événement "modifié"
+>> Dans ComboBox.Pourriez-vous me pointer quelque part vers le code source?
+>
+> Les indicateurs les plus clairs de la source Qooxdoo sont dans le
+> Exemple de code montrant comment utiliser ComboBox.
+>
+> En fait, j'ai trouvé le problème parce que j'ai utilisé LDBBrowse comme modèle
+> Pour un code que j'ai écrit, puis j'ai seulement compris pourquoi mon
+> Le gestionnaire d'événements ComboBox ne s'appelle pas quand j'ai regardé les lignes
+> 872 - 881 de
+> ./webapps/qooxdoo-0.6.5-sdk/frontend/application/showcase/source/class/showcase/application.js:
+>
+> var select = new qx.ui.form.combobox ();
+>.
+>.
+>.
+> select.adDeventListener ("Modigelected", fonction (e) {
+> var locale = e.getData (). getLabel ();
+> qx.locale.manager.getInstance (). setLocale (paramètres locaux);
+>});
+
+Merci d'avoir signalé cela.
+
+> En fait, je pense que l'existence d'un seul élément dans la base de données
+> La liste est la seule raison pour laquelle personne d'autre n'a remarqué le problème
+> avant.Je l'ai remarqué seulement parce que j'ai coupé et collé
+> ldbbrowse / gui.js, et a été surpris que mon gestionnaire d'événements n'ait jamais obtenu
+> appelé.Je miné si vous essayez d'ajouter un deuxième élément à la liste dans un test
+> Copie de LDBBrowse, vous constaterez que le gestionnaire d'événements de LDBBrowse n'est pas
+> appelé non.
+
+Bonne prise!Merci pour votre explication.Correction appliquée.
+
+
+à votre santé,
+-
+Rafal szczesniak
+Membre de l'équipe Samba http://www.samba.org
+
+###
+

@@ -1,0 +1,77 @@
+
+<Html> <A-Head> <Title> CNN.com Student News Newsletter </Title>
+<Style type = text / css rel = "Stylesheet"> Body {
+Taille de police: 14px;Contexte: # 000;Marge: 10px;Couleur: #fff
+}
+.mainbox {
+Border-droite: # 3E3D3D 1PX solide;Border-top: # 3E3D3D 1PX solide;Border-Left: # 3E3D3D 1PX solide;Largeur: 732px;Border-Bottom: # 3E3D3D 1PX solide;Texte-aligne: Centre
+}
+.Dateline {
+Padding-gauche: 10px;Contexte: # 000;Hauteur: 20px;Texte-aligne: gauche
+}
+.sur {
+Contexte: URL (http://www.cnn.com/linkto/student.news/images/sn.light.pattern.jpg);Largeur: 728px;Texte-aligne: gauche
+}
+.boxleft {
+Contexte: URL (http://www.cnn.com/linkto/student.news/images/sn.light.pattern.jpg);Largeur: 362px;Texte-aligne: gauche
+}
+.boxRight {
+Contexte: URL (http://www.cnn.com/linkto/student.news/images/sn.light.pattern.jpg);Largeur: 362px;Texte-aligne: gauche
+}
+.boxleft {
+Border-droite: # 000 1px solide
+}
+.boxRight {
+Border-Left: # 000 Solide 2px
+}
+UN {
+Police-poids: Bold;Couleur: #fff
+}
+.Titre {
+Padding-gauche: 25px
+}
+P {
+Padding-droite: 35px;Padding-gauche: 35px;Padding-Bottom: 10px;Marge: 0px;Tableau de rembourrage: 0px
+}
+.bas de page {
+Contexte: URL (http://www.cnn.com/linkto/student.news/images/sn.dark.pattern.jpg);Padding-boot: 10px
+}
+.un d {
+Contexte: URL (http://www.cnn.com/linkto/student.news/images/sn.dark.pattern.jpg);Padding-boot: 20px
+}
+.Centerline {
+Contexte: # 3E3D3D;Largeur: 1px
+}
+.petit {
+Taille de police: 10px;Couleur: #fff
+}
+.small a {
+Taille de police: 10px;Couleur: #fff
+}
+</ Style>
+
+<Meta Content = "MSHTML 6.00.2900.3059" Name = Generator> </Ead>
+<body> <br> <br>
+<Div Class = Mainbox>
+<Div style = "Border-right: # 000 1px solide; bordure: # 000 1px solide; bordure de bordure: # 000 1px solide; bordure-fond: # 000 1px solide">
+<Div class = ad> </div>
+<Div class = Banner> <img alt = "cnn étudiant news" src = "http://i.a.cnn.net/cnn/linkto/student.news/images/banner.jpg" width = 728> </ div>
+<Div Class = Dateline> Lundi 9 avril 2007 </div>
+<Table CellSpacing = 0 CELLPADDING = 0 Border = 0>
+<Tbody>
+<tr>
+<Td class = boxleft valign = top> <img style = "padding-bottom: 10px" alt = "aujourd'hui sur cnn étudiant new/sn.today.on.jpg "> <a class=title href="http://msg1svc.net/servlet/gateway?p=turnerlrn&u=5664&et=h&s=77198&da=0"> regarde et apprendre </a><br> <br>
+<p> L'édition d'aujourd'hui de CNN Student News commence par un coup d'il aux célébrations de Pâques au cours d'un week-end non saisonnière.Ensuite, nous entendons des marins et des marines britanniques libérés au sujet de leur captivité en Iran.Et nous regardons une lutte de skateboard en Caroline du Sud. </p> </td>
+<Td class = CenterLine> </td>
+<Td class = boxRight valign = top> <img style = "padding-bottom: 10px" alt = "actualités en éducation d'aujourd'hui" src = "http://i.a.cnn.net/cnn/linkto/student.news/images/sn.todays.educaion.jpg "> <a class=title href="http://msg1svc.net/servlet/gateway?p=turnerlrn&u=5669&et=h&s=77198&da=0"> officiel de congé après les tipées de stock divulguées </ / /A> <br> <br>
+<p> Un responsable du ministère de l'Éducation qui détenait environ 100 000 $ d'actions dans une entreprise de prêts étudiants pendant la supervision des prêteurs a été mis en congé, a déclaré vendredi un porte-parole du département. <br> </p> </td> </ /Tr>
+<tr>
+<td> </td> </tr> </ tbody> </s table>
+<Div class = about> <img style = "padding-bottom: 10px" alt = "À propos de nous" src = "http://i.a.cnn.net/cnn/linkto/student.news/images/sn.about.us.jpg "width = 728> <a class=title href="#"> </a> <br>
+<p> CNN Student News est un programme de nouvelles de 10 minutes sans publicité qui est diffusé sur CNN Headline News à 3 h 12 HNE ainsi que sur CNN.com/education.Créée par une équipe de journalistes et d'éducateurs, le programme fournit les meilleures histoires de la journée, des segments qui encouragent la participation des étudiants et des rapports spéciaux approfondis.De plus, CNN Student News fournit un programme d'études gratuit sur CNN.com/Education pour accompagner le contenu de chaque programme.CNN Student News, avec CNN Presents: Classroom Edition, est la contribution de Turner Broadcasting au câble en classe. </p> </div>
+<Div class = footer> <img style = "padding-right: 0px; padding-left: 0px; padding-bottom: 20px; padding-top: 20px" alt = line src = "http://i.a.cnn.net/ami </a> <br>
+<Div Class = Small> Vous avez reçu cet e-mail parce que vous vous êtes inscrit pour recevoir la newsletter CNN <br> Student News.<a href="http://msg1svc.net/servlet/unsub?d=703d7475726e65726c726e26733d373731393826633d3232312666c3d39323926723d3226664613d39323926723d3222664613d30 for clique
+<Div class = small> <a href="http://msg1svc.net/servlet/formListener?dhvybmvybhjuojq6veu6oti5ojc3mtk4"> modifiez votre profil ici </a> </div> </div> </v> </div><br> <img src = http: //msg1svc.net/servlet/mopen? C = 703d7475726e65726c726e26733d37373139382670643d4e4c312666c3d3932392665743d482666c39323926657443d48266666661266126610
+
+###
+

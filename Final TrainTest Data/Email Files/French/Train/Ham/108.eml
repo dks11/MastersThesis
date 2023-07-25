@@ -1,0 +1,24 @@
+
+Avez-vous essayé des machines 64 bits avec une mémoire plus grande ou voulez-vous dire
+que vous ne pouvez pas utiliser R sur vos machines actuelles?
+
+Avez-vous également essayé S-Plus?Cela fonctionnera-t-il pour vous?La transition de
+que pour r serait inférieur à SAS à R.
+
+Le 4/9/07, Jorge Cornejo-Donoso <jorgecornejo@uach.cl> a écrit:
+> tha s9ze de db est un problème avec R. nous utilisons toujours SAS parce que r
+> Impossible de gérer son propre DB, et de Couse, nous ne voulons pas sacrifier la résolution,
+> Parce que la collecte de données est coûteuse (au moins dans les pêcheries et
+> OCAAGRAPHY), donc .. Je pense que R doit améliorer l'utilisation des gros DB.Maintenant
+> Je ne peux utiliser que R pour la préparation des graphiques et certaines analyses de données, mais nous
+> Je ne peux pas faire le travail principal sur R, ABD qui est vraiment triste.
+>
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

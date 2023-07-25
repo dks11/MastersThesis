@@ -1,0 +1,80 @@
+
+Bonjour
+
+Me semble que vous pouvez faire un tableau de résumé en utilisant
+
+agrégat (réponse, liste (traitement, mesure, bloc, étude), moyenne)
+
+Et puis si vous le souhaitez, vous pouvez utiliser la fonction de remodelage ou la fonction de fondre / coulée
+Du package de remodelage pour obtenir une large forme de votre table.
+
+Salutations
+
+Petr Pikal
+Petr.pikal@precheza.cz
+
+r-helpbouces@stat.math.ethz.ch napsal dne 10.04.2007 00:14:15:
+
+> Salut,
+>
+> J'ai une table de résumé pour une expérience qui ressemble à ceci
+>
+> Réponse de mesure du traitement à l'étude
+> A 1 T-0 1 12
+> A 1 T-1 1 52
+> A 1 T-0 2 12
+> A 1 T-1 2 65
+>
+> Et ainsi de suite ...
+>
+> Il y a 10 études, 4 blocs, 10 concours, 5 mesures pour
+> la valeur de réponse.
+>
+> Je veux produire une table qui ressemble à ceci:
+>
+> Traitement des blocs d'étude Mes.1 Mes.2 Mes.3
+> A 1 T-1 15 54 65
+> A 1 T-2 54 65 45
+> A 2 T-1 12 12 23
+> A 2 T-2 65 54 65
+>
+> Et ainsi de suite ...
+>
+> Avec TAPPLY (réponse, liste (traitement, mesure, bloc, étude), moyenne)
+>
+> Je m'approche de très près, cependant, j'obtiens les résultats en tant que liste!
+>
+> Si à la place j'utilise
+>
+> fTable (tApply (réponse, liste (traitement, mesure, bloc, étude),
+moyenne))
+>
+> Je m'approche vraiment, mais je n'obtiens qu'une seule valeur pour chaque classe, cependant
+je
+> Besoin de table entière, car à la fin, ce dont j'ai vraiment besoin, c'est du
+> incrément entre la mesure (n) - mesure (n-1) pour chaque
+TRAITEMENT,
+> Bloquer, étudier, pour effectuer une analyse ANOVA sur les données d'incrément.
+>
+> ESENTIALY, je veux m'éloigner de l'exécution d'une table pivot dans l'accès
+>
+> Des pensées?
+>
+> Cristian Montes
+> Université d'État de Caroline du Nord
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication
+http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

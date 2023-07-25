@@ -1,0 +1,44 @@
+
+URL: http://build.samba.org/
+
+--- /home/build/master/cache/broken_results.txt.old 2007-04-09 00: 01: 15.000000000 +0000
++++ /home/build/master/cache/broken_results.txt 2007-04-10 00: 01: 35.000000000 +0000
+@@ -1,24 +1,24 @@
+-Duild de la construction du lun 9 avril 00:00:02 2007
++ Statut de construction à partir de Tue 10 avril 00:00:02 2007
+ 
+ Compter les comptes:
+ Panique brisée totale de l'arbre
+ Soc 0 0 0
+ build_farm 0 0 0
+-Ccache 34 6 0
++ ccache 33 6 0
+ ctdb 0 0 0
+ distcc 1 0 0
+-ldb 32 4 0
+-Libreplace 32 3 0
+-lokeet-heimdal 29 16 0
+-pidl 20 2 0
+-ppp 14 0 0
+-RSYNC 33 11 0
++ LDB 31 4 0
++ libreplace 31 3 0
++ Lorikeet-Heimdal 28 15 0
++ pidl 19 2 0
++ PPP 13 0 0
++ rsync 32 11 0
+ samba 0 0 0
+ samba-docs 0 0 0
+ samba-gtk 3 3 0
+-Samba4 35 12 0
+-Samba_3_0 38 20 2
+-smb-build 31 30 0
+-Talloc 33 1 0
++ samba4 34 12 0
++ samba_3_0 37 19 1
++ SMB-build 30 29 0
++ Talloc 31 1 0
+ TDB 31 2 0
+
+###
+

@@ -1,0 +1,78 @@
+
+Daer r-helpers,
+
+Quelqu'un peut-il aider avec ce qui suit:
+
+Je reçois:
+
+ > mcmcsamp (txt.lmer3f)
+Sortie Markov Chain Monte Carlo (MCMC):
+Démarrer = 1
+Fin = 1
+Intervalle d'éclaircissement = 1
+....
+
+Mais:
+
+ > mcsamp (txt.lmer3f)
+Erreur dans as.bugs.array (sims, programme = "lMer", n.iter = n.iter,
+n.burnin = n.burnin ,:
+erreur dans les paramètres sigma.s dans Paramètres.to.save
+
+
+J'avais attaché le paquet de bras:
+ > bibliothèque (bras)
+Chargement du package requis: R2Winbugs
+
+ARM (version 1.0-15, construit: 2007-3-17)
+Le répertoire de travail est / utilisateurs / mk / documents / projets / Mike / Prediss / Exp-Text
+Chargement du package requis: étranger
+
+ > SessionInfo ()
+R Version 2.4.1 (2006-12-18)
+i386-papple-darwin8.8.1
+
+lieu:
+C
+
+Packages de base ci-joints:
+[1] "Tools" "Grid" "DatasetSets" "Stats" "Graphics"
+"grdevices" "utilise" "méthodes"
+[9] "base"
+
+Autres packages ci-joints:
+      bras étranger r2winbugs coda
+HMISC GMODELS EFFETS LME4
+     "0,8-18" "1.0-15" "2.0-4" "0,10-7" "3,2-1"
+"2.13.2" "1.0-9" "0.9975-13"
+       Matrix Car Weaver Codetools
+digest xtable latticeextra réseau
+"0.9975-11" "1.2-1" "1.0.1" "0,0-3" "0,2.3"
+"1.4-3" "0,1-4" "0,14-17"
+     Gridbase Mass Jgr iplots
+Javagd rjava
+      "0,4-3" "7.2-33" "1.4-15" "1.0-5" "0,3-6"
+"0,4-14"
+
+Merci,
+Mk
+_____________________________
+Professeur Michael Kubovy
+Université de Virginie
+Département de psychologie
+USPS: P.O.Box 400400 Charlottesville, VA 22904-4400
+Colis: salle 102 Gilmer Hall
+         McCormick Road Charlottesville, VA 22903
+Bureau: B011 + 1-434-982-4729
+Laborat: B019 + 1-434-982-4751
+Fax: + 1-434-982-4766
+Www: http://www.people.virginia.edu/~mk9y/
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

@@ -1,0 +1,36 @@
+
+Derrell@samba.org écrit:
+
+> Derrell@samba.org écrit:
+>
+>> J'ai eu ma première opportunité, hier, de tester LibsmbClient contre Vista.
+>> c'est cassé.Nous ne pouvons pas énumérer ni accéder aux actions Vista.J'utilisais
+>> Code de Trunk à partir de jeudi soir.Cela affectera probablement Konqueror
+>> et le navigateur de Gnome, il serait donc agréable de le réparer.
+>
+> Je viens de découvrir, à mon horreur, que les exemples ne sont pas liés au
+> Library LibsmbClient dans Source / Bin;Au lieu de cela, ils sont liés dynamiquement
+> Tout ce qui est dans /usr/local/samba/lib/libsmbclient.so.Tellement pour un
+> test significatif.:-(
+>
+> Il est possible que le travail qui ait déjà été accompli dans la fabrication
+> La samba interopérer avec Vista a résolu les problèmes.J'aurai besoin de revenir
+> dans un environnement avec un accès Vista pour le tester à nouveau.
+
+J'ai réussi à accéder à nouveau au système Vista.Les changements qui ont été
+Fabriqué à Samba récemment * semble avoir résolu les problèmes d'accès
+Vue.Je suis maintenant en mesure d'énumérer les partages et d'accès aux fichiers sur la Vista
+Machine qui était inaccessible lors de mes tests initiaux.
+
+Fait intéressant, il négocie maintenant NTLMSSP comme il le fait avec W2K, qui
+Cela ne faisait pas dans mes tests précédents.
+
+Quoi qu'il en soit, il semble que le gros problème que je pensais que nous avions n'existe pas.C'est
+bon à savoir.
+
+Salutations,
+
+Derrell
+
+###
+

@@ -1,0 +1,15 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42350]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42350>
+
+
+Il y a un avertissement dans SRC / OPS / PMC.ops dans le Find_type () OP:
+
+Kludge Alert - XXX FIXME - Cette logique doit être dans PMC_TYPE_P ()
+
+Cela doit être corrigé.
+
+###
+

@@ -1,0 +1,23 @@
+
+Le 4/9/07, Wijaya Edward <ewijaya@i2r.a-star.edu.sg> a écrit:
+
+> Fonctionne sur cmdline simple (avec / sans "utiliser lib").
+> Mais pas dans Apache.
+
+Parfois, il est difficile de déboguer ce qu'il y a dans votre CGI
+environnement.C'est à quoi sert à l'intérieur:
+
+   http://search.cpan.org/~phoenix/inside-1.01/
+
+J'espère que cela t'aides!
+
+- Tom Phoenix
+Formation de Stonehenge Perl
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

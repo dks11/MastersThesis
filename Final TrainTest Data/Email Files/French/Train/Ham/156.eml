@@ -1,0 +1,54 @@
+
+Avez-vous plutôt essayé d'utiliser des polygones?Cela semble que ce serait
+plus approprié pour votre objectif.
+
+Hadley
+
+Le 4/9/07, Jorge Cornejo-Donoso <cornejo@biopatagonia.cl> a écrit:
+> J'ai la même question / problème.
+> J'ai un tracé UTM, donc les axes sont en mètres, et j'ai besoin de représenter chaque
+> point de 50 * 50 m.C'est une façon de le faire?
+>
+> ----- Mensaje Original -----
+> DE: r-helpbounts@stat.math.ethz.ch
+> [Mailto: r-helpbounces@stat.math.ethz.ch] en nombre de Cressoni, Massimo
+> (NIH / nhlbi) [f]
+> Enviado El: Domingo, 08 de Abril de 2007 18:29
+> Para: r-help@stat.math.ethz.ch
+> Asunto: [r] tracer les symboles dimensions
+>
+>
+> J'écris du code pour obtenir des parcelles de publication (comme celles peuvent
+> être obtenu avec Sigmaplot).Je ne suis pas en mesure de trouver les dimensions d'un
+> point.Des paramètres comme CEX vous font en sorte que
+> Besoin de connaître la dimension exacte (dans les coordonnées relatives:
+> Si mon tracé est 640x480, un point tracé avec CEX = 1.5 sera ...)
+>
+> Massimo Cressoni
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+> __________ Informacisn de NOD32, Revisisn 2173 (20070407) __________
+>
+> Este Mensaje ha Sido Anallizado Con NOD32 Antivirus System
+> http://www.nod32.com
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

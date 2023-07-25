@@ -1,0 +1,18 @@
+
+> Si vous n'avez pas déjà vu ceci:
+> http://www.debian.org/releases/stable/i386/release-notes/ch-information.en.html#s-hp-acpi
+
+Merci beaucoup.J'ai trouvé ce rapport de bogue après avoir soumis ma requête.
+Je voudrais savoir si la compilation d'un noyau immaculé 2.6.19
+pas casser les iptables, parce que je pense que le package iptables dans Debian
+nécessite certains correctifs de noyau que l'on ne trouve pas dans les sources officielles.
+
+Salutations.
+
+
+-
+Pour vous désabonner, envoyez un courriel à Debian-Laptop-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

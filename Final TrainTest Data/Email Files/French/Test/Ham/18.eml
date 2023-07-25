@@ -1,0 +1,20 @@
+
+Steve Peters a écrit:
+> Un problème que j'ai récemment rencontré tout en travaillant sur la compilation de perroquet avec
+> C ++ est l'utilisation de "classe" comme nom de variable dans struct _vtable et comme
+> Paramètres dans plusieurs fonctions.
+>
+> Cela devra changer alors que je commence à avancer sur ma compatibilité
+> Travaillez et je recherche un consensus sur le nom du VTable.
+> Dans mon travail initial, j'ai changé le nom en "pmc_class" car il
+> semble être le plus précis sur la base du documentaton dans vTable.h.
+> Je suis volontiers ouvert aux suggestions pour un autre nom pour cela
+> Varaible.
+>
+Je pense que le mot "espace de noms" doit également être utilisé avec soin, ou
+de préférence renommé autre chose.
+
+kjs
+
+###
+

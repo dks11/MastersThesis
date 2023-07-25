@@ -1,0 +1,40 @@
+
+----- Commencer le message signé PGP -----
+Hash: SHA1
+
+Gens,
+
+Sur la base de certaines recherches de Jeremy, il semble que Windows Vista
+n'a pas été soigneusement testé contre les serveurs CIFS en mode partage
+Sécurité.(Jeremy pouvez-vous rafraîchir ma mémoire ici sur les détails?)
+
+Je propose donc que nous commençons à l'utiliser comme une incitation à obtenir
+les personnes hors de la sécurité = partage.Nous pouvons contourner certains des
+Bogues mais il semble probablement pas tous et OMI nous avons plus important
+travailler à faire de toute façon.
+
+Si quelqu'un veut être le "Security = Share & Vista" officiel
+Développeur de soutien, je serai heureux de laisser tomber la proposition et le point
+Tous les e-mails Samba@samba.org pertinents :-) Quelqu'un?Quelqu'un?
+
+
+
+
+
+Cheers, Jerry
+- -
+==============================================.===================
+Samba ------- http://www.samba.org
+CentreRis ----------- http://www.centeris.com
+"Quel homme est un homme qui n'améliore pas le monde?"- Balian
+----- COMMENCER PGP Signature -----
+Version: GNUPG V1.4.3 (GNU / Linux)
+Commentaire: Utilisation de gnupg avec Mozilla - http://enigmail.mozdev.org
+
+id8dbqfggr8uir7qmdg1efyravlfakcjlucrat6e7 / vf1eccy0soigqp1qcaa0la
+5vusazaimdzxvafjtddhe / w =
+= M3e /
+----- Fin de la signature PGP -----
+
+###
+

@@ -1,0 +1,99 @@
+
+Le dimanche 08 avril 2007 18:07, Steve Peters via RT a écrit:
+
+> Le dim 08 avril 16:08:05 2007, Stmpeters a écrit:
+>> Le patch attaché comprend plusieurs nettoyages nécessaires au silence
+>> Avertissements
+>> Lors de la compilation du perroquet avec Intel C ++.
+>
+> Il est utile de fixer le bon patch ....
+
+Je reçois plusieurs avertissements.J'ai nettoyé ce lot:
+
+src / pmc / ev.
+SRC / PMC / EVAL.PMC: 255: AVERTISSEMENT: Argument de passere
+Type de pointeur incompatible
+src / pmc / ev.
+SRC / PMC / EVAL.PMC: 312: AVERTISSEMENT: Argument de passere
+Type de pointeur incompatible
+
+src / pmc_freeze.c: dans la fonction run_thaw:
+src / pmc_freeze.c: 1435: avertissement: la comparaison des types de pointeurs distincts manque de
+jeter
+
+src / pmc / string.pmc: dans la fonction «Parrot_string_nci_trans»:
+src / pmc / string.pmc: 853: avertissement: l'indice du tableau a le type de type «char»
+
+... Mais ma tentative de réparer ces échecs de test plus provoque plus de défaillances de test dans T / OP / String_cs.t:
+
+src / codings / fixe_8.c
+Src / Encodings / Fixed_8.c: dans la fonction «get_byte»:
+SRC / Encodings / Fixe
+dans
+ signée
+ src / codings / fixe_8.c: dans la fonction «set_byte»:
+ SRC / Encodings / Fixe
+sig
+ littoral
+ src / codings / ucs2.c
+ src / codings / utf16.c
+ src / codings / utf16.c: dans la fonction «get_byte»:
+ src / codings / utf16.c: 170: avertissement: les cibles du pointeur dans l'initialisation diffèrent
+dans
+ signée
+ src / codings / utf16.c: en fonction set_byte:
+ SRC / Encodings / UTF16.C: 188: AVERTISSEMENT: Les cibles du pointeur en affectation diffèrent en
+pancarte
+ edness
+ src / codings / utf8.c
+ src / codings / utf8.c: dans la fonction «to_encoding»:
+ src / codings / utf8.c: 334: avertissement: les cibles du pointeur en affectation diffèrent en
+signe
+ dûche
+ src / codings / utf8.c: 357: avertissement: les cibles du pointeur en affectation diffèrent en
+signe
+ dûche
+ src / codings / utf8.c: dans la fonction «get_byte»:
+ src / codings / utf8.c: 400: avertissement: les cibles du pointeur dans l'initialisation diffèrent
+dans S
+ ignorance
+ src / codings / utf8.c: dans la fonction «set_byte»:
+ src / codings / utf8.c: 418: avertissement: les cibles du pointeur en affectation diffèrent en
+signe
+ dûche
+
+Les résultats des tests sont:
+
+pas ok 5 - Downcase
+# Test échoué (T / op / string_cs.t à la ligne 72)
+# Got: 'aeiou_??
+                         # ''
+# attendu: 'aeiou_??
+                         # ''
+OK 6 - Upcase
+pas ok 7 - titlecase
+# Test échoué (T / op / string_cs.t à la ligne 90)
+# Got: 'Zaeiou_??
+                          # ''
+# attendus: 'zaeiou_??
+                          # ''
+
+Comme on le voit moins, ils sont:
+# Test échoué (T / op / string_cs.t à la ligne 72)
+# Got: 'aeiou_ <c4> <d6> <dc>
+# ''
+# attendus: 'aeiou_ <e4> <f6> <fc>
+# ''
+# Test échoué (T / op / string_cs.t à la ligne 90)
+# Got: 'zaeiou_ <c4> <d6> <dc>
+# ''
+# attendus: 'zaeiou_ <e4> <f6> <fc>
+
+... Donc les personnages codés obtiennent 32 personnes en quelque sorte, quelque part.
+
+J'ai attaché votre patch avec quelques modifications de mon côté.
+
+- C
+
+###
+

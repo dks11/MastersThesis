@@ -1,0 +1,13 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42379]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42379>
+
+
+Il y a l'élément TODO dans DEBUG_PRINT () de SRC / OPS / DEBUG.OPS:
+
+"Ajuster la disposition du registre"
+
+###
+

@@ -1,0 +1,127 @@
+
+Le Tue, le 10 avril 2007, Ronggui a écrit:
+
+> Le 4/10/07, le professeur Brian Ripley <riphley@stats.ox.ac.uk> a écrit:
+>> sur mar, le 10 avril 2007, Achim Zeileis a écrit:
+>>
+>>> sur mar, 10 avril 2007, Ronggui a écrit:
+>>>
+>> >> Il semble que la masse suggère de juger sur la base de
+>> >> sum (résidus (mode, type = "Pearson")) / df.residual (mode).
+>>
+>> pas vraiment;c'est l'estimateur de moment conventionnel de la surdispersion
+>> et il ne souffre pas des biais graves l'estimation non référencée
+>> ci-dessous a (et sont illustrés en masse).
+>>
+>> >> ma question: est
+>> >> y a-t-il une règle de base de la valeur cutpoiont?
+>> >>
+>> >> Le document "sur l'utilisation des corrections pour surdispersion"
+>>
+>> De quel papier?Il est grossier de ne pas donner de crédit et inutile à votre
+>> lecteurs pour ne pas donner une citation appropriée.
+>
+> Merci d'avoir signalé cela.Il y a la citation:
+> @article {Lindsey1999,
+> title = {sur l'utilisation des corrections pour surdispersion},
+> auteur = {Lindsey, JK},
+> journal = {statistiques appliquées},
+> volume = {48},
+> numéro = {4},
+> pages = {553--561},
+> année = {1999},
+>}
+
+Et je peux ajouter «il est utile de savoir dont l'autorité est invoquée»,
+Depuis (par exemple), certains auteurs ne sont pas du tout prudents.
+
+>> >> suggère que une surdispersion existe si la déviance est au moins deux fois
+>> >> Nombre de degrés de liberté.
+>>
+>> Overdispersion _exists_: "Tous les modèles sont faux mais certains sont utiles"
+>> (Box G.E.P.).La question est si elle est importante dans votre problème, pas ça
+>> si est détectable.
+>
+>
+>>> Il existe également des tests formels pour sur-dispersion.J'en ai mis en uvre un
+>> pour
+>>> un package qui n'est pas encore sur Cran (code / documents joints), un autre est
+>>> implémenté dans odTest () dans le package "pscl".Ce dernier contient également
+>>> compter davantage les modèles de régression des données qui peuvent traiter les deux
+>>> sur-dispersion et en excès de zéros dans les données de comptage.Une vignette expliquant
+>> le
+>>> Les outils sont sur le point d'être publiés.
+>>
+>> il y a, mais comme des tests formels pour les valeurs aberrantes que je ne conseillerais pas d'utiliser
+>> eux, comme vous pouvez obtenir des inférences trompeuses avant qu'elles ne soient importantes,
+>> et ils peuvent rejeter lorsque les inférences du petit modèle sont parfaitement
+>> adéquat.
+>>
+>> En général, c'est une bien meilleure idée d'élargir vos modèles pour prendre compte
+>> des types de départs votre test anticipé plutôt que pour
+>> ces départs et alors si ces tests ne manquent pas
+>> peu d'effet sur vos inférences.
+>
+> Quelle est la meilleure (ou) meilleure façon d'étendre le modèle existant?
+> en ajoutant d'autres variables indépendantes pertinentes ou en utilisant d'autres
+> Modèle plus approprié comme "Modèle linéaire généralisé binomial négatif"?
+
+Je peux penser à plusieurs approches du manque d'ajustement de Poisson GLM
+
+1) Variables explicatives manquantes.Si vous les avez, bien sûr, utilisez-les.
+
+2) Observations corrélées, probablement en groupes.Ici, un modèle Gee peut être
+approprié.
+
+3) Effets aléatoires du groupe manquant.Similaire en effet à 2) (et au hasard
+Les effets peuvent même être corrélés), mais avec une interprétation différente.
+
+4) Effets aléatoires manquants au niveau individuel, d'où le nombre d'observations
+proviennent d'un mélange de Poisson comme un binôme négatif.
+
+5) Corrélation au niveau individuel, donc les observations du nombre proviennent
+somme de poissons corrélés.
+
+6) Utiliser l'inférence du moment, par ex.Des modèles quasi tels que Quasipoisson.Cette
+ne se soucie pas du mécanisme causal mais s'ajuste à certains
+Effets de certains mécanismes inconnus.(Gee est similaire.)
+
+Vous pouvez ou non pour les distinguer en fonction de votre conception.
+Cependant, cela se résume plus souvent à «le genre de départs vous
+anticiper «en choisissant quoi faire.
+
+>
+> Merci!
+>
+>> L'estimateur du moment \\ phi de sur-dispersion vous donne une indication de
+>> Les effets probables sur vos inférences: par ex.Les erreurs standard estimées sont
+>> proportionnel à \\ sqrt (\\ phi).Avoir des erreurs standard qui doivent être gonflées
+>> par 40% semble indiquer que la règle que vous citez est trop optimiste (même
+>> lorsque son estimateur est fiable).
+>>
+>> - -
+>> Brian D. Ripley, ripley@stats.ox.ac.uk
+>> Professeur de statistiques appliquées, http://www.stats.ox.ac.uk/~ripley/
+>> Université d'Oxford, Tél: +44 1865 272861 (Self)
+>> 1 South Parks Road, +44 1865 272866 (PA)
+>> Oxford OX1 3TG, Fax britannique: +44 1865 272595
+>>
+>
+>
+>
+
+-
+Brian D. Ripley, Ripley@stats.ox.ac.uk
+Professeur de statistiques appliquées, http://www.stats.ox.ac.uk/~ripley/
+Université d'Oxford, Tél: +44 1865 272861 (Self)
+1 South Parks Road, +44 1865 272866 (PA)
+Oxford OX1 3TG, Fax britannique: +44 1865 272595
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

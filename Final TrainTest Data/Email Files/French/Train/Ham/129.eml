@@ -1,0 +1,15 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42354]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42354>
+
+
+Dans le fichier src / ops / pic.ops dans le pic_inline_sub __ () OP Il y a l'élément TODO:
+
+"Système de type de conservation"
+
+Cela doit être mis en uvre.
+
+###
+

@@ -1,0 +1,78 @@
+
+Chers experts,
+ 
+J'ai le script Perl simple suivant (appelé "Hellom.cgi"):
+ 
+__COMMENCER__
+#! / usr / bin / perl
+Utilisez CGI QW /: Standard: HTML3 /;
+Utilisez CGI :: CARP QW (Fatalstobrowser);
+$ Cgi :: post_max = 1024 * 100;# MAX 100K Posts1
+ 
+# --------------------------------------------------
+# COMMENCER {
+# if ($ env {perl5lib} et $ env {perl5lib} = ~ /^(.*)$/) {{
+#
+# # Aveuglement intain.Taintchecking est de protéger
+# # à partir des données Web;
+# # L'environnement est sous notre contrôle.
+# eval "Utiliser lib '$ _';"pour chaque (
+#             inverser
+# Split (/: /, 1 $)
+#);
+#}
+#}
+# --------------------------------------------------
+
+Utilisez ACME :: Spork;
+Utilisez Bio :: Tools :: GuessSeQformat;
+Utilisez IO :: String;
+Utilisez un fichier :: slurp qw (read_file);
+Imprimer "Content-Type: text / html \\ n \\ n";
+Imprimez "Hello World !! Cela fonctionne. \\ n";
+
+__FINIR__
+ 
+Qui est stocké sous: / usr / local / apache / htdocs / test / cgi-bin
+Et le site Web réel est accessible ici:
+http://bioinfo-z.comp.nus.edu.sg/test/cgi-bin/hellom.cgi
+ 
+Comme vous pouvez le voir à partir de ce lien, cela montre qu'il ne peut pas localiser ACME :: Spork,
+sur le chemin montré là-bas.Mais j'ai défini .htaccess pour contenir ceci:
+ 
+Setenv perl5lib / home / sadm / lib / site_perl / sun4-solaris-64int: / home / sadm / lib / site_perl /
+
+J'ai le .htaccess ici: / usr / local / apache / htdocs / test
+
+
+En outre vérifiant l'emplacement du module qu'il montre de manière cohérente
+
+Le chemin correct:
+sadm @ bioinfo-z: ~ $ perldoc -l acme :: spork
+/home/sadm/lib/site_perl/acme/spork.pm
+ 
+Ma question est de savoir pourquoi mon Apache ne peut pas localiser l'emplacement
+Étant donné le bon .htaccess?Ainsi, mon script ne fonctionnera pas?
+ 
+Mon httpd.conf est le suivant: http://dpaste.com/8163/plain/
+Mon modules.conf est le suivant: http://dpaste.com/8164/plain/
+
+J'espère avoir de vos nouvelles
+ 
+ 
+
+
+ 
+ 
+
+------------ Institute for Infocomm Research - Avertissement -------------
+Cet e-mail est confidentiel et peut être privilégié.Si vous n'êtes pas le destinataire prévu, veuillez le supprimer et nous en informer immédiatement.Veuillez ne pas le copier ou l'utiliser à quelque fin que ce soit, ou divulguer son contenu à toute autre personne.Merci.
+--------------------------------------------------------
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

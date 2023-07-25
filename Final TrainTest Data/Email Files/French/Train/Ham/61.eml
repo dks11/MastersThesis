@@ -1,0 +1,21 @@
+
+Sur http://samba.sernet.de/ma/bzr/samba_3_0-registry.bzr/
+
+------------------------------------------------------------
+Revno: 5344
+révision-id: ma@sernet.de-20070410103722-a2ae212eac5cc568
+Parent: ma@sernet.de-20070410103443-471e39ea62339c7b
+Committe: Michael Adam <ma@sernet.de>
+Branch Nick: Samba_3_0-registry.bzr
+Timestamp: mar 2007-04-10 12:37:22 +0200
+message:
+  Supprimer les fichiers déplacés de la fusion.
+  Je suppose que j'apprends toujours comment cela fonctionne ... :-)
+supprimé:
+  Source / Registry / Reg_fronttend_Hilvl.c.Moved Reg_fronttend_hilvl.c-20070228112523-ixvv3vyvzo4tfz32-1
+  source / utils / net_conf.c.moved net_conf.c-20070228210606-uywdn1acd043wgvt-1
+
+Diff trop grand pour le courrier électronique (1444 lignes, la limite est de 1000).
+
+###
+

@@ -1,0 +1,73 @@
+
+Auteur: Allison
+Date: lun 9 avril 19:15:56 2007
+Nouvelle révision: 18096
+
+Modifié:
+   tronc / docs / pdds / pdd15_objects.pod
+
+Enregistrer:
+[PDD]: Ajout d'opcodes et méthodes pour «inspecter» aux objets PDD.
+
+
+Modifié: trunk / docs / pdds / pdd15_objects.pod
+==============================================.===========================.
+--- trunk / docs / pdds / pdd15_objects.pod (original)
++++ Trunk / Docs / PDDS / PDD15_Objects.Pod Mon 9 avril 19:15:56 2007
+@@ -511,6 +511,13 @@
+ Renvoie True si l'objet en question implémente le rôle, la classe, le type,
+ ou un comportement passé, faux autrement.
+ 
++ = Inspecte des articles
++
++ $ P1 = $ p2.InSpect ()
++ $ P1 = $ p2.Ininspect ($ s3)
++
++ Renvoie des informations d'introspection pour la classe.
++
+ = dos
+ 
+ = API PMC d'objet Head2
+@@ -793,6 +800,13 @@
+ Inclure des méthodes ajoutées en composant d'autres rôles dans ce rôle.Les
+ L'accessoire est en lecture seule.
+ 
++ = Inspecte des articles
++
++ $ P1 = $ p2.InSpect ()
++ $ P1 = $ p2.Ininspect ($ s3)
++
++ Retourner des informations d'introspection pour le rôle.
++
+ = dos
+ 
+ = Résolution des conflits de rôle Head3
+@@ -964,13 +978,24 @@
+ il sera absent de tous les futurs objets de classe P1 $ P1, de classes qui
+ Hériter de la classe P1 $, ou des classes qui composent le rôle P1 $.
+ 
+- = item addrole px, py
++ = AddRole d'élément
+ 
+   Adstrole $ P1, $ P2
+ 
+ Ajoutez un rôle P2 $ à la fin de la liste des rôles de classe ou du rôle P1 $.Ajouter
+ Toutes les méthodes et attributs de P2 $ qui ne sont pas déjà dans P1 $.
+ 
++ = Inspecte des articles
++
++ $ P1 = inspecter $ p2
++ $ P1 = inspecter $ p2, $ s3
++
++ Retourner les informations d'introspection pour le PMC.Sans la chaîne facultative
++ Argument, renvoyez une structure de données de toutes les informations pertinentes à l'introspection.
++ Avec l'argument de chaîne facultatif, renvoyez un hachage PMC, un tableau, une chaîne, un entier,
++ ou valeur numérique avec des informations d'introspection correspondant à la demande demandée
++ nom de chaîne.
++
+ = dos
+ 
+ = surcharge VTable Head2
+
+###
+

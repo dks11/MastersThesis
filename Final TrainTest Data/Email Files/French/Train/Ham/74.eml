@@ -1,0 +1,34 @@
+
+C'est le message que j'obtiens tout en compilant le perroquet sur Linux:
+
+
+
+./miniparrot config_lib.pasm> runtime / perror / include / config.fpmc
+Real_Exception (Gravité: 2 Erreur: 30): complexe: chaîne malformée
+Raison probable: l'inadéquation du nombre d'arguments dans le principal (plus de 1 param)
+Make: *** [Runtime / Parrot / include / config.fpmc] erreur 30
+
+-
+__________________________________________________________________________
+           \\ ||| /
+           (o o)
+     + - ooo- () -ooo ------------------------------------------ +
+     |Christian Aperghis-tramoni |
+     ||
+     |Case postale 901 Tél: (33) 04 91 82 92 49 |
+     |163 Avenue de Luminy SFR: (33) 06 18 93 10 70 |
+     |13288 Marseille Cedex 09 Fax: (33) 04 91 82 92 75 |
+     |France Mel: chris@dil.univ-mrs.fr |
+    /) chris@apergis.net (ä
+   /) Web: http://www.dil.univ-mrs.fr/~chris (ä
+  ((+ ------------------------------------------------------- +))
+ ((\\ \\) /) /) (/ //)
+ (\\\\\\ \\ _ / / \\ \\ _ / ///)
+  \\ / \\ /
+___ \\ ___ / ______________________________________________________ \\ ___ / ________
+print join ('', map ({$ i = 1- $ i; $ a = $ i? 10 * $ _. "\\ b \\ b": pack "c", $ a + $ _ + 0x16} Split
+(// ,"511078927975871083810587992861093898779948387799310")) ,"....\\ \\n ");
+___________________________________________________________________________
+
+###
+

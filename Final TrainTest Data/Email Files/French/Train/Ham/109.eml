@@ -1,0 +1,19 @@
+
+Quelqu'un pourrait-il expliquer comment, dans l'exemple ci-dessous, $ name et $ goodguy sont
+égal numériquement?
+
+$ name = 'markkkk';
+
+$ goodguy = 'Tony';
+
+if ($ name == $ goodguy) {
+        imprimer "Bonjour, monsieur. \\ n";
+} autre {
+        Imprimer "Begone, Evil Peon! \\ n";
+}
+
+Merci,
+Hoffmann
+
+###
+

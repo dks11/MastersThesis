@@ -1,0 +1,78 @@
+
+Gabor vous a déjà montré une façon de faire votre propre fonction de résumé
+Cela fait cela.Je veux aborder un aspect différent de votre question.
+
+Votre question implique que des choses moins intéressantes appartiennent au bas
+de la sortie sommaire.D'un autre côté, quand j'enseignais à plein temps
+J'ai essayé de convaincre mes élèves que la sortie résumé des modèles LM
+(et d'autres) devraient être lus de bas en haut (et dans une certaine mesure de
+de droite à gauche).Après tout, vous ne devriez vraiment pas regarder le
+Valies p pour les coefficients individuels jusqu'à ce que vous ayez regardé le
+la valeur p globale du test F (tout en bas), et vous ne devriez pas essayer de
+Interprétez les valeurs du coefficient jusqu'à ce que vous ayez regardé leur norme
+erreurs (et éventuellement les valeurs p).Tout ce que je veux savoir sur le
+résidus que j'apprends des parcelles de diagnostic, pas le résumé des 5 nombres
+C'est en haut de la sortie (je ne me plaide pas pour que cela disparaisse,
+D'autres peuvent le trouver plus utile que moi, et je regarde occasionnellement
+Il, mais il semble le moins important de la sortie).Si votre modèle comprend
+interactions et / ou termes polynomiaux, alors ceux-ci doivent être examinés
+Avant les principaux effets et les termes linéaires (et les générer sont ci-dessous
+leurs principaux effets principaux / termes linéaires).Et en regardant le
+Test séquentiel de la fonction ANOVA lorsqu'on lui donne un seul modèle vraiment
+Il est logique de lire de bas en haut.
+
+Donc, si vous pensez en ces termes (et j'aime qu'il reste ainsi, avec un
+défilement de l'écran de l'ordinateur, la lecture de bas en haut est plus rapide et
+plus facile), puis ayant l'interception sans intérêt en haut de la liste
+des coefficients est le meilleur endroit pour cela.
+
+Juste quelques thougts,
+
+-
+Gregory (Greg) L. Snow Ph.D.
+Centre de données statistique
+Intermountain Healthcare
+greg.snow@intermountainmail.org
+(801) 408-8111
+ 
+ 
+
+> ----- Message original -----
+> De: r-helpbounts@stat.math.ethz.ch
+> [Mailto: r-helpbouces@stat.math.ethz.ch] au nom de Dimitri Szerman
+> Envoyé: jeudi 05 avril 2007 18:34
+> À: r-help
+> Sujet: [r] lm () intercepter à la fin, plutôt qu'au début
+>
+> Salut,
+>
+> Je me demande si quelqu'un a déjà trouvé un moyen de faire
+>
+> Résumé (mylm) # où Mylm est un objet de la classe lm ()
+>
+> pour imprimer le "(interception)" à la dernière ligne, plutôt que le
+> première ligne de la sortie.Je ne sais pas, disons,
+> biostatistique, mais en économie, l'ordonnée est généralement
+> le moins intéressant des paramètres d'un modèle de régression.
+> C'est pourquoi, disons, Stata imprime par défaut l'ordonnée au
+> fin.Juste une suggestion pour les développeurs R ...
+>
+> Merci,
+> Dimitri
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication
+> http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

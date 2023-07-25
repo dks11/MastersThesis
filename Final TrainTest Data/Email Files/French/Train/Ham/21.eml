@@ -1,0 +1,23 @@
+
+Jonathan Worthington a écrit:
+> Salut,
+>
+> J'ai maintenant l'inspects_straux et inspecter les méthodes VTable implémentées pour
+> la classe PMC, et la méthode "attributs", "méthodes", "rôles" et
+> "Parents" déléguer à Inspect_Str (et c'est testable et fonctionne).
+>
+> Cependant, il n'y a aucun moyen (sauf si je le manque) dans PDD15 pour appeler
+> Inspecter et inspecter_str directement à partir de PIR.Devrait être inspect_p et
+> Inspect_P_S OPS?Si nous avons également une méthode sur la classe (une de celles-ci
+> Plus tard pour passer à un rôle) comme "Inspecter (String * quoi: facultatif)"?Identifiant
+> aiment avoir à la fois les OP pour l'interopérabilité et la méthode pour Nice
+> Interfailsiness.
+
+Je viens d'ajouter un OPCode «inspecter» et une méthode «inspecter» sur les rôles et
+Cours à PDD 15.
+
+Merci!
+Allison
+
+###
+

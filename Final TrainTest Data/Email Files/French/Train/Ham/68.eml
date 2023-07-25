@@ -1,0 +1,16 @@
+
+J'écris du code pour obtenir des parcelles de publication (comme celles peuvent être obtenues avec
+Sigmaplot).Je ne suis pas en mesure de trouver les dimensions d'un point.Les paramètres comme CEX vous rendent capable
+Pour le rendre plus grand ou plus petit, mais j'ai besoin de connaître la dimension exacte (en coordonnées relatives:
+Si mon tracé est 640x480, un point tracé avec CEX = 1,5 sera ...)
+
+Massimo Cressoni
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

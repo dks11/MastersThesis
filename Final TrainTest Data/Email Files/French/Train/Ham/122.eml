@@ -1,0 +1,39 @@
+
+>>>>> "sorn" == sorn norng <sorn.norng@dpi.vic.gov.au>
+>>>>> sur mar, 10 avril 2007 16:11:38 +1000 écrit:
+
+    Sorn> Salut, en SPLUS, il y a une fonction appelée "Twoway" pour
+    SORN> Données médianes de polissage.Y a-t-il un équivalent
+    SORN> Fonction dans R?
+oui
+    Sorn> Je l'ai cherché en R Help
+    Sorn> sans beaucoup de succès.
+
+Hmm ... drôle ..
+
+Pour moi,
+
+    help.search ("Polisme médian")
+
+Donne assez rapidement l'indice dont vous avez besoin:
+
+MedPolish ()
+
+    Sorn> Votre aide est très appréciée.
+
+je vous en prie.
+Martin
+
+    SORN> [[version HTML alternative supprimée]]]
+
+Veuillez lire le guide de publication - en particulier sur
+       E-mails "html-ii ii iid".
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

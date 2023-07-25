@@ -1,0 +1,17 @@
+
+Jonathan Worthington a écrit:
+> Paul Cochrane (via RT) a écrit:
+>> Dans le fichier src / ops / object.ops, dans OP CallMethodcc (), il y a l'élément TODO:
+>>
+>> "Devrions-nous vérifier si object.can (méthode)"
+>>
+> Je pense que nous ne devrions pas avoir besoin de le faire;find_method va simplement remettre un
+> null PMC s'il ne trouve pas de méthode, puis nous pouvons tester cela et
+> Jetez une exception si elle est nul.
+
+D'accord.
+
+Allison
+
+###
+

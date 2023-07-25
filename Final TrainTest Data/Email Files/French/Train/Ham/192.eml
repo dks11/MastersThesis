@@ -1,0 +1,45 @@
+
+Cher Johann et Gabor,
+
+C'est ce qui équivaut à de grands ensembles de données.Il y a des centaines de jeux de données R
+Je ne peux pas gérer, probablement des milliers ou plus.J'ai remarqué sur mon ordinateur
+(ce qui n'est rien de plus à un PC moyen) qui R décompose après 250
+MB de mémoire.Je note également que SPSS se décompose, Matlab, etc.
+
+Je ne suis pas un utilisateur SAS, mais j'ai travaillé dans le passé avec SAS.Il est très
+Bien comme rappelez-vous, mais il y a dix ans.Et c'est une "machine à dollar"
+On m'a dit: vous ajoutez des dollars à SAS pendant que vous ajoutez des dollars à une Porsche.
+Je ne l'ai pas et pour la plupart des applications statistiques, ce n'est pas
+nécessaire, on m'a dit.R est suffisant pour cela.Les ensembles de données que j'utilise
+ne sont souvent pas si gros (la façon dont je l'aime).
+Il y a environ trois ans, j'ai parlé à quelqu'un qui a travaillé avec et
+a déclaré "son système de base de données est excellent et statistique profond".
+Quelqu'un avec un doctorat, donc il a probablement raison.
+
+Les simulations de Monte-Carlo prennent du temps en calcul, mais probablement
+ceux-ci peuvent être faits dans R. Je n'ai vu aucun libaire pour cela (ils pourraient
+Soyez là).Cela a été fait avec S (l'homologue commercial de R), donc
+Probablement avec R aussi.Si vous liez Monte Carlo Simulaton avec grand
+ensembles de données que vous rencontrez probablement des problèmes avec un système R conventionnel.
+Ce qu'on m'a dit dans ces cas, c'est "acheter un nouvel ordinateur" / "ajouter
+Mémoire et acheter un nouveau processeur "... et ne fumez pas Hashiesh.
+
+Ce n'était pas un bon conseil parce que le gars qui m'a dit fumé Hashiesh
+Comme l'enfer et buvait Pastis (liqor bleu) comme l'eau.Je l'ai expulsé.
+Mais c'est une autre histoire.
+
+Salutations,
+
+Wilfred
+
+(Je bois du vin et de la bière sur mesure, et seulement à des occasions. C'est pourquoi.
+Ses simulations étaient bonnes, on m'a dit.)
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

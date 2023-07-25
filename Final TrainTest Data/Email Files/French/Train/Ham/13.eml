@@ -1,0 +1,27 @@
+
+Le 4/8/07, Jim Gettys <jg@laptop.org> a écrit:
+> Nouvelle construction stable
+> ----------------
+> Build 385 et firmware Q2B87 forment une nouvelle version stable.Nous ne faisons pas
+
+Remarque rapide - Sur mon B2, cette paire ne parvient pas à démarrer Xorg, les dernières lignes
+dans xorg.0.log sont
+
+   AMD (0): XF86UnMAPVIDMEM: Impossible de trouver la région pour [0xB7XBB000,0x0]
+   AMD (0): XF86UnMAPVIDMEM: Impossible de trouver la région pour [0xb7cb4000,0x0]
+   AMD (0): XF86UnMAPVIDMEM: Impossible de trouver la région pour [0xb7cb3000,0x0]
+   FreefontPath: FPE "Built-in" RefCount est 2, devrait être 1;fixation
+
+Déboguera davantage et confirmera - pourrait très bien être une erreur de ma part.
+
+à votre santé
+
+
+Martin
+_______________________________________________
+Liste de diffusion de sucre
+Sucre@laptop.org
+http://mailman.laptop.org/mailman/listinfo/sugar
+
+###
+

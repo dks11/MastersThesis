@@ -1,0 +1,33 @@
+
+Salut,
+
+SAENS semble être incapable de fournir un miroir dans de bonnes conditions, donné
+que son interface de 100 millions est saturée et en conséquence très lente
+répondre :
+http://saens.debian.org/mrtg/saens.eth0.html
+
+De plus, Saens n'est pas synchronisé par rapport à d'autres ftp.us.debian.org
+Miroirs:
+Pas de http://saens.debian.org/debian/distes/lenny/release.gpg en ce moment.
+
+Saens est en fait la seule machine qui héberge ftp.debian.org (un miroir
+entrée qui ne doit pas être choisie par les utilisateurs, mais l'est) et l'un des trois
+Ip derrière ftp.us.debian.org (avec un miroir de Kernel.org, et
+ike.eg.msu.edu).
+
+À court terme, pourrions-nous retirer les saens du ftp.us.d.o round robin à
+Réduisez la charge dessus et surtout pour permettre aux utilisateurs qui choisissent FTP.US.D.O
+avoir un miroir décent?
+
+Cordialement,
+
+-
+Simon Paillard
+
+
+-
+Pour vous désinscrire, envoyer un courriel à Debian-Mirrors-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

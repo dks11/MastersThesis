@@ -1,0 +1,59 @@
+
+Cher debian.blueyonder.co.uk/debian.virginmedia.com Admin,
+
+Pourriez-vous désactiver la redirection HTTP de Debian.blueyonder.co.uk vers
+debian.virginmedia.com, et ne configure un simple VirtualHost que pour l'ancien
+Nom du miroir?
+En effet, HTTP redirige les courties apt.
+
+En attendant, nous modifierons la liste des miroirs afin que l'avenir
+Debian-Installer Builds Utilisez le nouveau nom de votre miroir.
+
+D'AILLEURS:
+* Pourriez-vous ajouter un alias HTTP pour que le miroir Debian soit également
+Disponible sous le standard / Debian?
+* Votre miroir ISO ne semble pas à jour par rapport à la gravure fraîche
+Libération :-)
+
+Merci pour votre réactivité et pour avoir reflété Debian,
+
+-
+Simon Paillard
+
+Le lun du lundi 09 avril 2007 à 04:59:49 PM +0200, Frans Pop a écrit:
+> Transférer ce message à la liste Debian-Mirrors.
+>
+> Bravo,
+> FJP
+>
+> ---------- Message transmis ----------
+> Objet: debian.blueyonder.co.uk Broken
+> Date: mercredi 04 avril 2007 00:55
+> De: adonikam@virgonet.org
+> À: debian-boot@lists.debian.org
+>
+> Le miroir debian.blueyonder.co.uk dans la dernière construction quotidienne (à partir de
+> 03/04/07) de l'installateur de gravure est obsolète.Le programme d'installation ne parvient pas à
+> Téléchargez les outils initramfs à l'aide de ce miroir (erreur non authentifiée).
+> De plus, un 302 trouvé a été rencontré lors de l'exécution manuelle APT-GET
+> Mise à jour dans le chroot / cible.Une fois que j'ai changé cela pour
+> debian.virginmedia.com, comme cela est correctement répertorié sur la liste des miroirs Debian
+> (http://www.debian.org/mirror/mirrors_full), je pourrais exécuter la mise à jour apt-get
+> et apt-get install initramfs-tools sans problème.L'installation
+> n'a pas pu être terminé comme le
+> /etc/apt/sources.list Le fichier est écrasé sur le "système d'installation de base"
+> étape.
+>
+> Cela doit être corrigé avant la libération de Etch.
+>
+> -
+> Adonikam Vierge
+> -------------------------------------------------------
+
+
+-
+Pour vous désinscrire, envoyer un courriel à Debian-Mirrors-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

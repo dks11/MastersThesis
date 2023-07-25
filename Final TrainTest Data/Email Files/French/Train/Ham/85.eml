@@ -1,0 +1,29 @@
+
+* Chas Owens [2007.04.09 11:00]:
+>> pour (mon $ i = 0; $ i <@banks; $ i ++)
+>
+> Si vous devez boucler de cette façon, faites-le au moins comme ça:
+>
+> pour mon $ i (0 .. $ # banques) {}
+>
+> Mais très probablement, vous n'avez pas besoin de boucle de cette façon et il vaut mieux
+> boucle de cette façon:
+>
+> pour ma banque $ (@banks) {}
+
+Je me demandais: le tableau est-il garanti d'être
+traversé dans le même ordre dans les trois cas?
+
+Et sont les deux derniers "pour" et non
+"pour chaque"?
+
+-
+JR
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

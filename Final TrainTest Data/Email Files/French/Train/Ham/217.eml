@@ -1,0 +1,41 @@
+
+Bonjour Carlos,
+
+Le lun le lundi 09 avril 2007 à 09:20:05 -0300, Carlos Carvalho a écrit:
+> Comme nous l'avions promis, ftp.br.debian.org reflète maintenant les CD ainsi que
+> les packages.Nous avons tous les arcs et tous les formats pour la gravure.
+>
+> Ils sont disponibles via HTTP et FTP sur ftp.br.debian.org/debian-cd,
+> et via RSYNC sur ftp.br.debian.org::debian-cd.
+>
+> Veuillez mettre à jour les listes de miroirs.
+
+Fait.La modification apparaîtra dans la prochaine version du site Web, dans le cadre du
+les heures suivantes.
+
+> J'allais utiliser le formulaire de soumission
+> Mais nous ne savons pas encore qui (si?) Nous obtiendrons une poussée, et j'ai peur
+> d'utilisation de l'option de modification, remplissez uniquement les champs de CD et ayez
+> Les autres ont effacé :-)
+
+Le formulaire de soumission n'est pas automatiquement appliqué à la liste réelle,
+ne t'inquiète pas.
+
+> Sur un autre problème, que DNS change pour MX et CL ne se sont pas encore produits.Les
+> La nouvelle version serait un bon moment pour cela.
+
+La demande de changement DNS a été soumise et j'espère que ce sera
+résolu bientôt.
+
+Cordialement,
+
+-
+Simon Paillard
+
+
+-
+Pour vous désinscrire, envoyer un courriel à Debian-Mirrors-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

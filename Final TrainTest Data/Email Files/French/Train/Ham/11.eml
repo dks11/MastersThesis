@@ -1,0 +1,14 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42352]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42352>
+
+
+Dans SRC / OPS / PMC.ops dans l'OP Hash (), il y a un élément TODO qui est
+Juste marqué avec xxx.Il n'y a aucune explication sur ce qu'il faut faire.
+Soit cela doit être élaboré et réparé, soit l'élément TODO devrait être
+supprimé (avec une bonne raison de savoir pourquoi).
+
+###
+

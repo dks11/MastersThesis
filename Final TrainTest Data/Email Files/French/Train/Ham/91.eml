@@ -1,0 +1,54 @@
+
+J'ai essayé de faire construire l'environnement de sucre et de fonctionner sur mon poste de travail Ubuntu (énervé).La seule partie de la base de construction qui échoue est DBUS-Python.J'ai téléchargé et construit les derniers DBU.À ce stade, j'ai construit du sucre et seul les grincements n'ont pas réussi à construire.
+
+Lorsque j'essaie de démarrer du sucre, j'obtiens les erreurs suivantes:
+
+
+Peter @ Floyd: ~ / wrk / sucre / sucre-jhbuild $ ./sugar-jhbuild
+Dispositifs d'entrée étendus non encore pris en charge.L'interrompre à la ligne 625 dans ../../../../hw/kdrive/src/kinput.c
+    xkb_keyCodes {inclue "xfree86 + aliases (qwerty)"};
+    xkb_types {inclue "complet"};
+    xkb_compatibilité {inclue "complet"};
+    xkb_Symbols {inclue "pc (pc101) + us"};
+    xkb_geometry {inclue "pc (pc101)"};
+Impossible d'élément Init Font Path / USR / Share / Fonts / X11 / TTF /, Suppression de la liste!
+Impossible d'élément Init Font Path / USR / Share / Fonts / X11 / OTF, en supprimant de la liste!
+Impossible d'élément Init Font Path / USR / Share / Fonts / X11 / CID /, Suppression de la liste!
+Erreur: Root: Erreur Lire la clé publique: [Errno 2] Aucun fichier ou répertoire de ce type: '/home/peter/.sugar/default/owner.key.pub'
+Erreur: Root: Erreur Lire la clé privée: [Errno 2] Aucun fichier ou répertoire de ce type: '/home/peter/.sugar/default/owner.key'
+Traceback (dernier appel dernier):
+  Fichier "/ Home / Peter / WRK / Sugar / Sugar-Jhbuild / Build / Bin / Sugar Shell", Ligne 38, dans <Module>
+    From View.Shell Import Shell
+  Fichier "/home/peter/wrk/sugar/sugar-jhbuild/build/share/sugar/shell/view/shell.py", ligne 23, dans <module>
+    From View.Home.Homewindow Import Homewindow
+  Fichier "/home/peter/wrk/sugar/sugar-jhbuild/build/share/sugar/shell/view/home/homewindow.py", ligne 23, dans <module>
+    From View.Home.Meshbox Import Meshbox
+  Fichier "/home/peter/wrk/sugar/sugar-jhbuild/build/share/sugar/shell/view/home/meshbox.py", ligne 30, dans <module>
+    à partir du modèle Import AccessPointModel
+  Fichier "/home/peter/wrk/sugar/sugar-jhbuild/build/share/sugar/shell/model/accesspointmodel.py", ligne 20, dans <module>
+    à partir du matériel importe nmclient
+  Fichier "/home/peter/wrk/sugar/sugar-jhbuild/build/share/sugar/shell/hardware/nmclient.py", ligne 28, dans <module>
+    à partir de l'importation matérielle nminfo
+  Fichier "/home/peter/wrk/sugar/sugar-jhbuild/build/share/sugar/shell/hardware/nminfo.py", ligne 268, dans <module>
+    classe nminfodbusservicehelper (dbus.service.object):
+  Fichier "/home/peter/wrk/sugar/sugar-jhbuild/build/share/sugar/shell/hardware/nminfo.py", ligne 288, dans nminfodbusservicehelper
+    @ dbus.service.method (nm_info_iface, in_signature = 'i', out_signature = 'as')
+  Fichier "/var/lib/python-support/python2.5/dbus/decorators.py", ligne 24, dans le décorateur
+    in_sig = tuple (dbus_bindings.signature (in_signature)))
+  Fichier "dbus_bindings.pyx", ligne 84, dans dbus_bindings.signatureter.next
+TypeError: les exceptions doivent être des chaînes, des classes ou des instances, pas de type
+
+
+-
+Peter Krenesky
+Programmeur Analyste
+LAB Open Source @ OSU
+Courriel: Peter@osuosl.org
+Bureau: 541-737-9572
+_______________________________________________
+Liste de diffusion de sucre
+Sucre@laptop.org
+http://mailman.laptop.org/mailman/listinfo/sugar
+
+###
+

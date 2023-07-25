@@ -1,0 +1,14 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42377]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42377>
+
+
+Dans src / ops / debug.ops dans le debug_break () op, il y a l'élément TODO:
+
+"Clone l'interprète pour permettre aux gens de jouer dans le
+débogueur puis poursuivre l'exécution normale du programme "
+
+###
+

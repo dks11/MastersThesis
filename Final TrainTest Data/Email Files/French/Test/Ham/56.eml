@@ -1,0 +1,70 @@
+
+Auteur: Mimir
+Date: 2007-04-09 12:06:42 +0000 (lun, 09 avril 2007)
+Nouvelle révision: 22136
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22136
+
+Enregistrer:
+Correction de la gestion incorrecte des événements.
+Soumis par John Jorgensen <jorgensen.john@gmail.com>
+
+
+rafal
+
+
+Modifié:
+   Branches / Samba_4_0 / webapps / swat / source / class / swat / module / ldbbrowse / fsm.js
+   Branches / Samba_4_0 / webapps / swat / source / class / swat / module / ldbbrowse / gui.js
+
+
+Set à l'échelle:
+Modifié: Branches / Samba_4_0 / Webapps / SWAT / SOURCE / CLASS / SWAT / MODULE / LDBBROWSE / FSM.JS
+==============================================.==================
+--- Branches / Samba_4_0 / webapps / swat / source / class / swat / module / ldbbrowse / fsm.js 2007-04-09 10:38:55 UTC (Rev 22135)
++++ branches / samba_4_0 / webapps / swat / source / class / swat / module / ldbbrowse / fsm.js 2007-04-09 12:06:42 UTC (Rev 22136)
+@@ -61,7 +61,7 @@
+             {
+               // Ouais.Rouvrir la base de données
+               var dbname = fsm.getObject ("dbname");
+- dbname.dispatchEvent (new qx.event.type.event ("changeselection"),
++ dbname.dispatchEvent (new qx.event.type.event ("change élu"),
+                                    vrai);
+             }
+             autre
+@@ -104,8 +104,14 @@
+           "Modification de l'élection":
+           {
+             "arbre" :
+- "transition_idle_to_awaitrpcresult_via_tree_selection_changed",
++ "Transition_idle_to_awaitrpcresult_via_tree_selection_changed"
+ 
++},
++
++ // Si une autre base de données est sélectionnée, essayez de l'ouvrir et de vous rafraîchir
++ // L'arbre
++ "Modificatrice":
++ {
+             "dbname":
+               "Transition_idle_to_awaitrpcresult_via_db_changed"
+           }
+
+Modifié: Branches / Samba_4_0 / Webapps / SWAT / Source / Class / Swat / Module / LDBBROWSE / GUI.JS
+==============================================.==================
+--- Branches / Samba_4_0 / webapps / swat / source / class / swat / module / ldbbrowse / gui.js 2007-04-09 10:38:55 UTC (Rev 22135)
++++ branches / samba_4_0 / webapps / swat / source / class / swat / module / ldbbrowse / gui.js 2007-04-09 12:06:42 UTC (Rev 22136)
+@@ -52,9 +52,9 @@
+   // Ajouter notre nom de base de données globale (la seule option, pour l'instant)
+   var item = new qx.ui.form.ListItem (module.dbfile);
+   O.Add (article);
+-
++
+   // Nous voulons être informés si la sélection change
+- O.AdDeventListener ("ChangeSelection", FSM.EventListener, FSM);
++ O.AdDeventListener ("Modigelected", fsm.EventListener, FSM);
+ 
+   // Enregistrer l'objet de nom de base de données afin que nous puissions réagir aux modifications
+   fsm.AddObject ("dbname", o);
+
+###
+

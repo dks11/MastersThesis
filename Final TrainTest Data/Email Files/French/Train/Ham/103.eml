@@ -1,0 +1,45 @@
+
+Auteur: vlendec
+Date: 2007-04-10 07:36:58 +0000 (mar, 10 avril 2007)
+Nouvelle révision: 22147
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22147
+
+Enregistrer:
+Essayez le prochain
+Modifié:
+   Branches / Samba_3_0 / Source / Modules / VFS_READAHEAD.C
+   Branches / Samba_3_0_25 / Source / Modules / VFS_READAHEAD.C
+
+
+Set à l'échelle:
+Modifié: branches / samba_3_0 / source / modules / vfs_readahead.c
+==============================================.==================
+--- Branches / Samba_3_0 / Source / Modules / VFS_READAHEAD.C 2007-04-10 07:33:14 UTC (REV 22146)
++++ branches / samba_3_0 / source / modules / vfs_readahead.c 2007-04-10 07:36:58 UTC (révélateur 22147)
+@@ -101,7 +101,7 @@
+ (unsigned int) rhd-> len,
+ err));
+ #Elif défini (hari_posix_fadvise)
+- int err = posix_fadvise (fromfd, offset, (off_t) rhd-> len, posix_fadv_willneed);
++ int err = posix_fadvise (fd, offset, (off_t) rhd-> len, posix_fadv_willneed);
+ Debug (10, ("readahead_pread: posix_fadvise sur fd% u, offset% llu, len% u a renvoyé% d \\ n",
+ (non signé int) fd,
+ (non signé long) décalage,
+
+Modifié: branches / samba_3_0_25 / source / modules / vfs_readahead.c
+==============================================.==================
+--- Branches / Samba_3_0_25 / Source / Modules / VFS_READAHEAD.C 2007-04-10 07:33:14 UTC (REV 22146)
++++ branches / samba_3_0_25 / source / modules / vfs_readahead.c 2007-04-10 07:36:58 UTC (Rev 22147)
+@@ -101,7 +101,7 @@
+ (unsigned int) rhd-> len,
+ err));
+ #Elif défini (hari_posix_fadvise)
+- int err = posix_fadvise (fromfd, offset, (off_t) rhd-> len, posix_fadv_willneed);
++ int err = posix_fadvise (fd, offset, (off_t) rhd-> len, posix_fadv_willneed);
+ Debug (10, ("readahead_pread: posix_fadvise sur fd% u, offset% llu, len% u a renvoyé% d \\ n",
+ (non signé int) fd,
+ (non signé long) décalage,
+
+###
+

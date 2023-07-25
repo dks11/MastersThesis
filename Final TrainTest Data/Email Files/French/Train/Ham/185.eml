@@ -1,0 +1,44 @@
+
+Le 08/04/2007, à 16 h 54, Jeremy Allison a écrit:
+
+> Sur le soleil, 08 avril 2007 à 03:25:55 -0700, James Peach a écrit:
+>> le 08/04/2007, à 12 h 41, jra@samba.org a écrit:
+>>
+>>> Auteur: JRA
+>>> Date: 2007-04-08 19:41:47 +0000 (Sun, 08 avril 2007)
+>>> Nouvelle révision: 22132
+>>>
+>>> websvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?
+>>> View = Rev & root = Samba & Rev = 22132
+>>>
+>>> journal:
+>>> Je déteste l'inefficacité.N'appelez pas conv_str_size ()
+>>> À chaque appel préalable / SendFile, initialisez-les
+>>> Variables dans une structure allouée à la connexion
+>>> le temps et référez-vous directement.
+>>
+>> Ce code est si proche de VFS_CACHEPRIME que je suis tenté de suggérer
+>> ils devraient être fusionnés.Y avait-il une raison particulière pour laquelle vous n'avez pas fait
+>> ceci?
+>
+> Oui - le mien est beaucoup plus simple :-).Je faisais juste
+> La chose minimale qui fonctionne pour Vista.
+>
+> Faire du cacheprime n'est pas le même que le Readahead ()
+> Appel système sur Linux.posix_fadvise est assez proche
+> que je pouvais le presser ...
+
+Vous pouvez l'ajouter à VFS_CACHEPRIME et avoir simplement une option que
+détermine s'il fait un lecture (c.-à-d.
+lire (2).
+
+> Ce code donne une augmentation de vitesse marquée pour Vista
+> Clients lors de l'utilisation d'explorateurs contre les serveurs Linux.
+
+Bien sûr, mais 2 modules qui * presque * la même chose sont tout simplement déroutants.
+
+-
+James Peach |jpeach@samba.org
+
+###
+

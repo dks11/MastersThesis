@@ -1,0 +1,86 @@
+
+Andy,
+Je suis totalement d'accord avec vous.L'argent doit être dépensé pour les personnes travaillant
+dur plutôt que sur le logiciel de fantaisie.Mais dans la vraie vie, c'est le
+opposé.^ _ ^.
+
+Le 4/9/07, liaw, Andy <andy_liaw@merck.com> a écrit:
+> Je suis probablement loin de SAS depuis trop longtemps ... nous avons récemment essayé de
+> Obtenez SAS sur nos boîtes Linux 64 bits (car SAS sur PC n'est pas suffisant
+> Pour certains de mes collègues qui en ont besoin).J'ai été choqué par la citation pour
+> Notre cluster Scyld à 28 curs --- Les frais annuels étaient quelques fois le total
+> Coût de notre matériel.Nous avons fini par acheter une nouvelle boîte d'Opterons Quad 3GHz
+> Avec 32 Go de RAM juste pour que les frais pour SAS sur une telle boîte soient plus
+> tolérable.Cela me fait un coup d'esprit que le droit d'utiliser SAS pendant un an
+> concerne le prix d'une belle maison de quatre chambres (près de l'Institut SAS!).
+> Je ne comprends pas les gens qui plutôt payer ce genre de prix pour le
+> logiciel, au lieu de dépenser l'argent pour du matériel de pointe et
+> Enregistrez plus qu'un paquet.
+>
+> Juste mes 0,02 $ ...
+> Andy
+>
+> De: Jorge Cornejo-Donoso
+>>
+>> J'ai un Dell avec 2 processeurs Intel Xeon 3.0 et 2 Go de RAM ....
+>> Le problème est la taille de la base de données.
+>>
+>> ----- Mensaje Original -----
+>> DE: Gabor Grothendieck [Mailto: ggrothendieck@gmail.com]
+>> Enviado El: Lunes, 09 de Abril de 2007 11:28
+>> Para: Jorge Cornejo-Donoso
+>> CC: r-help@stat.math.ethz.ch
+>> asunto: re: [r] raisons d'utiliser r
+>>
+>> Avez-vous essayé des machines 64 bits avec une mémoire plus grande ou faites-vous
+>> signifie que vous ne pouvez pas utiliser R sur vos machines actuelles?
+>>
+>> Avez-vous également essayé S-Plus?Cela fonctionnera-t-il pour vous?Les
+>> La transition de cela à R serait inférieure à celle de SAS à R.
+>>
+>> le 4/9/07, Jorge Cornejo-Donoso <jorgecornejo@uach.cl> a écrit:
+>>> Tha S9ze de DB est un problème avec R. Nous utilisons toujours SAS parce que R
+>>> Je ne peux pas gérer propre DB, et de Couse, nous ne voulons pas sacrifier
+>> Résolution,
+>>> parce que la collecte de données est coûteuse (au moins dans les pêcheries et
+>>> OCAAGRAPHY), donc .. Je pense que R doit améliorer l'utilisation des gros DB.
+>>> maintenant je ne peux utiliser que R pour la préparation des graphiques et certaines données
+>> Analisis, mais
+>>> Nous ne pouvons pas faire le travail principal sur R, ABD qui est vraiment triste.
+>>>
+>>
+>> ______________________________________________
+>> r-help@stat.math.ethz.ch Liste de diffusion
+>> https://stat.ethz.ch/mailman/listinfo/r-help
+>> Veuillez lire le guide de publication
+>> http://www.r-project.org/posting-guide.html
+>> Et fournissez un code de reproductible commenté, minimal, autonome et autonome.
+>>
+>>
+>>
+>
+>
+> ------------------------------------------------------------------------------
+> Remarque: ce message électronique, ainsi que les pièces jointes, ... {{Dropped}}
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+
+
+-
+Wensui liu
+Un statisticien handicapé qui connaît une petite programmation
+(http://spaces.msn.com/statcompute/blog)
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

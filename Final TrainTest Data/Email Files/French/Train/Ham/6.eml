@@ -1,0 +1,23 @@
+
+Le lundi 2 avril 2007 à 15h00:32 +0200, Josip Rodin a écrit:
+
+> Salut,
+>
+> Nous devons démanteler l'alias ftp.ipv6.debian.org
+>
+FWIW, DSA vient de supprimer les adresses brisées de ftp.ipv6.debian.org:
+$ host ftp.ipv6.debian.org samosa.debian.org
+Utilisation du serveur de domaine:
+Nom: samosa.debian.org
+Adresse: 192.25.206.57 # 53
+Alias:
+
+ftp.ipv6.debian.org a l'adresse IPv6 2001: 708: 310: 54 :: 99
+ftp.ipv6.debian.org a l'adresse IPv6 2001: b68: e212 :: 3
+$
+
+Salutations,
+Julien
+
+###
+

@@ -1,0 +1,56 @@
+
+c'est: 0 == 0
+
+Hoffmann Schrieb:
+> Dr.Ruud a écrit:
+>> Hoffmann Schreef:
+>>
+>>> quelqu'un pourrait-il expliquer comment, dans l'exemple ci-dessous, $ name et $ goodguy
+>>> sont égaux numériques?
+>>>
+>>> $ name = 'markkkk';
+>>>
+>>> $ goodguy = 'Tony';
+>>>
+>>> if ($ name == $ goodguy) {
+>>> imprimer "Bonjour, monsieur. \\ n";
+>>>} else {
+>>> imprimer "Begone, Evil Peon! \\ n";
+>>>}
+>>>
+>>
+>> Essayez aussi avec quelque chose comme
+>> #! / usr / bin / perl
+>> utiliser strict;
+>> utiliser des avertissements;
+>>
+>> my $ name = '1markkkk';
+>> mon $ goodguy = '2Tony';
+>>
+>>
+>> if ($ name eq $ goodguy) {
+>> imprimer "Bonjour, ami. \\ n";
+>>}
+>> elsif ($ name == $ goodguy) {
+>> Imprimer "Bonjour, n'importe qui. \\ n";
+>>}
+>> else {
+>> imprimer "Begone, Evil Peon! \\ n";
+>>}
+>>
+>> __end__
+>>
+>>
+> J'ai fait exactement ça.Et je sais que la bonne façon de comparer les chaînes
+> c'est en utilisant «eq».La question est: en considérant le post d'origine,
+> Quelle valeur perl «donne» à ces variables numériques?Est-ce 1 == 1?
+>
+
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

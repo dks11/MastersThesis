@@ -1,0 +1,113 @@
+
+Cher Matthew,
+
+Le 4/9/07, Matthew Keller <ckellercran@gmail.com> a écrit:
+> Salut Ramon,
+>
+> Je suis intéressé par les réponses à votre question.J'ai ce que je
+> Je pense que c'est un problème similaire - j'ai un très grand script de simulation et
+> aimerait pouvoir le modulariser en ayant un script principal qui
+> appelle beaucoup d'informations - mais je ne l'ai pas encore fait parce que le
+> La seule façon dont je pouvais penser à le faire était d'appeler un indice, de le faire fonctionner,
+> Enregistrez les objets de l'indice, puis rappelez ces objets
+> dans le script principal, qui semble être un moyen très lent et onéreux de
+> Faites-le.
+>
+> Rserve ferait-il ce que je recherche?
+>
+
+Peut-être.C'est en fait ce que je me demande.Cependant, un itinéraire plus facile
+pourrait être d'essayer RMPI avec PAPPLY.Ou neige (avec RMPI ou RPVM).
+Ou NWS (une implémentation Linda pour R).En utilisant RMPI avec PAPPLY, dans
+particulier est un morceau de gâteau avec des problèmes parallèles embarrassants.
+Papply est comme lapply, mais parallélisé, avec un équilibrage de charge intégré,
+Bien qu'il fonctionnera séquentiellement lorsqu'aucun univers MPI n'est disponible;
+Le dernier est très pratique pour le débogage.La neige a également parallélisé,
+Versions équilibrées à chargement de l'application (bien que je ne le pense pas
+passe automatiquement à l'exécution séquentiellement).
+
+Tous ces (RMPI, PAPPLY, RMPI, RPVM, NWS) sont des packages R disponibles
+de Cran.Vous aurez besoin de choses supplémentaires (LAM / MPI pour RMPI --- ou
+MPICH si vous exécutez Windows ---, PVM pour RPVM, et Python et tordu pour
+nws).
+
+(J'ai posé des questions sur Rserve car le manque de tolérance aux défauts de MPI est un
+Douleur à gérer dans mes applications.Aussi, avec Lam / MPI il y a
+limites au nombre d'esclaves qui peuvent être gérés par un démon lam,
+Et c'est un problème pour certaines de nos applications Web.Ainsi, je
+Je regarde des approches alternatives qui pourraient éliminer certains des
+Couches supplémentaires que MPI --- ou PVM --- Ajouter.).
+
+Hth,
+
+R.
+
+
+> Le 4/7/07, Ramon Diaz-uriarte <rdiaz02@gmail.com> a écrit:
+>> Cher tout,
+>>
+>> Le fichier "clients.txt" du dernier package Rserve, par Simon Urbanek,
+>> dit, concernant son client R,
+>>
+>> "(...) Un client R simple, c'est-à-dire qu'il vous permet de vous connecter à RServe à partir de
+>> r lui-même.C'est très simple et limité, car Rserve n'était pas
+>> principalement destiné à la communication R à R (il existe de meilleures façons de faire
+>> ça), mais il est utile pour une connexion interactive rapide à un RServe
+>> ferme. "
+>>
+>> Quelles sont ces meilleures façons de le faire?Je pense utiliser rserve
+>> Pour avoir un processus R, envoyez des travaux à un tas de rserves dans différents
+>> Machines.C'est comme ce que nous pourrions faire avec RMPI (ou PVM), mais sans
+>> La couche MPI.Par conséquent, il serait vraisemblablement plus facile de gérer
+>> Problèmes de réseau, échecs de la machine, utilisant des points de contrôle, etc. (c'est-à-dire,
+>> Pour essayer d'obtenir une meilleure tolérance aux défauts).
+>>
+>> Il semble que Rserve fournirait l'infrastructure de base pour faire
+>> cela et m'économise de réinventer la roue de l'utilisation de sockets, etc.,
+>> directement de R.
+>>
+>> Cependant, le commentaire de Simon sur de meilleures façons de communication R-à-R
+>> m'a fait me demander si cette idée a vraiment du sens.Qu'est-ce que la capture?
+>> D'autres personnes ont-elles essayé des approches similaires?
+>>
+>> merci,
+>>
+>> R.
+>>
+>> - -
+>> Ramon Diaz-Uriarte
+>> Équipe informatique statistique
+>> Programme de biologie structurelle et de biocomputing
+>> Centre national du cancer espagnol (CNIO)
+>> http://ligarto.org/rdiaz
+>>
+>> ______________________________________________
+>> r-help@stat.math.ethz.ch Liste de diffusion
+>> https://stat.ethz.ch/mailman/listinfo/r-help
+>> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+>> Et fournissez un code de reproductible commenté, minimal, autonome et autonome.
+>>
+>
+>
+> -
+> Matthew C Keller
+> Fellow postdoctoral
+> Virginia Institute for Psychiatric and Behavioral Genetics
+>
+
+
+-
+Ramon Diaz-Uriarte
+Équipe informatique statistique
+Programme de biologie structurelle et de biocomputing
+Centre national du cancer espagnol (CNIO)
+http://ligarto.org/rdiaz
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

@@ -1,0 +1,23 @@
+
+Le 4/7/07, Richard A. Smith <Richard@laptop.org> a écrit:
+> Je soupçonne que votre fichier xorg.conf est tout simplement incorrect.Surveiller vs ordinateur portable
+> L'écran LCD est détecté _once_ lorsque vous démarrez pour la première fois une nouvelle image.Donc si tu
+> a d'abord démarré sur un XO, puis l'a essayé dans votre Atest, vous serez
+> Utilisation du mauvais xorg.conf.Essayez de démarrer une nouvelle image sur le ATEST.
+
+Bon point.Re-testé pour m'assurer que j'utilise une image vierge, juste dd'd
+sur le lecteur flash.Aucun changement - même comportement, même journal.
+
+Mise à jour du billet Trac également avec des informations Edid des moniteurs au cas où
+C'est important: http://dev.laptop.org/ticket/1274
+
+
+
+m
+_______________________________________________
+Liste de diffusion de sucre
+Sucre@laptop.org
+http://mailman.laptop.org/mailman/listinfo/sugar
+
+###
+

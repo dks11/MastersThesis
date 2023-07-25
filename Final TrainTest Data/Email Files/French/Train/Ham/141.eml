@@ -1,0 +1,127 @@
+
+Le lundi 2007-04-09 à 12:45 -0400, Mumenchen, Robert A (Bob) a écrit:
+> Salut à tous,
+>
+> J'essaie de comprendre la différence entre do.Call et lapply pour
+> Appliquer une fonction à une liste.Ci-dessous est l'une des variations de
+> Les programmes (par Marc Schwartz) ont discuté ici récemment pour sélectionner le premier
+> et les n observations par groupe par groupe.
+>
+> J'ai regardé dans plusieurs livres, la FAQ R et j'ai fouillé les archives, mais je
+> Je ne trouve pas assez pour comprendre pourquoi lapply ne fait pas ce que fait.
+> Dans ce cas.Les fichiers d'aide et les descriptions de newsletter de Do.Call Sound
+> Comme il ferait la même chose, mais je suis sûr que cela est dû à mon manque de
+> Comprendre leur terminologie spécifique.J'apprécierais que
+> Vous pourriez prendre un moment pour m'éclairer.
+>
+> Merci,
+> Bob
+>
+> mydata <- data.frame (
+> id = c ('001', '001', '001', '002', '003', '003'),,
+> math = c (80,75,70,65,65,70),
+> Reading = C (65,70,88, na, 90, na)
+>)
+> mydata
+>
+> Mylast <- lapply (Split (MyData, MyData $ id), queue, n = 1)
+> MyLast
+> Classe (MyLast) # C'est une liste, donc lapply va donc * quelque chose * avec.
+>
+> #Ce obtient le résultat souhaité:
+> do.Call ("rbind", mylast)
+>
+> #Ce ne fait pas la même chose, ce qui me confond:
+> lapply (mylast, rbind)
+>
+> # ... et data.frame ne le réparera pas comme je l'ai vu faire dans d'autres
+> circonstances:
+> data.frame (lapply (mylast, rbind))
+
+Bob,
+
+Une différence clé est que do.Call () fonctionne (dans l'exemple ci-dessus) comme si
+L'appel réel était:
+
+> rbind (MyLast [[1]], MyLast [[2]], Mylast [[3]])
+   Id Math Reading
+3 001 70 88
+4 002 65 Na
+6 003 70 Na
+
+En d'autres termes, do.Call () prend la fonction citée et passe la liste
+Objectif comme s'il s'agissait d'une liste d'arguments individuels.Donc rbind () est seulement
+appelé une fois.
+
+Dans ce cas, rbind () gère en interne tous les problèmes de niveau du facteur,
+etc. pour permettre une seule trame de données commune à créer à partir des trois
+Cadres de données indépendantes contenues dans «Mylast»:
+
+> str (mylast)
+Liste de 3
+ 001 $: «data.frame»: 1 obs.de 3 variables:
+  .. $ id: facteur w / 3 niveaux "001", "002", "003": 1
+  .. $ math: num 70
+  .. $ Reading: Num 88
+ 002 $: «data.frame»: 1 obs.de 3 variables:
+  .. $ id: facteur w / 3 niveaux "001", "002", "003": 2
+  .. $ math: num 65
+  .. $ lecture: num na
+ 003 $: «data.frame»: 1 obs.de 3 variables:
+  .. $ id: facteur w / 3 niveaux "001", "002", "003": 3
+  .. $ math: num 70
+  .. $ lecture: num na
+
+
+D'un autre côté, lApply () (comme ci-dessus) appelle rbind () _separately_ pour
+Chaque composant de MyLast.Il agit donc comme si la série suivante
+de trois appels distincts ont été passés:
+
+
+> rbind (mylast [[1]])
+   Id Math Reading
+3 001 70 88
+
+> rbind (mylast [[2]])
+   Id Math Reading
+4 002 65 Na
+
+> rbind (mylast [[3]])
+   Id Math Reading
+6 003 70 Na
+
+
+Bien sûr, le résultat de lapply () est que ce qui précède est combiné en un
+objet unique de liste R et retourné:
+
+> lapply (mylast, rbind)
+$ `001`
+   Id Math Reading
+3 001 70 88
+
+$ `002`
+   Id Math Reading
+4 002 65 Na
+
+$ `003`
+   Id Math Reading
+6 003 70 Na
+
+
+C'est une différence subtile, mais bien sûr critique, comment l'internes
+La fonction est appelée et comment les arguments sont passés.
+
+Est ce que ça aide?
+
+Salutations,
+
+Marc Schwartz
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

@@ -1,0 +1,33 @@
+
+Simon Paillard a écrit:
+> Le lun, 09 avril 2007 à 08:43:07 -0400, Jean-Francois Chevrette a écrit:
+>> Salut,
+>>
+>> est-ce que quelqu'un a un guide simple sur la façon d'utiliser Jigdo pour construire
+>> et miroir ISOS?J'ai lu la documentation de Jigdo et de Debian
+>> page Web sur le sous-jet et cela ne fonctionnera tout simplement pas.
+>
+> Peut-être avec celui-ci: http://www.debian.org/cd/mirroring/#jigdomirror
+> et les liens connexes?
+
+Oui, j'ai utilisé les scripts suggérés mais il semble y avoir un
+Problème avec les sommes de contrôle du modèle.
+
+ D'après ce que j'ai lu, ces erreurs de somme de contrôle Jigdo sont normales quand il y a
+Une nouvelle version?
+
+
+Salutations,
+-
+Jean-François Chevrette [iweb]
+Spécialiste de l'architecture informatique
+Spécialist de l'architecture Ti
+http://www.iweb8.com/
+
+
+-
+Pour vous désinscrire, envoyer un courriel à Debian-Mirrors-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

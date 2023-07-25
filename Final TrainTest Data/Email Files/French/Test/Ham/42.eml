@@ -1,0 +1,53 @@
+
+Salut,
+
+J'essaie de comparer deux méthodes pour le calcul d'un CDF normal trivarié:
+
+1) "Direct" - en utilisant la matrice de covariance d'origine
+2.
+
+Le code suivant démontre les deux méthodes.
+
+Malheureusement, j'obtiens des résultats différents.
+
+Est-ce que je manque quelque chose?
+
+Merci d'avance.
+
+Shlomi Lifshits
+Université Tel-Aviv
+
+####################
+
+bibliothèque (mvtnorm)
+
+#Create une matrice définie positive symétrique pour la matrice de covariance
+my_mat <-matrix (data = c (1,2,3,0,0.1,0,0,0,0,1), nrow = 3, ncol = 3, byrow = true)
+covmat <-my_mat% *% t (my_mat)
+
+
+#calculate la transformation de Mahalanobis
+spectral_dec <-eigen (covmat)
+new_eigenval <-c (sqrt (spectral_dec $ valeurs [1]), sqrt (spectral_dec $ valeurs [2]), sqrt (spectral_dec $ valeurs [3]))
+covmat_trans <-solve (spectral_dec $ vecteurs% *% diag (new_eigenval)% *% t (spectral_dec $ vecteurs))))
+
+# Intégrer à la limite d'origine
+orig_limit <-c (-0,5,0.5,0,5)
+a <-pmvnorm (inférieur = -inf, upper = orig_limit, moyenne = répétiteur (0, 3), sigma = covmat)
+
+#transforme la limite et intégrer
+new_limit_raw <-covmat_trans% *% orig_limit
+new_limit <-c (new_limit_raw [1,1], new_limit_raw [2,1], new_limit_raw [3,1])
+new_sigma <-diag (3)
+b <-pmvnorm (inférieur = -inf, upper = new_limit, moyenne = répétiteur (0, 3), sigma = new_sigma)
+
+# A, B devrait être le même mais ils ne le sont pas !!!?
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

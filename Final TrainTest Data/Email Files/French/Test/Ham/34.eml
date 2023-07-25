@@ -1,0 +1,24 @@
+
+Il semble que la masse suggère de juger sur la base de
+sum (résidus (mode, type = "Pearson")) / df.residual (mode).Ma question est
+Il y a une règle de base de la valeur coupée?
+
+Le document "sur l'utilisation des corrections pour surdispersion" suggère
+une surdispersion existe si la déviance est au moins le double du nombre de
+degrés de liberté.
+
+Y a-t-il d'autres indices?Merci.
+
+-
+Ronggui Huang
+Département de sociologie
+Université Fudan, Shanghai, Chine
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

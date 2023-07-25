@@ -1,0 +1,75 @@
+
+Merci anhnmncb
+Je pense que le problème vient de la partie «Adobe» des noms de police - je
+«résolu» le problème en installant les journaux Ubuntu 7.04 Beta et maintenant R
+rapporte les mêmes noms de police sans «adobe».
+
+anhnmncb@gmail.com a écrit:
+ > Vous n'avez pas installé ces polices Xorg-Fonts-75DPI, qui est la
+ > Fonts de Xorg par défaut.
+ > Je pense qu'il existe peut-être d'autres meilleures solutions comme changer la valeur par défaut
+ > Polices que R recherche, mais je ne sais pas comment.
+ > Le jeu, 05 avril 2007 à 01:55:53 PM +0200, Fsando a écrit:
+ >> J'ai ce problème - et j'ai vu un message plus tôt sur le même
+ >> Problème - mais les solutions ne fonctionnent pas pour moi ou (être équitablement
+ >> Nouveau sur Linux) Je ne comprends pas les actions suggérées.
+ >>
+ >> Alors voilà:
+ >> chaque fois que j'essaie d'ajouter un titre «principal» R répond avec une erreur que
+ >> Impossible de trouver des polices X11.
+ >>
+ >> ### Exemples très basiques ###
+ >> # 1. Aucune erreur (un diagramme de dispersion x = 1: 10 et y = 1: 10):
+ >> Terrain (1: 10,1: 10)
+ >> # 2. Aucune erreur (comme ci-dessus, mais ajoutez un sous-titre):
+ >> Terrain (1: 10,1: 10, sous = "sous-titre")
+ >> # 3A.Erreur (comme ci-dessus, mais ajoutez un titre principal):
+ >> Terrain (1: 10,1: 10, main = "Titre principal")
+ >> # 3B.Erreur (un moyen équivalent de produire la même chose):
+ >> Plot (1: 10,1: 10) # Aucune erreur
+ >> title (main = "main") # Erreur
+ >>
+ >> # Erreur produite:
+ >>> Terrain (1: 10,1: 10, main = "main")
+ >> Erreur dans le titre (...): n'a pas pu trouver de polices X11
+ >> Vérifiez que le chemin de police est correct.
+ >>
+ >> # sortie de sessionInfo ()
+ >>> SessionInfo ()
+ >> Version 2.3.1 (2006-06-01)
+ >> I486-PC-LINUX-GNU
+ >>
+ >> Packages de base ci-joints:
+ >> [1] "Méthodes" "Stats" "Graphics" "GrDevices" "utilise"
+"ensembles de données"
+ >> [7] "base"
+ >>
+ >> # Je ne sais pas si c'est pertinent mais
+ >> # de getOption ("x11font")
+ >>> getOption ('x11fonts')
+ >> [1] "-Adobe-helvetica-% s-% s - * - * -% d - * - * - * - * - * - * - *"
+ >> [2] "-Adobe-symbol-medium-r - * - * -% d - * - * - * - * - * - * - *"
+ >>
+ >> ### Exemples fin ###
+ >>
+ >> la solution peut évidente pour quelqu'un de plus familier avec Linux, mais comme
+ >> a déclaré que je suis nouveau dans Linux, donc j'apprécierais des explications détaillées.
+ >> merci
+ >>
+ >> __________________________________________________
+ >> r-help@stat.math.ethz.ch Liste de diffusion
+ >> https://stat.ethz.ch/mailman/listinfo/r-help
+ >> Veuillez lire le guide de publication
+http://www.r-project.org/posting-guide.html
+ >> et fournissez un code commenté, minimal, autonome et autonome.
+ >
+ >
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

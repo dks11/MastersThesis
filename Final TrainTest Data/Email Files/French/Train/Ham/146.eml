@@ -1,0 +1,40 @@
+
+Chers r-helpers,
+
+Je recherche un package R qui produira des analyses de puissance pour
+Tests de Wald linéaires.J'ai effectué une analyse approfondie et je suis venu
+avec un tas de résultats négatifs (je suis le roi, bébé).j'ai trouvé
+Asypow, qui s'applique aux tests de rapport de vraisemblance.Toutefois, nous
+généralement avoir le pouvoir de faire des tests Wald, j'ai juste besoin de le prouver ainsi
+que nous pouvons le publier;)
+
+S'il s'agit d'une question "stupide" (c'est-à-dire qu'il y a quelque chose d'inhérent
+faire le test qui implique le pouvoir de faire de la détection d'un effet, ou
+Résultats publiés pour certaines tailles d'échantillon), veuillez me le faire savoir,
+me fera gagner beaucoup de temps.
+
+Joel
+Roi des résultats négatifs
+-
+Joel J. Adamson
+Biostatisticien
+Unité de recherche en psychopharmacologie pédiatrique
+Hôpital général du Massachusetts
+Boston, MA 02114
+(617) 643-1432
+(303) 880-3109
+
+
+
+
+
+Les informations transmises dans cette communication électronique sont destinées uniquement à la personne ou à l'entité à qui elles sont traitées et peuvent contenir du matériel confidentiel et / ou privilégié.Tout examen, retransmission, diffusion ou autre utilisation ou prise de toute action en se soutenant à ces informations par des personnes ou des entités autres que le destinataire prévu est interdite.Si vous avez reçu ces informations d'erreur, veuillez contacter la ligne d'assistance conformité au 800-856-1983 et éliminer correctement ces informations.
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

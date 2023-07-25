@@ -1,0 +1,100 @@
+
+Ne regardez pas soigneusement votre configuration, mais si je m'en souvenais correctement, vous
+peut avoir besoin de définir la direction "setenv" dans le httpd.conf.
+Au fait, pourquoi n'incluez pas cette ligne dans votre script CGI?
+
+utiliser lib '/ le / module / path';
+
+
+2007/4/9, Wijaya Edward <ewijaya@i2r.a-star.edu.sg>:
+>
+>
+> Chers experts,
+>
+> J'ai le script Perl simple suivant (appelé "Hellom.cgi"):
+>
+> __Begin__
+> #! / usr / bin / perl
+> Utilisez CGI QW /: Standard: HTML3 /;
+> Utilisez CGI :: CARP QW (Fatalstobrowser);
+> $ Cgi :: post_max = 1024 * 100;# MAX 100K Posts1
+>
+> # -------------------------------------------------
+> # Begin {
+> # if ($ env {perl5lib} et $ env {perl5lib} = ~ /^(.*)$/) {
+> #
+> # # Aveuglement intain.Taintchecking est de protéger
+> # # à partir des données Web;
+> # # L'environnement est sous notre contrôle.
+> # eval "Utiliser lib '$ _';"pour chaque (
+> # Inverse
+> # Split (/: /, 1 $)
+> #);
+> #}
+> #}
+> # -------------------------------------------------
+>
+> Utilisez ACME :: Spork;
+> Utilisez Bio :: Tools :: GuessSeQformat;
+> Utilisez io :: string;
+> Utilisez un fichier :: slurp qw (read_file);
+> Imprimer "Content-Type: text / html \\ n \\ n";
+> Imprimer "Hello World !! Cela fonctionne. \\ n";
+>
+> __End__
+>
+> Qui est stocké sous: / usr / local / apache / htdocs / test / cgi-bin
+> Et le site Web réel est accessible ici:
+> http://bioinfo-z.comp.nus.edu.sg/test/cgi-bin/hellom.cgi
+>
+> Comme vous pouvez le voir sur ce lien, il montre qu'il ne peut pas localiser ACME :: Spork,
+> sur le chemin illustré là-bas.Mais j'ai défini .htaccess pour contenir ceci:
+>
+> Setenv perl5lib
+> / home / sadm / lib / site_perl / sun4-solaris-64int: / home / sadm / lib / site_perl /
+>
+> J'ai le .htaccess ici: / usr / local / apache / htdocs / test
+>
+>
+> De plus, vérifiant l'emplacement du module qu'il montre de manière cohérente
+>
+> Le chemin correct:
+> sadm @ bioinfo-z: ~ $ perldoc -l acme :: spork
+> /home/sadm/lib/site_perl/acme/spork.pm
+>
+> Ma question est de savoir pourquoi mon Apache ne peut pas localiser l'emplacement
+> Étant donné le bon .htaccess?Ainsi, mon script ne fonctionnera pas?
+>
+> Mon httpd.conf est le suivant: http://dpaste.com/8163/plain/
+> My modules.conf est le suivant: http://dpaste.com/8164/plain/
+>
+> J'espère avoir de vos nouvelles
+>
+>
+>
+>
+>
+>
+>
+> ------------ Institute for InfoComm Research - Avertissement -------------
+> Cet e-mail est confidentiel et peut être privilégié.Si vous n'êtes pas le
+> Récipiendaire prévu, veuillez le supprimer et nous en informer immédiatement.Je vous en prie
+> ne pas le copier ou l'utiliser à des fins, ou divulguer son contenu à tout autre
+> Personne.Merci.
+> --------------------------------------------------------
+>
+> -
+> À désabonner, e-mail: débutants-unsubscribe@perl.org
+> Pour les commandes supplémentaires, e-mail: débutants-help@perl.org
+> http://learn.perl.org/
+>
+>
+>
+
+
+-
+mailto: pangj@earthlink.net
+http://home.arcor.de/jeffpang/
+
+###
+

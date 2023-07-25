@@ -1,0 +1,21 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42369]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42369>
+
+
+Dans le fichier src / ops / stack.ops dans le sageall () op, il y a le
+Élément de note et de todo:
+
+  / * Ces 2 opcodes modifient le pointeur de base du registre
+   * redémarrer Next () recharger les pointeurs de base mis en cache et fonctionne avec
+   * Opcodes de branche arbitraire également.Bien que ce soit un peu exagéré,
+   * Nous n'avons pas d'annotation d'opcode pour recharger juste les pointeurs de base
+   * Todo optimiser plus tard
+   * /
+
+Le chargement du pointeur doit donc être optimisé pour charger simplement les pointeurs de base.
+
+###
+

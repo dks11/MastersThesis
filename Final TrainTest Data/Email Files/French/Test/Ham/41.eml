@@ -1,0 +1,24 @@
+
+------------------------------------------------------------
+Revno: 81
+révision-id: tridge@samba.org-20070410093321-3dfc6368f2d792c8
+Parent: tridge@samba.org-20070410044813-b5c4d10a223f32dd
+Commitation: Andrew Tridgell <tridge@samba.org>
+Branche Nick: tridget
+Timestamp: mar 2007-04-10 19:33:21 +1000
+message:
+  Fabriqué toutes les prises gérant IO partielle
+  Résumé IO via CTDB_QUEUE _ * () Fonctions
+modifié:
+  Common / ctdb_daemon.c ctdb_daemon.c-20070409200331-3el1kqgdb9m4ib0g-1
+  Common / ctdb_io.c ctdb_io.c-20070409200335-dzfc7f3rra5rcf60-1
+  Inclure / ctdb.h ctdb.h-20061117234101-o3qt14umlg9en8z0-11
+  inclure / ctdb_private.h ctdb_private.h-20061117234101-o3qt14umlg9en8z0-13
+  TCP / CTDB_TCP.H CTDB_TCP.H-20061127103747-L8XENIWIAPBYDEHQ-3
+  TCP / TCP_CONNECT.C TCP_CONNECT.C-20061128004937-X70Q1CU5XZG5G2TM-1
+  TCP / TCP_IO.C TCP_IO.C-20061128004937-X70Q1CU5XZG5G2TM-3
+
+Diff trop grand pour le courrier électronique (853, la limite est de 200).
+
+###
+

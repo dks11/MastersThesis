@@ -1,0 +1,27 @@
+
+Le lundi 9 avril 2007, Tong Wang a écrit:
+
+> Salut,
+> J'ai un problème avec des chiffres d'économie lorsque j'utilise R dans EMACS (ESS).Chaque fois que j'essaie de sauver un complot, l'Emacs gèle
+> Et je dois le fermer.
+> J'utilise Win XP, R Binaires, Emacs pour Windows.
+> Quelqu'un a eu le même problème?Puis-je obtenir des suggestions?
+
+Ceci est une question pour la liste ESS: comme vous le dites «Emacs se fige» donc c'est un
+Problème dans la façon dont l'ESS commume avec R.
+
+-
+Brian D. Ripley, Ripley@stats.ox.ac.uk
+Professeur de statistiques appliquées, http://www.stats.ox.ac.uk/~ripley/
+Université d'Oxford, Tél: +44 1865 272861 (Self)
+1 South Parks Road, +44 1865 272866 (PA)
+Oxford OX1 3TG, Fax britannique: +44 1865 272595
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

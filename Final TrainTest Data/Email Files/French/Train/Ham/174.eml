@@ -1,0 +1,55 @@
+
+Le lun du 19 mars 15:43:27 2007, Particle a écrit:
+> Il y a un certain nombre de scripts et utilitaires dans les outils / sous-arbre qui
+> Je soupçonne que ce n'est pas utilisé depuis un certain temps maintenant.Ce billet est un
+> Perfectionnement pour suivre les efforts sur l'arpentage et la réparation des fichiers sous
+> Outils /.
+>
+> ~ Jerry
+
+Voici quelques données * non définitives, non exhaustives * concernant les outils / build / *. PL Scripts
+Cela peut être utile dans cet effort.
+
+1. Invocations par «faire»:
+
+  94 outils / build / c2str.pl
+   4 outils / build / dynpmc.pl
+   1 outils / build / digitalprint_c.pl
+   2 outils / build / jit2c.pl
+   1 outils / build / nativeCall.pl
+  12 outils / build / ops2c.pl
+   1 outils / build / ops2pm.pl
+   2 outils / build / parrot_config_c.pl
+ 179 outils / build / pmc2c.pl
+   1 outils / build / révision_c.pl
+   1 outils / build / vTable_Extend.pl
+
+Les outils / build / vtable_h.pl n'ont pas été invoqués par marquer depuis le 11 novembre 2006. Cependant, il peut
+être invoqué ailleurs.Voir config / gen / parrot_include.pm (54);lib / parrot / docs / section /
+Outils.pm (51);lib / Parrot / vTable.pm (16, 419).
+
+2. Un bon nombre des outils / build / *. Les scripts PL sont appelés par Parrot :: Docs :: Sections :: Tools.
+Personnellement, je ne pense pas que fournir un script perl comme argument à un appel de méthode Perl est un "meilleur
+Pratique. "Je considère donc ces instances comme mûres pour le refactorisation.
+
+lib / parrot / docs / section / outils.pm: 49: $ auto-auto> new_item ('', 'tools / build / nativecall.pl'),
+lib / parrot / docs / section / tools.pm: 50: $ auto-auto> new_item ('', 'tools / build / jit2c.pl'),
+lib / parrot / docs / section / outils.pm: 51: $ auto-auto> new_item ('', 'outils / build / vtable_h.pl'),
+lib / parrot / docs / section / outils.pm: 52: $ auto-auto> new_item ('', 'outils / build /
+vTable_Extend.pl '),
+lib / parrot / docs / section / outils.pm: 56: $ auto-auto> new_item ('', 'outils / build / pbc2c.pl'),
+lib / parrot / docs / section / outils.pm: 82: $ auto-auto> new_item ('', 'outils / build /
+digitalprint_c.pl '),
+lib / parrot / docs / section / outils.pm: 85: $ auto-auto> new_item ('', 'outils / build /
+parrot_config_c.pl '),
+lib / parrot / docs / section / outils.pm: 87: $ auto-auto> new_item ('', 'outils / build /
+révision_c.pl '),
+lib / parrot / docs / section / outils.pm: 104: $ auto-auto> new_item ('', 'outils / build /
+list_unjited.pl '),
+
+Je n'ai pas encore regardé les scripts dans d'autres répertoires tels que les outils / dev /.
+
+kid51
+
+###
+

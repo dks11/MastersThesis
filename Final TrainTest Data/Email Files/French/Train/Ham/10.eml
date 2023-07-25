@@ -1,0 +1,45 @@
+
+Auteur: vlendec
+Date: 2007-04-10 07:33:14 +0000 (mar, 10 avril 2007)
+Nouvelle révision: 22146
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22146
+
+Enregistrer:
+Tenter de réparer la construction
+Modifié:
+   Branches / Samba_3_0 / Source / Modules / VFS_READAHEAD.C
+   Branches / Samba_3_0_25 / Source / Modules / VFS_READAHEAD.C
+
+
+Set à l'échelle:
+Modifié: branches / samba_3_0 / source / modules / vfs_readahead.c
+==============================================.==================
+--- Branches / Samba_3_0 / Source / Modules / VFS_READAHEAD.C 2007-04-09 21:01:46 UTC (REV 22145)
++++ branches / samba_3_0 / source / modules / vfs_readahead.c 2007-04-10 07:33:14 UTC (REV 22146)
+@@ -106,7 +106,7 @@
+ (non signé int) fd,
+ (non signé long) décalage,
+ (unsigned int) rhd-> len,
+- (err));
++ err));
+ #autre
+ if (! rhd-> didmsg) {
+ Debug (0, ("ReadaHead_pread: pas de lecture sur cette plate-forme \\ n"));
+
+Modifié: branches / samba_3_0_25 / source / modules / vfs_readahead.c
+==============================================.==================
+--- Branches / Samba_3_0_25 / Source / Modules / VFS_READAHEAD.C 2007-04-09 21:01:46 UTC (REV 22145)
++++ branches / samba_3_0_25 / source / modules / vfs_readahead.c 2007-04-10 07:33:14 UTC (Rev 22146)
+@@ -106,7 +106,7 @@
+ (non signé int) fd,
+ (non signé long) décalage,
+ (unsigned int) rhd-> len,
+- (err));
++ err));
+ #autre
+ if (! rhd-> didmsg) {
+ Debug (0, ("ReadaHead_pread: pas de lecture sur cette plate-forme \\ n"));
+
+###
+

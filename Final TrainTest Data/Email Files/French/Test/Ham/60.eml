@@ -1,0 +1,75 @@
+
+Vous trouverez ci-dessous un script de test très simple à afficher et à sélectionner plusieurs options
+à partir d'une liste de cases à cocher.Le premier groupe utilise tous la même case à cocher
+Nom "SiteList" pour chaque case à cocher, le deuxième groupe utilise un nom différent
+pour chaque case à cocher.Le premier groupe ne renvoie que la première sélection,
+Quel que soit le nombre de personnes choisies.Le deuxième groupe renvoie chaque sélection
+valeur, comme prévu.
+
+Ce que j'ai pu trouver jusqu'à présent indique que je devrais pouvoir récupérer
+Chaque sélection, que le nom de case à cocher soit courant ou unique
+à chaque case, mais cela ne se produit pas.Toute clarification sur ce que je suis
+manquant ou malentendu (ainsi que toute documentation associée)
+être grandement apprécié.
+
+Merci,
+Joe
+
+#############################################
+
+#! / usr / bin / perl
+
+Utilisez CGI QW (: Tous);
+Utilisez CGI :: CARP QW (Fatalstobrowser);
+
+mon $ message = "";
+
+foreach mon $ param (param ())
+{
+    mon $ value = param ($ param);
+    $ message. = "param \\" $ param \\ "= \\" $ value \\ "<br />";
+}
+
+mon $ programme_name = __file__;
+$ program_name = ~ s /^.*\\////;# supprimer tout le chemin, ne laissant que réel
+nom du programme
+
+mon $ checkbox = "
+    Checkbox Name = \\ "SiteList \\" (Idem pour chaque option) <br />
+    <input type = \\ "checkbox \\" name = \\ "SiteList \\" value = \\ "arlington \\">
+Arlington <br />
+    <Type d'entrée = \\ "Checkbox \\" name = \\ "SiteList \\" value = \\ "Houston \\"> Houston
+<br />
+    <Type d'entrée = \\ "Checkbox \\" name = \\ "SiteList \\" value = \\ "plano \\"> plano <br
+/> <br />
+
+    Checher le nom de la case modifie avec chaque option <br />
+    <input type = \\ "checkbox \\" name = \\ "arlington \\" value = \\ "arlington \\">
+Arlington <br />
+    <Type d'entrée = \\ "Checkbox \\" name = \\ "Houston \\" valeur = \\ "Houston \\"> Houston <Br
+/>
+    <entrée type = \\ "Checkbox \\" name = \\ "plano \\" value = \\ "plano \\"> plano <br /> <br
+/>
+
+    <Type d'entrée = \\ "soumis \\" name = \\ "soumis \\" />
+"
+
+# Commencez à afficher la page Web
+En-tête d'impression ("texte / html");
+print start_html ();
+print start_form ();
+
+imprimer "$ message";
+
+Imprimer "<br /> $ Checkbox <br />";
+
+print end_form ();
+imprimer end_html;
+
+###################################
+-
+Puisqu'il s'agit d'un compte Gmail, veuillez vérifier que la liste de diffusion est incluse dans
+La réponse aux adresses
+
+###
+

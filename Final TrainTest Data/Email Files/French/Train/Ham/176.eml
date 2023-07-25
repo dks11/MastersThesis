@@ -1,0 +1,17 @@
+
+Je cherche un moyen de trouver la dimension du symbole de tracé dans un graphique dans les coordonnées relatives.
+L'importation du graphique dans GIMP et la mesure peuvent fonctionner, mais je recherche une manière plus élégante.
+De plus, j'ai remarqué que la taille du symbole est maintenue constante lorsque le graphique est à l'échelle (c'est-à-dire redimensionner la fenêtre ou
+modification de la résolution du fichier de sortie).D'autres logiciels, comme l'échelle Sigmaplot également les points où un tracé est
+escaladé.
+
+Massimo Cressoni
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

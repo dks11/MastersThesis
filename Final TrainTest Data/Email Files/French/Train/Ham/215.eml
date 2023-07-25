@@ -1,0 +1,17 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42355]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42355>
+
+
+Dans le fichier src / ops / pic.
+Article qui indique simplement:
+
+"Arg_max"
+
+Je crois que cela signifie utiliser la macro arg_max au lieu d'un codé dur
+Numéro dans le tableau Args [] mentionné sur cette ligne.En bref: fix.
+
+###
+

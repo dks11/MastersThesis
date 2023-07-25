@@ -1,0 +1,59 @@
+
+Auteur: Jerry
+Date: 2007-04-09 17:37:20 +0000 (lun, 09 avril 2007)
+Nouvelle révision: 22142
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22142
+
+Enregistrer:
+Ajouter la mention des correctifs de performances Vista
+Modifié:
+   Branches / Samba_3_0_release / WhatsNew.txt
+
+
+Set à l'échelle:
+Modifié: branches / samba_3_0_release / whatsnew.txt
+==============================================.==================
+--- Branches / Samba_3_0_release / WhatsNew.txt 2007-04-09 17:08:02 UTC (Rev 22141)
++++ branches / samba_3_0_release / whatsNew.txt 2007-04-09 17:37:20 UTC (Rev 22142)
+@@ -25,7 +25,8 @@
+   o Prise en charge du passage des descripteurs de sécurité Windows à un VFS
+     Plug-in permettant plusieurs outils UNIX ACL à côté exécuté
+     par côté sur le même serveur.
+- o Amélioration de la compatibilité avec les clients Windows Vista.
++ o Amélioration de la compatibilité avec les clients de Windows Vista, y compris
++ Amélioration des performances de lecture avec les serveurs Linux.
+   o Pages d'homme pour les plug-ins VFS.
+ 
+ 
+@@ -70,6 +71,27 @@
+ sur le même serveur, notamment NFSV4 et GPFS ACLS.
+ 
+ 
++ Plugin VFS Readahead
++ ====================.
++
++ Windows Vista introduit la prise en charge de lecture bordé de tuyaux pour améliorer
++ Performances lors du transfert de fichiers.Le nouveau plugin VFS_READAHEAD
++ permet aux serveurs de fichiers Linux d'utiliser des tampons de noyau supplémentaires
++ pour la mise en cache de fichiers afin d'éviter le temps d'attente des E / S au disque lors de la servitude
++ Clients Vista.Si vous ressentez de mauvaises performances en lecture entre
++ Serveurs Linux et clients Vista, veuillez tester le VFS_READAHEAD
++ module en ajoutant les lignes suivantes à la définition de partage
++ dans smb.conf:
++
++ [file_share]
++ objets VFS = Readahead
++ Readahead: Longueur = 1M
++
++ Notez que ce plugin entraînera des exigences de RAM supplémentaires
++ En raison de l'augmentation de la quantité de caches de tampon du noyau utilisés par SMBD.
++ Veuillez vous référer à VFS_READAHEAD (8) pour plus d'informations.
++
++
+ #######################################################################
+ Changements
+ #######
+
+###
+

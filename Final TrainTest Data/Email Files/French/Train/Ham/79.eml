@@ -1,0 +1,40 @@
+
+J'ai regardé autour de moi mais je ne trouve pas la méthode en R pour tester si
+les coefficients estimés résultants
+d'un modèle AR implique que le modèle est inversible.
+
+Pour citer le livre bleu d'Eric Zivot:
+
+ "L'AR (P) est inversible à condition que les Rots de la caractéristique
+équation
+
+Phi (z) = 1 - phi_1 * z - phi_2 * z ^ 2 = phi_3 * z ^ 3 - ..... phi_p * z ^ p = 0 mensonge
+dehors
+le cercle complexe ".
+
+Je ne trouve pas de fonction et je ne sais pas comment faire ce qui précède.je
+pense qu'il existe une méthode équivalente dans laquelle
+ Je peux vérifier si les valeurs propres d'une double équation (j'oublie
+ce que c'est) sont moins d'un mais je ne le fais pas
+rappelez-vous exactement ce qu'est cette équation et, même si je l'ai fait, je suis toujours
+ne saurait pas comment le faire.
+
+Peut-être vérifier si l'Absolu de la somme des coefficients est
+moins d'un va bien?
+Je me souviens avoir fait ça dans une autre vie mais je ne sais pas si c'est un
+approximation ou test réel.
+
+
+Merci pour toute aide.
+--------------------------------------------------------
+
+Ce n'est pas une offre (ou une sollicitation d'une offre) pour acheter / se ... {{Dropped}}
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

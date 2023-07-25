@@ -1,0 +1,73 @@
+
+# Nouveau billet créé par James Keenan
+# Veuillez inclure la chaîne: [Perl # 42362]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42362>
+
+
+Supposons que j'exécute les tests dans T / Configure / *. T avec Devel :: Cover:
+
+$> couverture -delete couverture / configure /
+$> Perl5opt = -mdevel :: cover = -db, couverture / configurer prouver t / configurer /
+* .t "$ @"
+$> Couverture de couverture / configurer / -ignore_re '^ (t \\ / configure | \\ / usr | lib \\ / (?!
+Perroquet))'
+ou alors
+$> Couverture de couverture / configurer / -ignore_re '^ (t \\ / configure | \\ / usr | lib \\ / (?!
+Parrot)) '-Report = Text> Couverture / Analysis.Configure.txt
+
+L'analyse de couverture résultante suggère que un code considérable dans
+L'arbre config / * / *. PM n'est pas atteint par ces tests.Voici un
+extrait;Voir l'attachement pour plus.
+
+---------------------------- ------ ------ ------ ----- ------
+------ ------
+Fichier STMT Bran Cond sous-pod
+Temps total
+---------------------------- ------ ------ ------ ----- ------
+------ ------
+config / auto / aio.pm 45.5 0,0 n / a 83.3 n / a
+0,1 42,6
+config / auto / alignpts.pm 42.9 0,0 0,0 85,7 n / a
+0,0 35,8
+config / auto / byteorder.pm 53.6 0,0 n / a 83,3 n / a
+0,0 50,0
+config / auto / cgoto.pm 41,7 0,0 0,0 83,3 n / a
+0,0 37,0
+config / auto / cpu.pm 58.1 0,0 n / a 85,7 n / a
+0,0 52,2
+
+Dans tous les cas que j'ai examinés, la méthode runsteps () n'est pas testée par le
+Tester Suite en question.La rédaction d'un test pour cette méthode
+augmenter la couverture du sous-programme à 100% et irait vers le chemin vers
+Obtenir une couverture de déclaration décente.
+
+Ces modules sont-ils touchés par des tests dans un autre endroit?Ack-ing a
+Échantillon d'entre eux du niveau supérieur dans mon bac à sable ne le suggère pas.
+
+##### Démarrer ACK ####
+[Parrot] 517 $ ack --nohtml --nophp 'auto (\\ / |: :) python'
+config / auto / python.pm
+6: Config / Auto / Python - Vérifiez si Python est là
+18: Package Auto :: Python;
+
+Configurer.pl
+345: Auto :: Python
+##### End ACK #####
+
+Mission:
+
+Écrire des tests unitaires pour chaque module trouvé sous config /.
+
+De tels tests devraient être effectués dans un état «pré-configure.pl», c'est-à-dire qu'ils
+devrait être exécutable au point après avoir vérifié un perroquet
+Branche du référentiel et avant d'avoir invoqué Configure.pl.
+
+Tous les fichiers ou répertoires créés lors de l'exécution de ces tests devraient être
+créé dans des répertoires temporaires qui sont automatiquement nettoyés à
+la fin de l'exécution d'un script de test unique.
+
+kid51
+
+###
+

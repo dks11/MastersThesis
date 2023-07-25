@@ -1,0 +1,36 @@
+
+Auteur: vlendec
+Date: 2007-04-09 10:38:55 +0000 (lun, 09 avril 2007)
+Nouvelle révision: 22135
+
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22135
+
+Enregistrer:
+Vérifiez la plupart des services de conflite nets de Michael Adam.Une bonne part de ce patch
+Déplace les fonctions pour corriger certaines dépendances de liens pour le registre.
+
+Michael, j'ai renommé votre auth_utils2.c à token_utils.c.
+
+Merci!
+
+Volker
+
+Ajoutée:
+   branches / samba_3_0 / source / auth / token_util.c
+   Branches / Samba_3_0 / Source / Registry / Reg_fronttend_hilvl.c
+   Branches / Samba_3_0 / source / utils / net_conf.c
+Modifié:
+   Branches / Samba_3_0 / Source / MakeFile.in
+   branches / samba_3_0 / source / auth / auth_util.c
+   Branches / Samba_3_0 / Source / Registry / Reg_API.C
+   Branches / Samba_3_0 / Source / Registry / Reg_fronttend.c
+   Branches / Samba_3_0 / source / utils / net.c
+   Branches / Samba_3_0 / source / utils / net.h
+
+
+Set à l'échelle:
+Désolé, le patch est trop grand (2931 lignes) pour inclure;Veuillez utiliser WebVN pour le voir!
+WebSvn: http://websvn.samba.org/cgi-bin/viewcvs.cgi?view=rev&root=samba&rev=22135
+
+###
+

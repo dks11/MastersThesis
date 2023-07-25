@@ -1,0 +1,41 @@
+
+Transférer ce message à la liste Debian-Mirrors.
+
+Salutations,
+FJP
+
+----------  Message transféré  ----------
+Sujet: debian.blueyonder.co.uk cassé
+Date: mercredi 04 avril 2007 00:55
+De: adonikam@virgonet.org
+À: debian-boot@lists.debian.org
+
+Le miroir debian.blueyonder.co.uk dans la dernière construction quotidienne (à partir de
+03/04/07) de l'installateur de gravure est obsolète.Le programme d'installation ne parvient pas à
+Téléchargez les outils initramfs à l'aide de ce miroir (erreur non authentifiée).
+De plus, un 302 trouvé a été rencontré lors de l'exécution manuelle APT-GET
+Mise à jour du chroot / cible.Une fois que j'ai changé cela pour
+debian.virginmedia.com, comme cela est correctement répertorié sur la liste des miroirs Debian
+(http://www.debian.org/mirror/mirrors_full), je pourrais exécuter une mise à jour apt-get
+et apt-get install initramfs-tools sans problème.L'installation
+ne pouvait pas être terminé comme le
+/etc/apt/sources.list Le fichier est écrasé sur le "système d'installation de base"
+ étape.
+
+Cela doit être corrigé avant la libération de Etch.
+
+-
+Adonikam Vierge
+-------------------------------------------------------
+
+--- Mail_boundary ---
+----- COMMENCER PGP Signature -----
+Version: GNUPG V1.4.6 (GNU / Linux)
+
+id8dbqbgglt3gm / kwh6icoqram11akcealzngnpd / addnzp744f8bp2zpacgjnmc
+hkbzlbvvbl3vbil5rc8mije =
+= zwix
+----- Fin de la signature PGP -----
+
+###
+

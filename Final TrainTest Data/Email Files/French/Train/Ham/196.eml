@@ -1,0 +1,17 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42381]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42381>
+
+
+Dans le fichier src / ops / core.ops dans le load_bytecode () op il y a
+L'article TODO intégré dans un docstring:
+
+"Chargez des bytecodes de perroquet à partir du fichier 1 $ et (TODO) recherchez le chemin de la bibliothèque,
+Pour localiser le fichier. "
+
+Cette fonctionnalité nécessite une implémentation.
+
+###
+

@@ -1,0 +1,24 @@
+
+# Nouveau billet créé par Steve Peters
+# Veuillez inclure la chaîne: [Perl # 42359]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42359>
+
+
+Le patch attaché comprend plusieurs nettoyages nécessaires pour faire taire les avertissements
+Lors de la compilation du perroquet avec Intel C ++.
+
+Les nettoyages tombent principalement dans deux catagories.
+
+1) Changer StrStart en chaîne d'un vide * à un char *.Cela comprend aussi
+Quelques corrects où le pointeur est traité comme un char * non signé *.
+
+2) Les valeurs d'énumération doivent être traitées comme INTS, et non comme le type d'énumération.Alors il y a
+Redéclations variables et paramètres multiples d'un type énuméré à
+un int.
+
+Steve Peters
+steve@fisharerojo.org
+
+###
+

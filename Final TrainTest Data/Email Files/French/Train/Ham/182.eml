@@ -1,0 +1,33 @@
+
+------------------------------------------------------------
+Revno: 82
+révision-id: tridge@samba.org-20070410093521-faf87738c5a369a7
+Parent: tridge@samba.org-20070410093321-3dfc6368f2d792c8
+Parent: ronniesahlberg@gmail.com-20070410045323-893gitfaif8bmigt
+Commitation: Andrew Tridgell <tridge@samba.org>
+Branche Nick: tridget
+Timestamp: mar 2007-04-10 19:35:21 +1000
+message:
+  fusionner de Ronnie
+modifié:
+  Common / ctdb_io.c ctdb_io.c-20070409200335-dzfc7f3rra5rcf60-1
+    ------------------------------------------------------------
+    Mergé: ronniesahlberg@gmail.com-20070410045323-893gitfaif8bmigt
+    Parent: ronniesahlberg@gmail.com-20070410031715-9ec894cesu1zghs4
+    Commitation: Ronnie Sahlberg <ronniesahlberg@gmail.com>
+    Branche Nick: CTDB
+    Timestamp: mar 2007-04-10 14:53:23 +1000
+    message:
+      Supprimer l'ancien IFDEF qui est resté du moment où il s'agissait d'un fichier d'en-tête
+=== Fichier modifié 'Common / ctdb_io.c'
+--- a / commun / ctdb_io.c 2007-04-10 09:33:21 +0000
++++ b / commun / ctdb_io.c 2007-04-10 09:35:21 +0000
+@@ -301,5 +301,3 @@
+ 
+ retour de la file d'attente;
+ }
+-
+-
+
+###
+

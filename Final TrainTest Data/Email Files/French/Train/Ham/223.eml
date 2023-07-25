@@ -1,0 +1,123 @@
+
+Chers utilisateurs,
+
+Je suis nouveau sur R. Je voudrais trouver * des estimateurs du maximum de vraisemblance pour PSI
+et alpha * basé sur la fonction de vraisemblance du journal suivant *, c est
+Données de consommation comprenant 148 entrées:
+
+Fn <-Function (C, Psi, Alpha)
+
+{
+
+S1 <-SUM (pour (i en 1: n) {(c [i] - (psi ^ (- 1 / alpha) * (lag (c [i], - 1)))) ^ 2 *
+
+(lag (c [i], - 1) ^ ((- 2) * (alpha + 1))
+
+)});
+
+S2 <- sum (pour (m en 1: n) {log (lag (c [m], - 1) ^ (((2) * alpha) +2))});
+
+constant- (74 * s1) - (1/2) * s2}
+
+
+
+En particulier, je souhaite utiliser le BHHH et les algorithmes BFGS.j'ai trouvé
+Les packages suivants qui peuvent être utilisés pour la tâche: * mle {stats4},
+Optim {statts}, maxbhhh {miceCon}, maxbfgs {miceCon} *.J'ai documenté certains des
+Mes tentatives ci-dessous ((a) Nom du package (b) Utilisation (c) Ma tentative et
+erreur correspondante).En toute humilité, je m'excuse pour tout mauvais codage, et
+Demandez si quelqu'un peut * me diriger pour trouver ces estimateurs *.
+
+
+
+Cordialement.
+
+
+
+
+
+* (1a) mle {stats4}
+
+(b) Utilisation:
+
+     mle (miniuslogl, start = formals (moinslogl), méthode = "bfgs",
+
+     fixe = list (), ...)
+
+(Pour cela, j'utilise le négatif de la fonction log-likelihood, bn) *
+
+* (c)> mle (start = list (psi = 1, alpha = 0), fn, méthode = "bfgs", fixe = list (c = c)) *
+
+Erreur dans Optim (start, f, méthode = méthode, Hessian = true, ...):
+
+        valeur de différence finie non finie [1]
+
+
+
+* (2a) Optim {Stats}
+
+
+
+(b) Optim (par, fn, gr = null,
+
+      Méthode = C ("Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "Sann"), *
+
+*
+
+      inférieur = -inf, supérieur = inf,
+
+      contrôle = list (), Hessian = false, ...)
+
+
+
+(c)> optim (c (c, 1,0), fn, méthode = "bfgs", contrôle = list (c = c)) *
+
+Erreur: l'argument "psi" est manquant, sans défaut
+
+
+
+* (3a) maxbhhh {micecon}
+
+(b) Utilisation: maxbhhh (fn, grad = null, Hess = null, thêta, print.level
+= 0, iterlim = 100, ...) *
+
+* *
+
+* (c)> maxbhhh (fn (c, psi, alpha), theta = list (psi = 1, alpha = 0)) *
+
+ Erreur dans psi ^ (- 1 / alpha) * (LAG (C [i], -1)):
+
+        Délivrage temporel / décalage de la longueur du vecteur
+
+
+
+(4a) maxbfgs {micecon}
+
+
+
+(b) Utilisation: maxbfgs (fn, grad = null, thêta, print.level = 0, iterlim = 200,
+
+     tol = 1e-06, ...)
+
+* (ci)> maxbfgs (fn (c, psi, alpha), theta = list (psi = 1, alpha = 0)) *
+
+Erreur dans psi ^ (- 1 / alpha) * (LAG (C [i], -1)):
+
+        Délivrage temporel / décalage de la longueur du vecteur
+
+
+
+* (cii)> maxbfgs (fn, theta = list (psi = 1, alpha = 0)) *
+
+Erreur: l'argument "psi" est manquant, sans défaut
+
+[[version HTML alternative supprimée]]
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

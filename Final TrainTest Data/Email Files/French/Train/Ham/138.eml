@@ -1,0 +1,87 @@
+
+Le 4/9/07, Mugenchen, Robert A (Bob) <Mugenchen@utk.edu> a écrit:
+> Salut à tous,
+>
+> J'essaie de comprendre la différence entre do.Call et lapply pour
+> Appliquer une fonction à une liste.Ci-dessous est l'une des variations de
+> Les programmes (par Marc Schwartz) ont discuté ici récemment pour sélectionner le premier
+> et les n observations par groupe par groupe.
+>
+> J'ai regardé dans plusieurs livres, la FAQ R et j'ai fouillé les archives, mais je
+> Je ne trouve pas assez pour comprendre pourquoi lapply ne fait pas ce que fait.
+> Dans ce cas.Les fichiers d'aide et les descriptions de newsletter de Do.Call Sound
+> Comme il ferait la même chose, mais je suis sûr que cela est dû à mon manque de
+> Comprendre leur terminologie spécifique.J'apprécierais que
+> Vous pourriez prendre un moment pour m'éclairer.
+>
+> Merci,
+> Bob
+>
+> mydata <- data.frame (
+> id = c ('001', '001', '001', '002', '003', '003'),,
+> math = c (80,75,70,65,65,70),
+> Reading = C (65,70,88, na, 90, na)
+>)
+> mydata
+>
+> Mylast <- lapply (Split (MyData, MyData $ id), queue, n = 1)
+> MyLast
+> Classe (MyLast) # C'est une liste, donc lapply va donc * quelque chose * avec.
+>
+> #Ce obtient le résultat souhaité:
+> do.Call ("rbind", mylast)
+Cela fait un seul «rbind» avec les éléments de la liste comme le
+paramètres afin que vous créiez efficacement une seule trame de données à partir de
+il.
+>
+> #Ce ne fait pas la même chose, ce qui me confond:
+> lapply (mylast, rbind)
+Cela applique «rbind» séparément à chaque élément de la liste (que
+est ce que fait lapply - appelez la fonction avec chaque élément) et
+Renvoyez une liste qui est exactement la même.
+>
+> # ... et data.frame ne le réparera pas comme je l'ai vu faire dans d'autres
+> circonstances:
+> data.frame (lapply (mylast, rbind))
+Ce que vous faites efficacement, c'est appeler des données.
+Paramètres comme vous avez des éléments de la liste.Voyez ce qui se passe avec:
+
+> data.frame (a = list (a = 1, b = 2), b = list (a = 3, b = 4))
+  A.A A.B B.A B.B
+1 1 2 3 4
+
+>
+> =============================================.========
+> Bob Mugenchen (prononcé Min'-Chen), manager
+> Centre de conseil statistique
+> U de TN Bureau des technologies de l'information
+> 200 Stokely Management Center, Knoxville, TN 37996-0520
+> Voix: (865) 974-5230
+> Fax: (865) 974-4810
+> Courriel: mugenchen@utk.edu
+> Web: http://oit.utk.edu/scc,
+> News: http://listserv.utk.edu/archives/statnews.html
+>
+> ______________________________________________
+> R-help@stat.math.ethz.ch Liste de diffusion
+> https://stat.ethz.ch/mailman/listinfo/r-help
+> Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+> et fournissez un code reproductible commenté, minimal, autonome.
+>
+
+
+-
+Jim Holtman
+Cincinnati, oh
++1 513 646 9390
+
+Quel est le problème que vous essayez de résoudre?
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

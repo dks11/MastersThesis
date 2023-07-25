@@ -1,0 +1,15 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42356]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42356>
+
+
+Dans le fichier src / ops / pic.ops dans le pic_callr __ () op, il y a l'élément TODO:
+
+"Vérifiez que 1 $ n'a pas changé"
+
+Implémentez cet élément TODO.
+
+###
+

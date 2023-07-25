@@ -1,0 +1,14 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42385]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42385>
+
+
+Dans les compilateurs de fichiers / IMCC / IMCC.Y, il y a l'élément TODO:
+
+"Supprimez cette variable globale ...
+ Symreg * cur_namespace;hack laid pour mk_address "
+
+###
+

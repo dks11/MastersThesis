@@ -1,0 +1,35 @@
+
+J'essaye d'installer le package Gnomegui
+J'ai essayé à l'intérieur de R (r a été lancé avec: sudo r) avec:
+installer le paquet()
+et de la console avec:
+sudo r cmd install /download/gnomegui_2.3.0-3.tar.gz
+Dans les deux cas, j'obtiens exactement les mêmes erreurs:
+
+Vérification de Gnome-Config ... Non
+Vérification du fichier gnomeconf.sh dans / usr / local / lib ... pas trouvé
+Configurer: Erreur: conditionnelle "hari_orbit" n'a jamais été définie.
+Habituellement, cela signifie que la macro n'a été invoquée que conditionnellement.
+Erreur: la configuration a échoué pour le package «gnomegui»
+
+Trouvé ce qui suit dans le message précédent dans la liste R-Help:
+
+ De B R Tura
+"Alors je pense que Gnomegui n'est pas Instalable en R maintenant ..."
+
+Réponse du professeur Ripley:
+"C'est presque entièrement une désinformation. Gnomegui est un package sur Cran
+(et le fait depuis quelques années) et peut être installé comme n'importe quel
+autre package.Comme plusieurs autres, cela nécessite que R ait été
+configuré avec --enable-r-shlib. "
+
+Toute aide serait très appréciée.
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

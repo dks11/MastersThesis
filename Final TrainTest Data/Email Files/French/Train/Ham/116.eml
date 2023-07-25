@@ -1,0 +1,58 @@
+
+Salut tout le monde,
+
+J'essaye de comprendre la différence entre do.Call et lapply pour
+Appliquer une fonction à une liste.Ci-dessous est l'une des variations de
+Les programmes (par Marc Schwartz) ont discuté ici récemment pour sélectionner le premier
+et les n observations par groupe par groupe.
+
+J'ai regardé dans plusieurs livres, la FAQ R et j'ai fouillé les archives, mais je
+Impossible de trouver assez pour comprendre pourquoi lapply ne fait pas ce que fait.
+dans ce cas.Les fichiers d'aide et les descriptions de newsletter de Do.Call Sound
+Comme si cela ferait la même chose, mais je suis sûr que cela est dû à mon manque de
+Comprendre leur terminologie spécifique.J'apprécierais que
+Vous pourriez prendre un moment pour m'éclairer.
+
+Merci,
+Bob
+
+mydata <- data.frame (
+  id = c ('001', '001', '001', '002', '003', '003'),,
+  math = c (80,75,70,65,65,70),
+  lecture = C (65,70,88, na, 90, na)
+)
+mes données
+
+Mylast <- lapply (Split (MyData, MyData $ id), queue, n = 1)
+mon dernier
+Classe (MyLast) # C'est une liste, donc lapply va donc * quelque chose * avec.
+
+#Ce obtient le résultat souhaité:
+do.Call ("rbind", mylast)
+
+#Ce ne fait pas la même chose, ce qui me confond:
+lapply (mylast, rbind)
+
+# ... et Data.frame ne le réparera pas comme je l'ai vu faire dans d'autres
+circonstances:
+data.frame (lapply (mylast, rbind))
+
+==============================================.=======
+  Bob Mugenchen (prononcé Min'-Chen), manager
+  Centre de conseil statistique
+  U de TN Bureau des technologies de l'information
+  200 Stokely Management Center, Knoxville, TN 37996-0520
+  Voix: (865) 974-5230
+  Fax: (865) 974-4810
+  Courriel: mugenchen@utk.edu
+  Web: http://oit.utk.edu/scc,
+  NOUVELLES: http://listserv.utk.edu/archives/statnews.html
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

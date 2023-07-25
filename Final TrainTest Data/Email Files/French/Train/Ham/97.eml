@@ -1,0 +1,16 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42371]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42371>
+
+
+Dans le fichier src / ops / object.ops, dans OP CallMethodcc (), il y a l'élément TODO:
+
+"Si nous vérifions si object.can (méthode)"
+
+Faites le chèque ou supprimez l'élément TODO avec une bonne raison (et
+Peut-être laisser un commentaire dans la source de savoir pourquoi).
+
+###
+

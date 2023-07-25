@@ -1,0 +1,39 @@
+
+Salut,
+
+> Ajouter cette ligne:
+> utiliser lib '/ home / sadm / lib / site_perl';
+> En haut de votre script, je pense que cela devrait bien fonctionner.
+
+Comme je l'ai mentionné plus tôt.Je l'ai fait.Le chemin exact comme vous avez déclaré
+au dessus.Ne fonctionnera toujours pas.
+
+Bien que faisant
+
+$ perl -c helom.cgi
+
+Fonctionne sur cmdline simple (avec / sans "utiliser lib").
+Mais pas dans Apache.
+
+
+-
+Edward Wijaya
+SINGAPOUR
+
+
+-
+> mailto: pangj@earthlink.net
+> http://home.arcor.de/jeffpang/
+
+
+------------ Institute for Infocomm Research - Avertissement -------------
+Cet e-mail est confidentiel et peut être privilégié.Si vous n'êtes pas le destinataire prévu, veuillez le supprimer et nous en informer immédiatement.Veuillez ne pas le copier ou l'utiliser à quelque fin que ce soit, ou divulguer son contenu à toute autre personne.Merci.
+--------------------------------------------------------
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

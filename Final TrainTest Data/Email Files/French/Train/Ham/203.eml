@@ -1,0 +1,43 @@
+
+AR 09/04/2007 AM 18:24, ysgrifennodd Marco Pesenti Gritti:
+> Le lundi 2007-04-09 à 16:14 +0100, Dafydd Harries a écrit:
+>> J'ai écrit une nouvelle activité de chat basée sur la télépathie.Je l'ai rendu aussi simple que
+>> possible: lorsque vous le lancez, il rejoint le chat multi-utilisateur Jabber
+>> chat@conference.olpc.collabora.co.uk.
+>>
+>> En ce moment, il est codé pour utiliser du gabble (le XMPP soutenu pour la télépathie), mais
+>> Il devrait être assez facile de le faire utiliser SALUT (pour le jabber de réseau local).Si
+>> Vous voulez exécuter ceci, vous devrez avoir le binaire de télépathie et son
+>>. Fichier de service installé.
+>>
+>> Le référentiel GIT est ici:
+>>
+>> http://projects.collabora.co.uk/~daf/chat-activity.git/
+>>
+>
+> Cool!Pouvons-nous déplacer cela sur dev.laptop.org et l'ajouter à jhbuild?
+
+Sûr.C'est une continuation de l'ancien référentiel de discussion sur le chat (mais seulement
+setup.py et le .svg sont inchangés) pour pouvoir le tirer dans le
+Référentiel d'activité de chat déjà là.Vraisemblablement, j'aurai besoin d'une sorte de
+Compte pour pousser sur dev.laptop.org.
+
+> Btw Veuillez ne pas utiliser de pixels bruts pour spécifier la marge, le rembourrage, etc. Vous pouvez
+> Utilisez les aides Sugar / Graphics / Units.py pour effectuer la conversion à partir de points.UN
+> peu ennuyeux, mais cela s'assure que les trucs sont bons à la fois dans l'émulateur et
+> Sur le XO.
+>
+> À un moment donné, nous voulons ajouter une prise en charge des unités aux hippocanvas (et un moyen
+> Pour définir le facteur de zoom Canvas) pour éviter le typage supplémentaire.
+
+Ah, je vais réparer ça.
+
+-
+Dafydd
+_______________________________________________
+Liste de diffusion de sucre
+Sucre@laptop.org
+http://mailman.laptop.org/mailman/listinfo/sugar
+
+###
+

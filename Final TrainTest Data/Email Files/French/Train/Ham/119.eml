@@ -1,0 +1,17 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42372]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42372>
+
+
+Il y a deux alertes Kludge dans SRC / OPS / Object.Ops liés à la sous-classe OP:
+
+"Kludge Alert - Le nom d'opcode doit différer de ci-dessous - xxx fixe"
+
+"Kludge Alert - Le nom d'opcode doit différer de ci-dessus - xxx fixe"
+
+Ce problème doit être résolu.
+
+###
+

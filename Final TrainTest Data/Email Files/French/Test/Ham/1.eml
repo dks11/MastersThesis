@@ -1,0 +1,15 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42353]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42353>
+
+
+Dans src / ops / pic.ops au pic_infix __ () OP Il y a l'élément TODO:
+
+"Si nous sommes arrivés trop souvent ici, faites une recherche dynamique"
+
+Cela doit être mis en uvre.
+
+###
+

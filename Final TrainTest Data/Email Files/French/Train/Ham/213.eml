@@ -1,0 +1,45 @@
+
+Le lun le lundi 09 avril 2007 à 10:01:25 PM +0200, Josip Rodin a écrit:
+> Les conseils habituels s'appliquent - regardez votre chargement, car plus d'utilisateurs peuvent essayer
+> Pour télécharger Debian en raison de la nouvelle version.Cela s'applique particulièrement à
+> Miroirs officiels qui sont les sélections par défaut dans les menus d'installation.
+>
+> Si vous reflétez les trucs du CD, portez une attention particulière aux images du CD, dans l'ordre
+> Pour éviter les situations DOS et de telles choses.
+
+J'ai un nouveau matériel sur ftp.tuke.sk (ftp.sk.debian.org) - le serveur est
+Plus rapide, l'espace est plus grand, l'administrateur se sent mieux ;-)
+
+J'ai une question: maintenant nous avons un apt sécurisé, nous pouvons donc refléter
+Référentiels Debian-Sécurité?afin que tout le monde puisse utiliser:
+deb http://ftp.sk.debian.org/debian-security ettcha
+
+Oui, j'ai lu http://www.debian.org/security/faq#mirror
+
+Q: Pourquoi n'y a-t-il pas de miroirs officiels pour Security.debian.org?
+
+R: En fait, il y en a.Il y a plusieurs miroirs officiels, mis en uvre
+à travers des alias DNS.Le but de Security.debian.org est de faire
+Mises à jour de sécurité disponibles aussi rapidement et facilement que possible.
+
+Encourager l'utilisation de miroirs non officiels ajouterait une complexité supplémentaire
+ce n'est généralement pas nécessaire et cela peut provoquer de la frustration si ces
+Les miroirs ne sont pas tenus à jour.Les miroirs officiels sont cependant prévus
+à mettre en uvre à l'avenir.
+
+
+Je pense que c'est maintenant "The Future" ;-)
+
+
+-
+
+5o Peter.mann à Tuke.sk
+
+
+
+-
+Pour vous désinscrire, envoyer un courriel à Debian-Mirrors-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

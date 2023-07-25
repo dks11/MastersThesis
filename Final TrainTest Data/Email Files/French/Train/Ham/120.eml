@@ -1,0 +1,35 @@
+
+Mike C. Fletcher a écrit:
+> Steven W Riggins a écrit:
+>> Salut à tous!
+>>
+>> J'ai un temps de dévide pour que tout fonctionne avec le
+>> Instructions de construction actuelles.J'ai téléchargé les images de CD en direct, disparu
+>> Grâce à plusieurs pages Wiki, rien ne semble actuel ni ne fonctionne.
+>>
+> ...
+>> Un indice sur quelle est la meilleure façon d'obtenir une image pour se développer?
+>>
+> Il a fallu des kilomètres environ 5 minutes pour se mettre à pied avec le gentoo
+> Images du développeur (version 2) sous l'OSX VMware Beta.je ne sais pas
+> * pense que * il a déjà fait fonctionner le réseautage, cependant (il a pu
+> développer un jeu et a commencé dans un autre avec cette configuration, je crois
+> Il utilise une clé USB pour transférer des fichiers en / sortie pour le moment).Je voudrais
+> Imaginez que l'image de base de Fedora de Noah pourrait également y fonctionner.
+>
+
+Je gère en effet cette image sous parallèles, et le réseautage fonctionne bien.je
+Utilisez SSHFS monté sur ~ / activités pour développer des trucs et pour se déplacer
+fichiers autour.
+
+--Noé
+
+
+--- Mail_boundary ---
+_______________________________________________
+Liste de diffusion de sucre
+Sucre@laptop.org
+http://mailman.laptop.org/mailman/listinfo/sugar
+
+###
+

@@ -1,0 +1,60 @@
+
+Bonjour,
+
+J'ai mis mon code:
+
+utiliser strict;
+utiliser des avertissements;
+
+J'ai donc déclaré de nombreuses variables.Par exemple les compteurs et
+tableaux.En utilisant mon.
+
+Mon script commence le Postgres.
+./PostgreSQL.PL Démarrage | Arrêt | Recharger | Statut
+
+J'utilise cette structure ci-dessous.Quand j'exécute le script
+COMO le message:
+
+Utilisation de la valeur non initialisée dans Eq String à
+./PostgreSQL.PL LINE 67
+
+Si je mets en code: mon @argv = ('a');
+Venez le message:
+
+SH: -C: Ligne 0: EOF inattendu tout en recherchant
+correspondant à `` ''
+SH: -C: Ligne 1: Erreur de syntaxe: fin inattendue du fil
+
+
+J'ai essayé de créer ce tableau, mais toutes les tentatives échouent.
+
+Comment puis-je résoudre ce problème?
+
+if ($ argv [0] eq 'stop')
+{
+  Imprimer "Arrêt PostgreSQL: \\ n";
+  Sauf si (fourche)
+    {
+       pour (mon $ i = 0; $ i <@banks; $ i ++)
+        {
+          Imprimez "Hello World!"
+        }
+    } # Fork Fork
+   }
+
+
+Cordialement,
+
+Faria
+
+__________________________________________________
+Fale com seus Amigos de Graça com o Novo Yahoo!Messager
+http://br.messenger.yahoo.com/
+
+-
+Pour se désabonner, e-mail: débutants-unsubscribe@perl.org
+Pour des commandes supplémentaires, e-mail: débutants-help@perl.org
+http://learn.perl.org/
+
+###
+

@@ -1,0 +1,76 @@
+
+Jean-François Chevrette (mirrors@iweb.ca) a écrit le 9 avril 2007 11:40:
+ > Simon Paillard a écrit:
+ >> le lundi 09 avril 2007 à 08:43:07 -0400, Jean-François Chevrette a écrit:
+ >>> Salut,
+ >>>
+ >>> Quelqu'un a-t-il un guide simple sur la façon d'utiliser Jigdo pour construire
+ >>> et miroir ISOS?J'ai lu la documentation de Jigdo et de Debian
+ >>> page Web sur le sous-jet et cela ne fonctionnera tout simplement pas.
+ >>
+ >> peut-être avec celui-ci: http://www.debian.org/cd/mirroring/#jigdomirror
+ >> et les liens connexes?
+ >
+ > Oui, j'ai utilisé les scripts suggérés mais il semble y avoir un
+ > Problème avec les sommes de contrôle du modèle.
+ >
+ > D'après ce que j'ai lu, ces erreurs de somme de contrôle Jigdo sont normales quand il y a
+ > une nouvelle version?
+
+Non, c'est un bug dans Jigdo-File.À solution, il mettait ceci
+
+jigdofile = "jigdo-file --cache = $ tmpdir / jigdo-cache.db --cache-expiry = 1w --report = noprogress"
+
+dans jigdo-mirror.conf.in.Cela devient plus lent mais fonctionne.C'est ce que j'ai envoyé
+Hier à la liste de diffusion Debian-CD:
+
+Date: Soleil, 8 avril 2007 17:37:22 -0300
+À: debian-cd@lists.debian.org
+Sujet: Suivi: Template Jigdo MDSUM MISSUM ??
+X-Railer: VM 7.19 sous EMACS 21.4.1
+
+En regardant cette partie de Jigdo-mirror,
+
+    # Si possible, vérifiez MD5SUM des données de modèle
+    si tester "$ templatemd5";ensuite
+        SET - `$ JIGDOFILE MD5SUM --Report = silencieux" modèle "`
+        Si tester "1 $" = "$ templatemd5";ensuite
+            journal "La somme de contrôle du modèle est correcte"
+        autre
+            Journal "Erreur - Modèle de contrôle de contrôle"
+            exitcode = 1
+            rm -f "image" "modèle"
+            retour 0
+        Fi
+    autre
+
+$ JigDofile est "JigDo-File --cache = $ tmpdir / jigdo-cache.db
+--cache-expiry = 1W --Report = NOProgress --no-check-files ",
+
+Comme d'habitude (c'est la valeur par défaut de Jigdo-mirror).Cependant lorsqu'il est utilisé avec
+--No-check-files jigdo-file ne produit aucun md5sum!Prendre un
+Trace de Jigdo-mirror J'obtiens ceci:
+
++ Tester olshs7shh08k63h8blp8-q <- c'est le md5sum du modèle,
+
+++ jigdo-file --cache = / home / debian-cd-sync / alpha.cd / jigdo-cache.db --cache-expir
+y = 1W --Report = NOProgress --no-cocheck-files md5sum --report = modèle silencieux
++ set -
++ test '' = olshs7shh08k63h8blp8-Q
++ Log 'Erreur - Template Checksground Mismatch'
+
+Cela montre que Jigdo-File renvoie une somme de contrôle vide.En cours d'exécution
+La commande à main ne produit rien, avec un statut de sortie de zéro.
+La suppression de l'argument --no-cocheck-files donne la somme de contrôle correcte.
+
+Ceci est un bug dans Jigdo-File, pour ne pas ignorer l'option lorsqu'il est utilisé
+avec une commande md5sum, car la page de l'homme dit "toutes les options sont
+ignoré silencieusement s'ils ne sont pas applicables à la commande actuelle. "
+
+
+-
+Pour vous désinscrire, envoyer un courriel à Debian-Mirrors-request@lists.debian.org
+avec un sujet de "désabonnement".Difficulté?Contacter listmaster@lists.debian.org
+
+###
+

@@ -1,0 +1,26 @@
+
+J'ai une question à tout le monde.
+
+Après la transfprmation log10, j'ai fait du krigeage ordinaire dans GSTAT en R?je
+Besoin de soutenir TRNASFORM Les valeurs de prédiction à l'échelle orgiginale.Comment puis-je
+Faites-le dans GStat en R?
+
+Merci
+
+Zia
+-
+Zia Uddin Ahmed
+915 Brad Field Hall
+Département des cultures et des sols
+L'Université de Cornell
+Ithaca NY 14850
+Etats-Unis
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

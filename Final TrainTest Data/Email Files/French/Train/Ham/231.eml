@@ -1,0 +1,13 @@
+
+# Nouveau billet créé par Paul Cochrane
+# Veuillez inclure la chaîne: [Perl # 42378]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42378>
+
+
+Dans le fichier src / ops / debug.ops dans le debug_break () op, il y a un
+sortie explicite (0), qui est marquée comme étant une bonne chose à faire.
+Ce problème doit être étudié et résolu.
+
+###
+

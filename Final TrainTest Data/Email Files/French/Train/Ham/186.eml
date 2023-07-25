@@ -1,0 +1,169 @@
+
+Marc,
+
+Cela fait la différence entre DO.Call et Lapply Crystal Clear.Ton
+L'explication ferait une belle entrée FAQ.
+
+Merci!
+Bob
+
+==============================================.=======
+  Bob Mugenchen (prononcé Min'-Chen), manager
+  Centre de conseil statistique
+  U de TN Bureau des technologies de l'information
+  200 Stokely Management Center, Knoxville, TN 37996-0520
+  Voix: (865) 974-5230
+  Fax: (865) 974-4810
+  Courriel: mugenchen@utk.edu
+  Web: http://oit.utk.edu/scc,
+  NOUVELLES: http://listserv.utk.edu/archives/statnews.html
+==============================================.=======
+
+
+> ----- Message original -----
+> De: Marc Schwartz [Mailto: marc_schwartz@comcast.net]
+> Envoyé: lundi 09 avril 2007 13 h 06
+> À: Muenchen, Robert A (Bob)
+> CC: r-help@stat.math.ethz.ch
+> Objet: Re: Do.Call contre lapply pour les listes
+>
+> Le lundi 2007-04-09 à 12:45 -0400, Mumenchen, Robert A (Bob) a écrit:
+>> Salut à tous,
+>>
+>> J'essaie de comprendre la différence entre Do.Call et Lapply
+> pour
+>> Appliquer une fonction à une liste.Ci-dessous est l'une des variations de
+>> Les programmes (par Marc Schwartz) ont récemment discuté ici pour sélectionner le
+> d'abord
+>> et les n observations par groupe par groupe.
+>>
+>> J'ai regardé dans plusieurs livres, la FAQ et j'ai fouillé les archives,
+> mais je
+>> Impossible de trouver assez pour comprendre pourquoi lapply ne fait pas ce qui fait.
+> fait
+>> Dans ce cas.Les fichiers d'aide et les descriptions de newsletter de DO.CALL
+> son
+>> Comme si ça ferait la même chose, mais je suis sûr que cela est dû à mon manque
+> de
+>> Comprendre leur terminologie spécifique.J'apprécierais
+il
+> si
+>> Vous pourriez prendre un moment pour m'éclairer.
+>>
+>> merci,
+>> Bob
+>>
+>> myData <- data.frame (
+>> id = c ('001', '001', '001', '002', '003', '003'),
+>> math = c (80,75,70,65,65,70),
+>> Reading = C (65,70,88, na, 90, na)
+>>)
+>> Mydata
+>>
+>> MyLast <- lapply (Split (MyData, MyData $ id), queue, n = 1)
+>> MyLast
+>> Class (MyLast) # C'est une liste, donc lapply va donc * quelque chose * avec.
+>>
+>> # Cela obtient le résultat souhaité:
+>> do.Call ("rbind", mylast)
+>>
+>> # Cela ne fait pas la même chose, ce qui me confond:
+>> lapply (mylast, rbind)
+>>
+>> # ... et data.frame ne le réparera pas comme je l'ai vu faire dans d'autres
+>> Circonstances:
+>> data.frame (lapply (mylast, rbind))
+>
+> Bob,
+>
+> Une différence clé est que DO.Call () fonctionne (dans l'exemple ci-dessus) comme
+> si
+> L'appel réel était:
+>
+>> rbind (MyLast [[1]], MyLast [[2]], MyLast [[3]])
+> Id Math Reading
+> 3 001 70 88
+> 4 002 65 Na
+> 6 003 70 na
+>
+> En d'autres termes, do.Call () prend la fonction citée et passe le
+liste
+> Objet comme s'il s'agissait d'une liste d'arguments individuels.Donc rbind () est seulement
+> appelé une fois.
+>
+> Dans ce cas, rbind () gère en interne tout le niveau du facteur
+> Problèmes,
+> etc. pour permettre une seule trame de données commune à créer à partir des trois
+> Les cadres de données indépendants contenus dans «Mylast»:
+>
+>> str (mylast)
+> Liste de 3
+> $ 001: 'data.frame': 1 obs.de 3 variables:
+> .. $ id: facteur w / 3 niveaux "001", "002", "003": 1
+> .. $ math: num 70
+> .. $ Reading: num 88
+> 002 $: 'data.frame': 1 obs.de 3 variables:
+> .. $ id: facteur w / 3 niveaux "001", "002", "003": 2
+> .. $ math: num 65
+> .. $ lecture: num na
+> 003 $: 'data.frame': 1 obs.de 3 variables:
+> .. $ id: facteur w / 3 niveaux "001", "002", "003": 3
+> .. $ math: num 70
+> .. $ lecture: num na
+>
+>
+> D'un autre côté, lapply () (comme ci-dessus) appelle rbind () _separately_ pour
+> Chaque composant de MyLast.Il agit donc comme si ce qui suit
+séries
+> De trois appels distincts ont été passés:
+>
+>
+>> rbind (mylast [[1]])
+> Id Math Reading
+> 3 001 70 88
+>
+>> rbind (mylast [[2]])
+> Id Math Reading
+> 4 002 65 Na
+>
+>> rbind (mylast [[3]])
+> Id Math Reading
+> 6 003 70 na
+>
+>
+> Bien sûr, le résultat de lapply () est que les éléments ci-dessus sont combinés en
+un
+> Objet unique de liste R et retourné:
+>
+>> lapply (mylast, rbind)
+> $ `001`
+> Id Math Reading
+> 3 001 70 88
+>
+> $ `002`
+> Id Math Reading
+> 4 002 65 Na
+>
+> $ `003`
+> Id Math Reading
+> 6 003 70 na
+>
+>
+> C'est une différence subtile, mais bien sûr critique, comment l'internes
+> La fonction est appelée et comment les arguments sont passés.
+>
+> Cela aide-t-il?
+>
+> Cordialement,
+>
+> Marc Schwartz
+>
+
+______________________________________________
+R-help@stat.math.ethz.ch Liste de diffusion
+https://stat.ethz.ch/mailman/listinfo/r-help
+Veuillez lire le guide de publication http://www.r-project.org/posting-guide.html
+et fournir un code commenté, minimal, autonome et autonome.
+
+###
+

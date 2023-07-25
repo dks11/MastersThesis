@@ -1,0 +1,31 @@
+
+# Nouveau billet créé par James Keenan
+# Veuillez inclure la chaîne: [Perl # 42360]
+# dans la ligne d'objet de toute correspondance future sur cette question.
+# <Url: http://rt.perl.org/rt3/ticket/display.html?id=42360>
+
+
+lib / parrot / révision.pm ne semble aucun test d'unité écrit
+spécifiquement pour cela.Écrivez-en, puis effectuez une analyse de couverture pour
+Assurez-vous que tout le code est couvert par des tests.
+
+$ ack --nohtml --nophp 'Parrot :: révision'
+
+config / gen / révision.pm: 23: Utilisez Parrot :: révision;
+config / gen / révision.pm: 30: mon $ révision = $ Parrot :: Revision :: Current;
+config / gen / révision.pm: 31: mes $ entrées =
+$ Parrot :: Revision :: svn_entries;
+Lib / Parrot / révision.pm: 6: Parrot :: révision - révision SVN
+lib / parrot / révision.pm: 10: Utiliser Parrot :: révision;
+lib / parrot / révision.pm: 12: print $ Parrot :: révision :: actuel;
+lib / parrot / révision.pm: 13: print $ Parrot :: révision :: config;
+lib / parrot / révision.pm: 21: package Parrot :: révision;
+T / Distro / File_metadata.t: 13: Utilisez Parrot :: révision;
+T / Distro / File_metadata.t: 219: Sauf si ($ Parrot :: Revision :: Current
+ou `svk ls .`) {
+Outils / build / révision_c.pl: 25: Utilisez Parrot :: révision;
+Outils / build / révision_c.pl: 46: return $ {Parrot :: révision :: current};
+Outils / build / révision_c.pl: 51: return $ {Parrot :: Revision :: config};
+
+###
+

@@ -1,0 +1,65 @@
+
+Le lundi 2007-04-09 à 16:14 +0100, Dafydd Harries a écrit:
+> J'ai écrit une nouvelle activité de chat basée sur la télépathie.Je l'ai rendu aussi simple que
+> possible: lorsque vous le lancez, il rejoint le chat multi-utilisateur Jabber
+> chat@conference.olpc.collabora.co.uk.
+>
+> En ce moment, il est codé pour utiliser du gabble (le XMPP soutenu pour la télépathie), mais
+> Il devrait être assez facile de le faire utiliser SALUT (pour le réseau de réseau local).Si
+> Vous voulez exécuter ceci, vous devrez avoir le binaire de télépathie et son
+> Fichier de service installé.
+>
+> Le référentiel GIT est ici:
+>
+> http://projects.collabora.co.uk/~daf/chat-activity.git/
+>
+
+Frais!Pouvons-nous déplacer cela sur dev.laptop.org et l'ajouter à jhbuild?
+
+> (C'est ma première fois avec Git, donc je ne sais pas si j'ai bien compris.)
+>
+> Il y a un bug vraiment ennuyeux que je ne pouvais pas m'entraîner: la conversation est
+> À l'intérieur d'une zone de défilement GTK, en utilisant un piratage, j'ai retiré le code de journal.L'interface utilisateur
+> La structure ressemble à ceci:
+>
+> - Hippo.canvas
+> - Hippo.canvaswidget
+> - gtk.scrolledwindow
+> - gtk.viewport
+> - Hippo.canvas (*)
+> - Hippo.canvasbox
+> - (éléments de conversation)
+> - sucre.graphics.entry.entry
+>
+> Il semble que l'Inner Hippo.Canvas reçoit plus d'espace qu'il ne le veut,
+> qui gâche le réglage vertical du ScrolledWindow.Il s'avère
+> que l'allocation est toujours 804 pixels plus grande que la demande, ce que je suis
+> Devinez est 844 (hauteur d'écran) - 40 pixels pour l'entrée.C'est énervant
+> Parce que je veux faire défiler la conversation quand quelqu'un dit quelque chose,
+> mais cela finit par montrer une masse d'espace vide si je fais défiler ce qui devrait être le
+> En bas.D'où ce piratage brut qui le fait fonctionner un peu:
+>
+> adj.set_value (adj.upper - adj.page_size - 804)
+>
+> Si quelqu'un peut faire la lumière à ce sujet, je serais très heureux.
+>
+
+Je peux le voir une fois qu'il est ajouté à la construction.
+
+Btw Veuillez ne pas utiliser de pixels bruts pour spécifier la marge, le rembourrage, etc. Vous pouvez
+Utilisez les aides Sugar / Graphics / Units.py pour effectuer la conversion à partir de points.UN
+peu ennuyeux, mais cela s'assure que les trucs sont bons à la fois dans l'émulateur et
+sur le xo.
+
+À un moment donné, nous voulons ajouter une prise en charge des unités aux hippocanvas (et un moyen
+Pour définir le facteur de zoom Canvas) pour éviter le typage supplémentaire.
+
+Marco
+
+_______________________________________________
+Liste de diffusion de sucre
+Sucre@laptop.org
+http://mailman.laptop.org/mailman/listinfo/sugar
+
+###
+
